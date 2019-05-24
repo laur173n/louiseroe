@@ -19,7 +19,6 @@
 
         <main>
             <h1 class="overskrift"></h1>
-            <div class="indhold"></div>
         </main>
 
         <footer></footer>
@@ -33,7 +32,7 @@
 
         function start() {
             async function getJson() {
-                let url = "http://lauravillumsen.com/kea/eksamen/wp/wp-json/wp/v2/pages/72";
+                let url = "http://lauravillumsen.com/kea/eksamen/wp/wp-json/wp/v2/pages/66";
                 let jsonData = await fetch(url);
                 indhold = await jsonData.json();
                 visIndhold();
