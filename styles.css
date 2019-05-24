@@ -1,0 +1,17 @@
+/*** FONTS ***/
+
+@font-face {
+    font-family: 'DIN';
+    src: url('fonts/DINPro.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'DIN-Bold';
+    src: url('fonts/DINPro-Bold.woff') format('woff');
+
+}
+
+@font-face {
+    font-family: 'DIN-Light';
+    src: url('DINPro-Light.woff') format('woff');
+}
