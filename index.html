@@ -13,12 +13,31 @@
     <div class="container">
 
         <header>
-            <div class="logo"></div>
-            <nav></nav>
+            <!--- LOGO --->
+            <a href="index.html">
+                <div class="logo">
+                    <img src="img/nyt_logo_copenhagen_FINAL.png" alt="logo">
+                </div>
+            </a>
+
+            <!--- BURGER MENU --->
+            <div class="burger-button">
+                <img src="img/burgermenu.png" alt="menu">
+            </div>
+            <nav id="menu" class="hide">
+                <ul>
+                    <li><a href="shop.html">SHOP</a></li>
+                    <li><a href="conceptstore.html">CONCEPT STORE</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="stories.html">STORIES</a></li>
+                </ul>
+            </nav>
+
         </header>
 
         <main>
             <h1 class="overskrift"></h1>
+            <div class="indhold"></div>
         </main>
 
         <footer></footer>
@@ -26,9 +45,38 @@
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", start);
+        document.addEventListener("DOMContentLoaded", sidenVises);
 
         let indhold;
+
+
+        function sidenVises() {
+            //console.log("siden vises");
+            // registrer klik på menuknap
+            document.querySelector(".burger-button").addEventListener("click", toggleMenu);
+
+
+        }
+
+        function toggleMenu() {
+            console.log("Toggle menu");
+            document.querySelector("#menu").classList.toggle("hide");
+
+            let erSkjult = document.querySelector("#menu").classList.contains("hide");
+            document.querySelector("header").classList.toggle("burgermenu_fix");
+
+
+            if (erSkjult == true) {
+                //menuen er skjult - ændr menuknap til lll
+                document.querySelector(".burger-button img").src = "img/burgermenu.png";
+            } else {
+                //menuen er nu vist - ændr menuknap til X
+                document.querySelector(".burger-button img").src = "img/cancel.png";
+            }
+
+            start();
+        }
+
 
         function start() {
             async function getJson() {
@@ -40,6 +88,7 @@
 
             function visIndhold() {
                 document.querySelector(".overskrift").textContent = indhold.title.rendered;
+                document.querySelector(".indhold").innerHTML = indhold.content.rendered;
             }
             getJson();
         }
