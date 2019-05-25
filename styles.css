@@ -1,4 +1,4 @@
-/*** FONTS ***/
+/*** ---------------FONTS--------------- ***/
 
 @font-face {
     font-family: 'DIN';
@@ -16,7 +16,7 @@
     src: url('DINPro-Light.woff') format('woff');
 }
 
-/*** GRID ***/
+/***---------------- GRID ----------------***/
 
 .container {
     position: relative;
@@ -25,31 +25,55 @@
         "header"
         "main"
         "footer";
+    width: 100vw;
+    margin: 0;
 }
 
 header {
     grid-area: header;
     display: grid;
     grid-template-areas:
-        "logo logo logo menu";
+        "menu logo .";
+    grid-template-columns: 1fr 2fr 1fr;
 }
 
 .logo {
     grid-area: logo;
 }
 
-#menu {
+.burger-button {
     grid-area: menu;
+    width: 83px;
 }
 
-/*** HEADER ***/
+/***------------- OVERALL ------------------- ***/
 
-/*** LOGO ***/
+figure {
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.hide {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/***--------- HEADER ------------- ***/
+
+/*** logo ***/
 
 .logo img {
     width: 200px;
 }
 
-.logo {
-    text-align: center;
+.logo {}
+
+.burger-button img {
+    width: 40px;
+    margin: 2vw;
+    top: 2vw;
 }
