@@ -67,13 +67,118 @@ body {
 /*** logo ***/
 
 .logo img {
-    width: 200px;
+    width: 240px;
+  margin: 0 auto;
+    margin-top: 3vw;
+
 }
 
-.logo {}
+.logo {
+    display: grid;
+}
 
 .burger-button img {
-    width: 40px;
-    margin: 2vw;
-    top: 2vw;
+    width: 30px;
+    margin-top: 11vw;
+    margin-left: 7vw;
+    cursor: pointer;
+
 }
+
+/*** menu ****/
+#menu {
+    background-color: white;
+    position: absolute;
+    top: 100px;
+    height: 100%;
+    width: 102vw;
+    margin: -2vw;
+}
+#menu li {
+    text-align: center;
+    list-style: none;
+    margin-top: 3em;
+}
+#menu ul {
+    padding-left: 0;
+}
+
+#menu li a {
+    color: black;
+    text-decoration: none;
+    font-family: 'DIN';
+    font-size: 1rem;
+}
+
+.shoppingcart {
+    position: absolute;
+    font-family: 'DIN';
+    font-size: 0.7rem;
+    right: 0.7vw;
+    margin-top: 0.7vw;
+}
+
+/*-----------------------------MEDIAQUERY FOR IPAD------------------------------------*/
+
+@media only screen and (min-width: 528px) {
+    /* MENU */
+
+    .burger-button img {
+        margin-top: 7vw;
+    }
+
+    #menu {
+        top: 140px;
+    }
+
+
+}
+
+   /*-----------------------------MEDIAQUERY FOR WEBSITE------------------------------------*/
+
+    @media only screen and (min-width: 1270px) {
+
+        /*HEADER*/
+        header {
+        grid-area: header;
+        display: grid;
+        grid-template-areas:
+        "menu logo .";
+    /*grid-template-columns: 1fr 2fr 1fr;*/
+}
+        #menu {
+            grid-area: menu;
+            background-color: transparent;
+            margin: 0;
+            width: initial;
+            height: 0;
+            width: 100vw;
+        }
+
+        .logo img {
+            justify-content: center;
+        }
+        .logo {
+            margin: 0 auto;
+        }
+
+        .hide {
+            visibility: visible;
+            pointer-events: initial;
+        }
+        .burger-button {
+            display: none;
+        }
+
+        #menu li {
+            padding: 0;
+            display: inline-grid;
+            position: absolute;
+        }
+
+        #menu li a {
+
+        }
+}
+
+
