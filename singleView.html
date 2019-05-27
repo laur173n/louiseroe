@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louise Roe Copenhagen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <p class="shoppingcart">shopping cart (0)</p>
+        <header>
+
+            <!--- LOGO --->
+            <a href="index.html">
+                <div class="logo">
+                    <img src="img/nyt_logo_copenhagen_FINAL.png" alt="logo">
+                </div>
+            </a>
+
+            <!--- BURGER MENU --->
+            <div class="burger-button">
+                <img src="img/burgermenu.png" alt="menu">
+            </div>
+            <nav id="menu" class="hide">
+                <ul>
+                    <li><a class="a" href="shop.html">shop</a></li>
+                    <li><a class="b" href="conceptstore.html">concept store</a></li>
+                    <a href="index.html">
+                        <div class="logo2">
+                            <img src="img/nyt_logo_copenhagen_FINAL.png" alt="logo">
+                        </div>
+                    </a>
+                    <li><a class="c" href="about.html">about</a></li>
+                    <li><a class="d" href="stories.html">stories</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main>
+            <h1 class="overskrift"></h1>
+            <div class="singleview">
+                <div class="indhold"></div>
+            </div>
+        </main>
+
+        <footer>
+            <img class="logo_footer" src="img/ikon_plus_streg.png" alt="footer logo">
+            <a href="contact.html">contact</a>
+            <a href="press.html">press</a>
+            <a href="retailers.html">retailers</a>
+            <a href="policies.html">policies</a>
+        </footer>
+
+    </div>
+
+    <script>
+        let urlParams = new URLSearchParams(window.location.search);
+        let id = urlParams.get("id");
+        console.log("ID", id);
+
+        let produkter = [];
+        let produkt;
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log("starter");
+            let dest = document.querySelector("#liste_singleView");
+
+            async function getJson() {
+                console.log("getting json");
+                let jsonData = await fetch("http://lauravillumsen.com/kea/eksamen/wp/wp-json/wp/v2/posts");
+                produkter = await jsonData.json();
+
+                produkter.forEach(obj => {
+                    if (id == obj.id) {
+                        produkt = obj;
+
+                    }
+                })
+
+                åbn();
+            }
+
+            function åbn() {
+                console.log("åbner indhold");
+                document.querySelector(".indhold").innerHTML = `
+                        <div class="produkt">
+                            <h2>${produkt.title.rendered}</h2>
+                            <img class="billede" src="${produkt.content.rendered}" alt="${produkt.title.rendered}>
+                        </div>
+                        `;
+            }
+
+            getJson();
+
+        }
+    </script>
+</body>
+
+</html>
