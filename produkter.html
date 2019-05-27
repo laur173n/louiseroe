@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Louise Roe Copenhagen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <!--- LOGO --->
+            <a href="index.html">
+                <div class="logo">
+                    <img src="img/nyt_logo_copenhagen_FINAL.png" alt="logo">
+                </div>
+            </a>
+
+            <!--- BURGER MENU --->
+            <div class="burger-button">
+                <img src="img/burgermenu.png" alt="menu">
+            </div>
+            <nav id="menu" class="hide">
+                <ul>
+                    <li><a href="shop.html">SHOP</a></li>
+                    <li><a href="conceptstore.html">CONCEPT STORE</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="stories.html">STORIES</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main>
+            <h1 class="overskrift"></h1>
+            <div class="indhold"></div>
+
+            <div class="menu all">
+                <button class="filter" data-hold="20">All</button>
+            </div>
+
+            <h2>Materials</h2>
+            <div class="menu materials">
+                <button class="filter" data-hold="15">Textile</button>
+                <button class="filter" data-hold="9">Metal</button>
+                <button class="filter" data-hold="6">Marble</button>
+                <button class="filter" data-hold="2">Glass</button>
+                <button class="filter" data-hold="14">Paper</button>
+                <button class="filter" data-hold="13">Ceramics</button>
+            </div>
+
+            <h2>Colours</h2>
+            <div class="menu colours">
+                <button class="filter" data-hold="19">Amber</button>
+                <button class="filter" data-hold="16">Lotus</button>
+                <button class="filter" data-hold="10">Blue</button>
+                <button class="filter" data-hold="11">Gold</button>
+                <button class="filter" data-hold="7">White</button>
+                <button class="filter" data-hold="3">Burgundy</button>
+                <button class="filter" data-hold="18">Green</button>
+                <button class="filter" data-hold="17">Silver</button>
+                <button class="filter" data-hold="12">Black</button>
+            </div>
+
+            <div id="liste"></div>
+
+
+        </main>
+
+        <footer></footer>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", sidenVises);
+
+        // hjemmesidens generelle indhold
+        let indhold;
+
+        // shoppens indhold
+        let produkter = [];
+        let filter = "20";
+
+        // siden loades
+        function sidenVises() {
+            console.log("siden vises");
+
+            // registrer klik på menuknap
+            document.querySelector(".burger-button").addEventListener("click", toggleMenu);
+        }
+
+        // burgermenuen skal kunne foldes ind og ud
+        function toggleMenu() {
+            console.log("Toggle menu");
+            document.querySelector("#menu").classList.toggle("hide");
+
+            let erSkjult = document.querySelector("#menu").classList.contains("hide");
+            document.querySelector("header").classList.toggle("burgermenu_fix");
+
+
+            if (erSkjult == true) {
+                //menuen er skjult - ændr menuknap til lll
+                document.querySelector(".burger-button img").src = "img/burgermenu.png";
+            } else {
+                //menuen er nu vist - ændr menuknap til X
+                document.querySelector(".burger-button img").src = "img/cancel.png";
+            }
+
+            start();
+        }
+
+        // starter den generelle hjemmeside
+        function start() {
+            console.log("starter");
+
+            // hjemmesidens generelle indhold bliver nu hentet
+            async function getJson() {
+                console.log("henter sidens indhold");
+                let url = "http://lauravillumsen.com/kea/eksamen/wp/wp-json/wp/v2/pages/121";
+                let jsonData = await fetch(url);
+                indhold = await jsonData.json();
+                visIndhold();
+            }
+
+            // hjemmesidens generelle indhold bliver nu vist
+            function visIndhold() {
+                console.log("viser sidens indhold");
+                document.querySelector(".overskrift").textContent = indhold.title.rendered;
+                document.querySelector(".indhold").innerHTML = indhold.content.rendered;
+            }
+            getJson();
+        }
+
+        // shoppen bliver nu hentet
+        async function getShop() {
+            console.log("henter produkter");
+            let dest = document.querySelector("#liste");
+            let temp = document.querySelector("template");
+
+            let jsonData = await fetch("http://lauravillumsen.com/kea/eksamen/wp/wp-json/wp/v2/posts");
+            produkter = await jsonData.json();
+            visProdukter();
+
+            /*// den gamle kode for loop, som ikke virker, men tør ikke slette det
+            function visProdukter() {
+                console.log("viser produkter");
+                produkter.forEach(produkt => {
+                    if (produkt.categories == filter) {
+                        dest.innerHTML += `
+                        <div class="produkt">
+                            <h2>${produkt.id.title.rendered}</h2>
+                            <img class="billede" src="${produkt.content.rendered} alt="${produkt.title.rendered}>
+                        </div>
+                        `;
+                    }
+                })
+            }*/
+
+            // shoppen bliver nu vist
+            function visProdukter() {
+                console.log("viser produkter");
+                dest.innerHTML = "";
+                produkter.forEach(produkt => {
+                    if (filter == "20" || filter == produkt.categories) {
+                        let template = `
+                        <div class="produkt">
+                            <h2>${produkt.title.rendered}</h2>
+                            <img class="billede" src="${produkt.content.rendered}" alt="${produkt.title.rendered}>
+                        </div>
+                        `
+                        // alternative stier til img
+                        // http://lauravillumsen.com/kea/eksamen/wp/wp-content/uploads/2019/05/${produkt.slug}.jpg
+                        // http://lauravillumsen.com/kea/eksamen/wp/wp-content/uploads/2019/05/${produkt.guid.slug}.jpg
+                        // ${produkt.content.rendered}
+
+                        dest.insertAdjacentHTML("beforeend", template);
+                        dest.lastElementChild.addEventListener("click", () => {
+                            location.href = "singleView.html?id=" + produkt.id;
+                        });
+                    }
+                })
+            }
+
+        }
+
+
+        // filtrering muliggøres
+        document.querySelectorAll(".filter").forEach(elm => {
+            elm.addEventListener("click", filtrering);
+        })
+
+        function filtrering() {
+            console.log("filtrerer produkter");
+            filter = this.getAttribute("data-hold");
+
+        }
+
+        getShop();
+
+    </script>
+</body>
+
+</html>

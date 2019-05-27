@@ -37,38 +37,8 @@
 
         <main>
             <h1 class="overskrift"></h1>
+            <h2 class="underoverskrift"></h2>
             <div class="indhold"></div>
-
-            <div class="menu all">
-                <button class="filter" data-hold="20">All</button>
-            </div>
-
-            <h2>Materials</h2>
-            <div class="menu materials">
-                <button class="filter" data-hold="15">Textile</button>
-                <button class="filter" data-hold="9">Metal</button>
-                <button class="filter" data-hold="6">Marble</button>
-                <button class="filter" data-hold="2">Glass</button>
-                <button class="filter" data-hold="14">Paper</button>
-                <button class="filter" data-hold="13">Ceramics</button>
-            </div>
-
-            <h2>Colours</h2>
-            <div class="menu colours">
-                <button class="filter" data-hold="19">Amber</button>
-                <button class="filter" data-hold="16">Lotus</button>
-                <button class="filter" data-hold="10">Blue</button>
-                <button class="filter" data-hold="11">Gold</button>
-                <button class="filter" data-hold="7">White</button>
-                <button class="filter" data-hold="3">Burgundy</button>
-                <button class="filter" data-hold="18">Green</button>
-                <button class="filter" data-hold="17">Silver</button>
-                <button class="filter" data-hold="12">Black</button>
-            </div>
-
-            <div id="liste"></div>
-
-
         </main>
 
         <footer></footer>
@@ -76,41 +46,30 @@
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", start);
+        document.addEventListener("DOMContentLoaded", sidenVises);
 
         // hjemmesidens generelle indhold
         let indhold;
-
-        // shoppens indhold
-        let produkter = [];
-        let filter = "20";
 
         // siden loades
         function sidenVises() {
             console.log("siden vises");
 
-            // registrer klik på menuknap
-            document.querySelector(".burger-button").addEventListener("click", toggleMenu);
+            // billederne skal linke til nye html-sider
+            document.querySelector(".underoverskrift").addEventListener("click", visInspirationSide);
+            document.querySelector(".underoverskrift").addEventListener("click", visProdukterSide);
         }
 
-        // burgermenuen skal kunne foldes ind og ud
-        function toggleMenu() {
-            console.log("Toggle menu");
-            document.querySelector("#menu").classList.toggle("hide");
+        // man bliver taget til inspirationssiden
+        function visInspirationSide() {
+            console.log("klikket på inspiration");
+            location.href = "inspiration.html";
+        }
 
-            let erSkjult = document.querySelector("#menu").classList.contains("hide");
-            document.querySelector("header").classList.toggle("burgermenu_fix");
-
-
-            if (erSkjult == true) {
-                //menuen er skjult - ændr menuknap til lll
-                document.querySelector(".burger-button img").src = "img/burgermenu.png";
-            } else {
-                //menuen er nu vist - ændr menuknap til X
-                document.querySelector(".burger-button img").src = "img/cancel.png";
-            }
-
-            start();
+        // man bliver taget til produktsiden
+        function visProdukterSide() {
+            console.log("klikket på produkter");
+            location.href = "produkter.html";
         }
 
         // starter den generelle hjemmeside
@@ -120,7 +79,7 @@
             // hjemmesidens generelle indhold bliver nu hentet
             async function getJson() {
                 console.log("henter sidens indhold");
-                let url = "http://lauravillumsen.com/kea/eksamen/wp/wp-json/wp/v2/pages/74";
+                let url = "http://lauravillumsen.com/kea/eksamen/wp/wp-json/wp/v2/pages/66";
                 let jsonData = await fetch(url);
                 indhold = await jsonData.json();
                 visIndhold();
@@ -135,44 +94,6 @@
             getJson();
         }
 
-        // shoppen bliver nu hentet
-        async function getShop() {
-            console.log("henter produkter");
-            let dest = document.querySelector("#liste");
-
-            let jsonData = await fetch("http://lauravillumsen.com/kea/eksamen/wp/wp-json/wp/v2/posts");
-            produkter = await jsonData.json();
-            visProdukter();
-
-            // shoppen bliver nu vist
-            function visProdukter() {
-                console.log("viser produkter");
-                produkter.forEach(produkt => {
-                    if (produkt.categories == filter) {
-                        dest.innerHTML += `
-                        <div class="produkt">
-                            <h2>${produkt.id.title.rendered}</h2>
-                            <img class="billede" src="${produkt.featured_media.rendered} alt="${produkt.title.rendered}>
-                        </div>
-                        `;
-                    }
-                })
-            }
-
-        }
-
-        // filtrering muliggøres
-        document.querySelectorAll(".filter").forEach(elm => {
-            elm.addEventListener("click", filtrering);
-        })
-
-        function filtrering() {
-            console.log("filtrerer produkter");
-            filter = this.getAttribute("data-hold");
-
-        }
-
-        getShop();
     </script>
 </body>
 
