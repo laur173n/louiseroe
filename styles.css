@@ -49,6 +49,7 @@ header {
 
 figure {
     margin: 0;
+    padding: 0;
 }
 
 body {
@@ -59,6 +60,25 @@ body {
 .hide {
     visibility: hidden;
     pointer-events: none;
+}
+
+h2{
+    font-family: palatino;
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+
+figcaption {
+    font-family: palatino;
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+
+p {
+   font-family: palatino;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 3vw;
 }
 
 /***--------- HEADER ------------- ***/
@@ -74,6 +94,9 @@ body {
 
 .logo {
     display: grid;
+}
+.logo2 {
+    display: none;
 }
 
 .burger-button img {
@@ -117,7 +140,87 @@ body {
     font-size: 0.7rem;
     right: 0.7vw;
     margin-top: 0.7vw;
+    margin: 0;
 }
+
+/*--------------FORSIDE---------------*/
+
+main{
+    width: 100vw;
+}
+
+/*'louise roe gallery' billede og overskrift*/
+.wp-image-106{
+   margin: 3vw;
+    width: 94vw;
+    margin-top: 8vw;
+}
+
+.blok1 figcaption {
+    position: absolute;
+    top: 4.5vw;
+    left: 3vw;
+}
+
+.blok1 {
+    position: relative;
+}
+
+/*'retailers' billede og overskrift*/
+.wp-image-108 {
+    margin: 3vw;
+    width: 94vw;
+    margin-top: 8vw;
+}
+.blok2 figcaption {
+    position: absolute;
+    top: 5vw;
+    right: 3.2vw;
+}
+.blok2 {
+    position: relative;
+}
+/*'press' billede og overskrift*/
+.wp-image-109 {
+    margin: 3vw;
+    width: 94vw;
+    margin-top: 8vw;
+}
+.blok3 figcaption {
+    position: absolute;
+    top: 17.5vw;
+    left: 3vw;
+}
+.blok3 {
+    position: relative;
+}
+
+/*'coffee table' billede og overskrift*/
+.h2_coffeetable {
+    margin: 3vw;
+    width: 94vw;
+    margin-top: 8vw;
+}
+
+
+/*FOOTER*/
+
+footer {
+   text-align: center;
+}
+.logo_footer {
+    width: 100vw;
+}
+
+
+footer a {
+    font-family: 'DIN';
+    text-decoration: none;
+    color: black;
+    padding-bottom: 1vw;
+    margin: 5vw
+}
+
 
 /*-----------------------------MEDIAQUERY FOR IPAD------------------------------------*/
 
@@ -130,6 +233,44 @@ body {
 
     #menu {
         top: 140px;
+    }
+
+    /*--------------FORSIDE---------------*/
+
+/*'louise roe gallery' billede og overskrift*/
+
+
+.blok1 figcaption {
+    top: 5.5vw;
+}
+
+/*'retailers' billede og overskrift*/
+
+.blok2 figcaption {
+    top: 6vw;
+}
+
+/*'press' billede og overskrift*/
+
+.blok3 figcaption {
+    top: 18.4vw;
+}
+
+    /*FOOTER*/
+
+footer a {
+    margin: 7vw
+}
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+/*forside-splash*/
+ .wp-image-157{
+        width: 100%;
+        padding: 0;
+        margin: 0;
     }
 
 
@@ -148,14 +289,13 @@ body {
         grid-template-columns: none;
         height: 25vh;
 
-
     }
 
     .a {
         grid-area: a;
     }
     .b {
-        grd-area: b;
+        grid-area: b;
     }
     .c {
         grid-area: c;
@@ -175,16 +315,15 @@ body {
 
     .logo2 img {
         width: 100%;
-        max-width:400px;
+        max-width: 400px;
         position: fixed;
-        margin:0 auto;
         z-index: -1;
         cursor: pointer;
 }
     .logo2{
         grid-area: logo;
-
-
+        margin-left: -0.5vw;
+        display: block;
     }
 
 
@@ -192,7 +331,6 @@ body {
         background-color: transparent;
         width: initial;
         margin: 0;
-        height: 30vh;
         width: 100vw;
         top: 0;
     }
@@ -219,4 +357,18 @@ body {
     }
 
     #menu li a {}
+
+
+
+footer a {
+    font-family: 'DIN';
+    text-decoration: none;
+    color: black;
+    padding-bottom: 1vw;
+    margin: 5vw;
+/*    transform: rotate(90deg);
+  transform-origin: top left;}*/
 }
+
+
+
