@@ -13,6 +13,7 @@
     <div class="container">
 
         <header>
+
             <!--- LOGO --->
             <a href="index.html">
                 <div class="logo">
@@ -26,18 +27,21 @@
             </div>
             <nav id="menu" class="hide">
                 <ul>
-                    <li><a href="shop.html">SHOP</a></li>
-                    <li><a href="conceptstore.html">CONCEPT STORE</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="stories.html">STORIES</a></li>
+                    <li><a class="a" href="shop.html">shop</a></li>
+                    <li><a class="b" href="conceptstore.html">concept store</a></li>
+                    <a href="index.html">
+                        <div class="logo2">
+                            <img src="img/nyt_logo_copenhagen_FINAL.png" alt="logo">
+                        </div>
+                    </a>
+                    <li><a class="c" href="about.html">about</a></li>
+                    <li><a class="d" href="stories.html">stories</a></li>
                 </ul>
             </nav>
-
         </header>
 
         <main>
             <h1 class="overskrift"></h1>
-            <h2 class="underoverskrift"></h2>
             <div class="indhold"></div>
         </main>
 
@@ -55,23 +59,7 @@
         function sidenVises() {
             console.log("siden vises");
 
-            // billederne skal linke til nye html-sider
-            document.querySelector(".underoverskrift").addEventListener("click", visInspirationSide);
-            document.querySelector(".underoverskrift").addEventListener("click", visProdukterSide);
-
             start();
-        }
-
-        // man bliver taget til inspirationssiden
-        function visInspirationSide() {
-            console.log("klikket på inspiration");
-            location.href = "inspiration.html";
-        }
-
-        // man bliver taget til produktsiden
-        function visProdukterSide() {
-            console.log("klikket på produkter");
-            location.href = "produkter.html";
         }
 
         // starter den generelle hjemmeside
@@ -92,7 +80,25 @@
                 console.log("viser sidens indhold");
                 document.querySelector(".overskrift").textContent = indhold.title.rendered;
                 document.querySelector(".indhold").innerHTML = indhold.content.rendered;
+
+                // billederne skal linke til nye html-sider
+                document.querySelector(".wp-image-94").addEventListener("click", visInspirationSide);
+                document.querySelector(".wp-image-95").addEventListener("click", visProdukterSide);
+
             }
+
+            // man bliver taget til inspirationssiden
+            function visInspirationSide() {
+                console.log("klikket på inspiration");
+                location.href = "inspiration.html";
+            }
+
+            // man bliver taget til produktsiden
+            function visProdukterSide() {
+                console.log("klikket på produkter");
+                location.href = "produkter.html";
+            }
+
             getJson();
         }
     </script>
