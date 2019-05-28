@@ -81,6 +81,10 @@ p {
     margin: 3vw;
 }
 
+h1.overskrift {
+    display: none;
+}
+
 /***--------- HEADER ------------- ***/
 
 /*** logo ***/
@@ -202,6 +206,32 @@ main{
     margin-top: 8vw;
 }
 
+/*--------------shop forside---------------*/
+
+/*inspiration - billede og overskrift*/
+.wp-image-94 {
+    margin: 3vw;
+    width: 94vw;
+    margin-top: 10vw;
+}
+.inspiration_kasse figcaption {
+    position: absolute;
+    top: 25.5vw;
+    left: 3vw;
+}
+
+
+/*produkter - billede og overskrift*/
+.wp-image-95 {
+    margin: 3vw;
+    width: 94vw;
+    margin-top: 8vw;
+}
+.products_kasse figcaption {
+    position: absolute;
+    top: 162.5vw;
+    right: 3vw;
+}
 
 /*FOOTER*/
 
@@ -333,6 +363,7 @@ footer a {
         margin: 0;
         width: 100vw;
         top: 0;
+
     }
 
     .logo img {
@@ -415,6 +446,12 @@ footer a {
     margin-top: 12vw;
 }
 
+/*
+    .publication_img img {
+        align-items: center;
+        margin: 0 auto;
+    }
+*/
 
 
   /******FOOTER******/
