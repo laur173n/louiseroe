@@ -39,31 +39,33 @@
             <h1 class="overskrift"></h1>
             <div class="indhold"></div>
 
-            <div class="menu all">
-                <button class="filter valgt" data-hold="20">All</button>
-            </div>
+            <div class="filtercategories">
+                <div class="all">
+                    <button class="filter valgt" data-hold="20">All</button>
+                </div>
 
-            <h2>Materials</h2>
-            <div class="menu materials">
-                <button class="filter" data-hold="15">Textile</button>
-                <button class="filter" data-hold="9">Metal</button>
-                <button class="filter" data-hold="6">Marble</button>
-                <button class="filter" data-hold="2">Glass</button>
-                <button class="filter" data-hold="14">Paper</button>
-                <button class="filter" data-hold="13">Ceramics</button>
-            </div>
+                <h2>Materials</h2>
+                <div class="materials">
+                    <button class="filter" data-hold="15">Textile</button>
+                    <button class="filter" data-hold="9">Metal</button>
+                    <button class="filter" data-hold="6">Marble</button>
+                    <button class="filter" data-hold="2">Glass</button>
+                    <button class="filter" data-hold="14">Paper</button>
+                    <button class="filter" data-hold="13">Ceramics</button>
+                </div>
 
-            <h2>Colours</h2>
-            <div class="menu colours">
-                <button class="filter" data-hold="19">Amber</button>
-                <button class="filter" data-hold="16">Lotus</button>
-                <button class="filter" data-hold="10">Blue</button>
-                <button class="filter" data-hold="11">Gold</button>
-                <button class="filter" data-hold="7">White</button>
-                <button class="filter" data-hold="3">Burgundy</button>
-                <button class="filter" data-hold="18">Green</button>
-                <button class="filter" data-hold="17">Silver</button>
-                <button class="filter" data-hold="12">Black</button>
+                <h2>Colours</h2>
+                <div class="colours">
+                    <button class="filter" data-hold="19">Amber</button>
+                    <button class="filter" data-hold="16">Lotus</button>
+                    <button class="filter" data-hold="10">Blue</button>
+                    <button class="filter" data-hold="11">Gold</button>
+                    <button class="filter" data-hold="7">White</button>
+                    <button class="filter" data-hold="3">Burgundy</button>
+                    <button class="filter" data-hold="18">Green</button>
+                    <button class="filter" data-hold="17">Silver</button>
+                    <button class="filter" data-hold="12">Black</button>
+                </div>
             </div>
 
             <div id="liste"></div>
@@ -85,12 +87,17 @@
         let produkter = [];
         let filter = "20";
 
+        let dest = document.querySelector("#liste");
+        let temp = document.querySelector("template");
+
         // siden loades
         function sidenVises() {
             console.log("siden vises");
 
             // registrer klik på menuknap
             document.querySelector(".burger-button").addEventListener("click", toggleMenu);
+
+            start();
         }
 
         // burgermenuen skal kunne foldes ind og ud
@@ -109,8 +116,6 @@
                 //menuen er nu vist - ændr menuknap til X
                 document.querySelector(".burger-button img").src = "img/cancel.png";
             }
-
-            start();
         }
 
         // starter den generelle hjemmeside
@@ -131,19 +136,17 @@
                 console.log("viser sidens indhold");
                 document.querySelector(".overskrift").textContent = indhold.title.rendered;
                 document.querySelector(".indhold").innerHTML = indhold.content.rendered;
+                getShop();
             }
-            getJson();
-        }
 
-        // shoppen bliver nu hentet
-        async function getShop() {
-            console.log("henter produkter");
-            let dest = document.querySelector("#liste");
-            let temp = document.querySelector("template");
+            // shoppen bliver nu hentet
+            async function getShop() {
+                console.log("henter produkter");
 
-            let jsonData = await fetch("http://lauravillumsen.com/kea/eksamen/wp/wp-json/wp/v2/posts");
-            produkter = await jsonData.json();
-            visProdukter();
+                let jsonData = await fetch("http://lauravillumsen.com/kea/eksamen/wp/wp-json/wp/v2/posts");
+                produkter = await jsonData.json();
+                visProdukter();
+            }
 
             /*// den gamle kode for loop, som ikke virker, men tør ikke slette det
             function visProdukter() {
@@ -171,7 +174,7 @@
                             <h2>${produkt.title.rendered}</h2>
                             <img class="billede" src="${produkt.content.rendered}" alt="${produkt.title.rendered}>
                         </div>
-                        `
+                        `;
                         // alternative stier til img
                         // http://lauravillumsen.com/kea/eksamen/wp/wp-content/uploads/2019/05/${produkt.slug}.jpg
                         // http://lauravillumsen.com/kea/eksamen/wp/wp-content/uploads/2019/05/${produkt.guid.slug}.jpg
@@ -185,21 +188,44 @@
                 })
             }
 
+            /*function visRetter() {
+                console.log("viser retter");
+                dest.innerHTML = "";
+                alleRetter.forEach(ret => {
+                    if (filter == "alle" || filter == ret.kategori) {
+                        let template = `
+                            <div class="billede">
+                                <img src="img/${ret.billede}.png">
+                                <div class="text">
+                                    <p>${ret.navn}</p>
+                                </div>
+                            </div>`
+                        dest.insertAdjacentHTML("beforeend", template);
+                        dest.lastElementChild.addEventListener("click", () => {
+                            location.href = "singleView.html?id=" + ret.id;
+                        });
+                    }
+                })
+            }*/
+
+            // klik på knapper muliggører filtrering
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+            })
+
+            function filtrering() {
+                console.log("filtrerer produkter");
+                filter = this.getAttribute("data-hold");
+                document.querySelectorAll(".filter").forEach(elm => {
+                    elm.classList.remove("valgt");
+                })
+                this.classList.add("valgt");
+                visProdukter();
+            }
+
+            getShop();
         }
 
-
-        // filtrering muliggøres
-        document.querySelectorAll(".filter").forEach(elm => {
-            elm.addEventListener("click", filtrering);
-        })
-
-        function filtrering() {
-            console.log("filtrerer produkter");
-            filter = this.getAttribute("data-hold");
-
-        }
-
-        getShop();
     </script>
 </body>
 
