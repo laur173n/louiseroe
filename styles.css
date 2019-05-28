@@ -13,7 +13,7 @@
 
 @font-face {
     font-family: 'DIN-Light';
-    src: url('DINPro-Light.woff') format('woff');
+    src: url('fonts/DINPro-Light.woff') format('woff');
 }
 
 /***---------------- GRID ----------------***/
@@ -214,7 +214,7 @@ footer {
 
 
 footer a {
-    font-family: 'DIN';
+    font-family: 'DIN-Light';
     text-decoration: none;
     color: black;
     padding-bottom: 1vw;
@@ -358,17 +358,97 @@ footer a {
 
     #menu li a {}
 
+/******FORSIDE******/
 
+    /*'louise roe gallery' billede og overskrift*/
+.wp-image-106{
+    width: 45%;
+    margin: 0vw;
+    margin-top: 5vw;
+    margin-left: 4vw;
+}
+
+.blok1 figcaption {
+    top: 4vw;
+    left: 4vw;
+}
+
+/*'retailers' billede og overskrift*/
+.wp-image-108 {
+    position: relative;
+    margin: 0vw;
+    width: 40%;
+    margin-top: 0vw;
+   left: 55vw;
+    top: -20vw;
+}
+.blok2 figcaption {
+    top: -20.9vw;
+    left: 83vw;
+}
+
+
+/*'press' billede og overskrift*/
+.wp-image-109 {
+    position: relative;
+    margin: 0vw;
+    width: 40%;
+    margin-top: 0;
+    margin-left: 4vw;
+    top: -47vw;
+}
+
+.blok3 figcaption {
+    top: -42.5vw;
+    left: 4vw;
+}
+
+    .blok3 {
+        height: 0;
+    }
+
+    /*'coffee table' billede og overskrift*/
+
+    .h2_coffeetable {
+    margin-left: 4.5vw;
+    width: 40vw;
+    margin-top: 12vw;
+}
+
+
+
+  /******FOOTER******/
 
 footer a {
     font-family: 'DIN';
     text-decoration: none;
     color: black;
     padding-bottom: 1vw;
-    margin: 5vw;
-/*    transform: rotate(90deg);
-  transform-origin: top left;}*/
+    margin: 2vw;
+}
+
+    .footer_menu {
+        position: fixed;
+       transform: rotate(-90deg);
+        right: -16vw;
+        bottom: 17vw;
+        padding-bottom: 1vw;
+    margin: 0;
+    }
+
 }
 
 
+
+    @media only screen and (min-width: 1180px) {
+       .footer_menu {
+        right: -14.7vw;
+        bottom: 14vw;
+    }
+            /*'retailers' overskrift*/
+
+.blok2 figcaption {
+    left: 84.5vw;
+}
+    }
 
