@@ -47,13 +47,9 @@
             <div class="indhold"></div>
 
             <div class="filtercategories">
-                <div class="all">
-                    <button class="filter valgt" data-hold="20">All</button>
-                </div>
-
                 <h2>Materials</h2>
                 <div class="materials">
-                    <button class="filter" data-hold="Textile">Textile</button>
+                    <button class="filter valgt" data-hold="Textile">Textile</button>
                     <button class="filter" data-hold="Metal">Metal</button>
                     <button class="filter" data-hold="Marble">Marble</button>
                     <button class="filter" data-hold="Glass">Glass</button>
@@ -163,21 +159,6 @@
                 visProdukter();
             }
 
-            /*// den gamle kode for loop, som ikke virker, men tør ikke slette det
-            function visProdukter() {
-                console.log("viser produkter");
-                produkter.forEach(produkt => {
-                    if (produkt.categories == filter) {
-                        dest.innerHTML += `
-                        <div class="produkt">
-                            <h2>${produkt.id.title.rendered}</h2>
-                            <img class="billede" src="${produkt.content.rendered} alt="${produkt.title.rendered}>
-                        </div>
-                        `;
-                    }
-                })
-            }*/
-
             // shoppen bliver nu vist
             function visProdukter() {
                 console.log("viser produkter");
@@ -187,11 +168,12 @@
                         let template = `
                         <div class="produkt">
                             <h2>${produkt.title.rendered}</h2>
-                            <img class="billede" src="${produkt.content.rendered}" alt="${produkt.title.rendered}>
+                            <img src="${produkt.billede.guid}">
                         </div>
                         `;
 
                         // alternative stier til img
+                        // <a href="https://github.com/${person.github}">Github</a>
                         // http://lauravillumsen.com/kea/eksamen/wp/wp-content/uploads/2019/05/${produkt.slug}.jpg
                         // http://lauravillumsen.com/kea/eksamen/wp/wp-content/uploads/2019/05/${produkt.guid.slug}.jpg
                         // ${produkt.content.rendered}
@@ -203,26 +185,6 @@
                     }
                 })
             }
-
-            /*function visRetter() {
-                console.log("viser retter");
-                dest.innerHTML = "";
-                alleRetter.forEach(ret => {
-                    if (filter == "alle" || filter == ret.kategori) {
-                        let template = `
-                            <div class="billede">
-                                <img src="img/${ret.billede}.png">
-                                <div class="text">
-                                    <p>${ret.navn}</p>
-                                </div>
-                            </div>`
-                        dest.insertAdjacentHTML("beforeend", template);
-                        dest.lastElementChild.addEventListener("click", () => {
-                            location.href = "singleView.html?id=" + ret.id;
-                        });
-                    }
-                })
-            }*/
 
             // klik på knapper muliggører filtrering
             document.querySelectorAll(".filter").forEach(elm => {
