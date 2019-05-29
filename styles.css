@@ -116,7 +116,7 @@ h1.overskrift {
 #menu {
     background-color: white;
     position: absolute;
-    top: 100px;
+    top: 90px;
     height: 100%;
     width: 102vw;
     margin: -2vw;
@@ -166,7 +166,7 @@ main{
 
 .blok1 figcaption {
     position: absolute;
-    top: 4.5vw;
+    top: 5.6vw;
     left: 3vw;
 }
 
@@ -182,7 +182,7 @@ main{
 }
 .blok2 figcaption {
     position: absolute;
-    top: 5vw;
+    top: 6vw;
     right: 3.2vw;
 }
 .blok2 {
@@ -196,7 +196,7 @@ main{
 }
 .blok3 figcaption {
     position: absolute;
-    top: 17.5vw;
+    top: 18.2vw;
     left: 3vw;
 }
 .blok3 {
@@ -240,6 +240,7 @@ main{
 /*FOOTER*/
 
 footer {
+    margin-top: 6vw;
    text-align: center;
 }
 .logo_footer {
@@ -266,7 +267,7 @@ footer a {
     }
 
     #menu {
-        top: 140px;
+        top: 100px;
     }
 
     /*--------------FORSIDE---------------*/
@@ -295,6 +296,15 @@ footer a {
 footer a {
     margin: 7vw
 }
+
+    @media only screen and (min-width: 775px) {
+
+         #menu {
+        top: 110px;
+
+    }
+
+    }
 
 }
 
