@@ -85,6 +85,7 @@ h1.overskrift {
     display: none;
 }
 
+
 /***--------- HEADER ------------- ***/
 
 /*** logo ***/
@@ -145,6 +146,9 @@ h1.overskrift {
     right: 0.7vw;
     margin-top: 0.7vw;
     margin: 0;
+}
+.valgt {
+    font-weight: 800;
 }
 
 /*--------------FORSIDE---------------*/
@@ -363,6 +367,7 @@ footer a {
         margin: 0;
         width: 100vw;
         top: 0;
+        z-index: -1;
 
     }
 
