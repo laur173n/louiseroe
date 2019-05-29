@@ -24,17 +24,17 @@
 
             <!--- BURGER MENU --->
             <div class="burger-button">
-                 <img src="img/burgermenu.png" alt="menu">
+                <img src="img/burgermenu.png" alt="menu">
             </div>
             <nav id="menu" class="hide">
                 <ul>
                     <li><a class="a" href="shop.html">shop</a></li>
                     <li><a class="b" href="conceptstore.html">concept store</a></li>
                     <a href="index.html">
-                <div class="logo2">
-                    <img src="img/nyt_logo_copenhagen_FINAL.png" alt="logo">
-                </div>
-            </a>
+                        <div class="logo2">
+                            <img src="img/nyt_logo_copenhagen_FINAL.png" alt="logo">
+                        </div>
+                    </a>
                     <li><a class="c" href="about.html">about</a></li>
                     <li><a class="d" href="stories.html">stories</a></li>
                 </ul>
@@ -53,25 +53,25 @@
 
                 <h2>Materials</h2>
                 <div class="materials">
-                    <button class="filter" data-hold="15">Textile</button>
-                    <button class="filter" data-hold="9">Metal</button>
-                    <button class="filter" data-hold="6">Marble</button>
-                    <button class="filter" data-hold="2">Glass</button>
-                    <button class="filter" data-hold="14">Paper</button>
-                    <button class="filter" data-hold="13">Ceramics</button>
+                    <button class="filter" data-hold="Textile">Textile</button>
+                    <button class="filter" data-hold="Metal">Metal</button>
+                    <button class="filter" data-hold="Marble">Marble</button>
+                    <button class="filter" data-hold="Glass">Glass</button>
+                    <button class="filter" data-hold="Paper">Paper</button>
+                    <button class="filter" data-hold="Ceramics">Ceramics</button>
                 </div>
 
                 <h2>Colours</h2>
                 <div class="colours">
-                    <button class="filter" data-hold="19">Amber</button>
-                    <button class="filter" data-hold="16">Lotus</button>
-                    <button class="filter" data-hold="10">Blue</button>
-                    <button class="filter" data-hold="11">Gold</button>
-                    <button class="filter" data-hold="7">White</button>
-                    <button class="filter" data-hold="3">Burgundy</button>
-                    <button class="filter" data-hold="18">Green</button>
-                    <button class="filter" data-hold="17">Silver</button>
-                    <button class="filter" data-hold="12">Black</button>
+                    <button class="filter" data-hold="Amber">Amber</button>
+                    <button class="filter" data-hold="Lotus">Lotus</button>
+                    <button class="filter" data-hold="Blue">Blue</button>
+                    <button class="filter" data-hold="Gold">Gold</button>
+                    <button class="filter" data-hold="White">White</button>
+                    <button class="filter" data-hold="Burgundy">Burgundy</button>
+                    <button class="filter" data-hold="Green">Green</button>
+                    <button class="filter" data-hold="Silver">Silver</button>
+                    <button class="filter" data-hold="Black">Black</button>
                 </div>
             </div>
 
@@ -81,12 +81,12 @@
         </main>
 
         <footer>
-           <img class="logo_footer" src="img/footer.png" alt="footer logo">
-           <div class="footer_menu">
-            <a href="contact.html">contact</a>
-            <a href="press.html">press</a>
-            <a href="retailers.html">retailers</a>
-            <a href="policies.html">policies</a>
+            <img class="logo_footer" src="img/footer.png" alt="footer logo">
+            <div class="footer_menu">
+                <a href="contact.html">contact</a>
+                <a href="press.html">press</a>
+                <a href="retailers.html">retailers</a>
+                <a href="policies.html">policies</a>
             </div>
         </footer>
 
@@ -100,7 +100,7 @@
 
         // shoppens indhold
         let produkter = [];
-        let filter = "20";
+        let filter = "Textile";
 
         let dest = document.querySelector("#liste");
         let temp = document.querySelector("template");
@@ -183,13 +183,14 @@
                 console.log("viser produkter");
                 dest.innerHTML = "";
                 produkter.forEach(produkt => {
-                    if (filter == "20" || filter == produkt.categories) {
+                    if (filter == produkt.colours || filter == produkt.materials) {
                         let template = `
                         <div class="produkt">
                             <h2>${produkt.title.rendered}</h2>
                             <img class="billede" src="${produkt.content.rendered}" alt="${produkt.title.rendered}>
                         </div>
                         `;
+
                         // alternative stier til img
                         // http://lauravillumsen.com/kea/eksamen/wp/wp-content/uploads/2019/05/${produkt.slug}.jpg
                         // http://lauravillumsen.com/kea/eksamen/wp/wp-content/uploads/2019/05/${produkt.guid.slug}.jpg
@@ -240,7 +241,6 @@
 
             getShop();
         }
-
     </script>
 </body>
 
