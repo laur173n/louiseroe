@@ -221,15 +221,6 @@ main {
 /*--------------shop forside---------------*/
 
 /*inspiration - billede og overskrift*/
-.wp-image-94 {
-    /*
-    margin: 3vw;
-    width: 94vw;
-    margin-top: 10vw;
-*/
-    flex-basis: 400px;
-    flex-grow: 1;
-}
 
 .inspiration_kasse figcaption {
     position: absolute;
@@ -239,15 +230,6 @@ main {
 
 
 /*produkter - billede og overskrift*/
-.wp-image-95 {
-    /*
-    margin: 3vw;
-    width: 94vw;
-    margin-top: 8vw;
-*/
-    flex-basis: 400px;
-    flex-grow: 1;
-}
 
 .products_kasse figcaption {
     position: absolute;
@@ -258,6 +240,7 @@ main {
 .indhold_shop {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 /*-------------------FOOTER-----------------*/
@@ -496,6 +479,53 @@ footer a {
 */
 
     /*--------SHOP---------*/
+
+    /*fjernelse af mobil billede-versioner*/
+    .wp-image-191 {
+        display: none;
+    }
+
+    .mobile_shop_inspiration figcaption {
+        display: none;
+    }
+
+    .wp-image-192 {
+        display: none;
+    }
+
+    .mobile_shop_produkter figcaption {
+        display: none;
+    }
+
+    /*styles af desktop billeder*/
+
+    .wp-image-190 {
+        width: 550px;
+        margin: 3vw;
+        transition: 3s height;
+
+    }
+
+    .desktop_shop_inspiration figcaption {
+        position: absolute;
+        top: 14.5vw;
+        left: 7vw;
+    }
+
+    .desktop_shop_produkter figcaption {
+        position: absolute;
+        top: 14.5vw;
+        right: 7vw;
+    }
+
+    .wp-image-193 {
+        width: 550px;
+        margin: 3vw;
+    }
+
+    open {
+        height: 100%;
+    }
 
     /******FOOTER******/
 
