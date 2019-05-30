@@ -144,7 +144,7 @@ h1.overskrift {
     position: absolute;
     font-family: 'DIN';
     font-size: 0.7rem;
-    right: 1vw;
+    right: 0.7vw;
     margin-top: 0.7vw;
     margin: 0;
 }
@@ -221,7 +221,7 @@ main {
 
 /*inspiration - billede og overskrift*/
 .wp-image-94 {
-/*
+    /*
     margin: 3vw;
     width: 94vw;
     margin-top: 10vw;
@@ -239,7 +239,7 @@ main {
 
 /*produkter - billede og overskrift*/
 .wp-image-95 {
-/*
+    /*
     margin: 3vw;
     width: 94vw;
     margin-top: 8vw;
@@ -252,10 +252,6 @@ main {
     position: absolute;
     top: 162.5vw;
     right: 3vw;
-}
-
-.publications_text {
-    margin: 3vw;
 }
 
 .indhold_shop {
@@ -502,32 +498,7 @@ footer a {
 
     /******FOOTER******/
 
-
-footer a {
-    font-family: 'DIN-light';
-    text-decoration: none;
-    color: black;
-    padding-bottom: 1vw;
-    margin: 2vw;
-}
-
-    .footer_menu {
-        position: fixed;
-       transform: rotate(-90deg);
-        right: -20vw;
-    }
-    .footer a {
-        font-family: 'DIN';
-        text-decoration: none;
-        color: black;
-        padding-bottom: 1vw;
-        margin: 2vw;
-    }
-
-    .footer_menu {
-        position: fixed;
-    }
-    .footer a {
+    footer a {
         font-family: 'DIN';
         text-decoration: none;
         color: black;
@@ -548,10 +519,6 @@ footer a {
 
 
 
-    @media only screen and (min-width: 1180px) {
-       .footer_menu {
-        right: -14.6vw;
-        }
 @media only screen and (min-width: 1180px) {
     .footer_menu {
         right: -14.7vw;
