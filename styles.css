@@ -498,36 +498,7 @@ footer a {
 
     /******FOOTER******/
 
-<<<<<<< HEAD
-
-footer a {
-    font-family: 'DIN-light';
-    text-decoration: none;
-    color: black;
-    padding-bottom: 1vw;
-    margin: 2vw;
-}
-
-    .footer_menu {
-        position: fixed;
-       transform: rotate(-90deg);
-        right: -20vw;
-    }
-    .footer a {
-        font-family: 'DIN-light';
-        text-decoration: none;
-        color: black;
-        padding-bottom: 1vw;
-        margin: 2vw;
-    }
-
-    .footer_menu {
-        position: fixed;
-    }
-    .footer a {
-=======
     footer a {
->>>>>>> origin/master
         font-family: 'DIN';
         text-decoration: none;
         color: black;
