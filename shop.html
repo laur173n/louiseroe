@@ -71,13 +71,7 @@
             document.querySelector(".burger-button").addEventListener("click", toggleMenu);
 
             start();
-            animationBilleder();
-
         }
-
-        function animationBilleder() {
-            document.querySelector(".wp-image-190").classList.add(".open");
-        };
 
         function toggleMenu() {
             console.log("Toggle menu");
@@ -119,7 +113,9 @@
 
                 // billederne skal linke til nye html-sider
                 document.querySelector(".wp-image-190").addEventListener("click", visInspirationSide);
+                document.querySelector(".wp-image-191").addEventListener("click", visInspirationSide);
                 document.querySelector(".wp-image-193").addEventListener("click", visProdukterSide);
+                document.querySelector(".wp-image-192").addEventListener("click", visProdukterSide);
 
             }
 
@@ -137,6 +133,7 @@
 
             getJson();
         }
+
     </script>
 </body>
 
