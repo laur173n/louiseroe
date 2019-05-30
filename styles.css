@@ -62,7 +62,7 @@ body {
     pointer-events: none;
 }
 
-h2{
+h2 {
     font-family: palatino;
     font-weight: 100;
     font-size: 1.5rem;
@@ -75,7 +75,7 @@ figcaption {
 }
 
 p {
-   font-family: palatino;
+    font-family: palatino;
     font-size: 1rem;
     line-height: 1.5rem;
     margin: 3vw;
@@ -100,6 +100,7 @@ h1.overskrift {
 .logo {
     display: grid;
 }
+
 .logo2 {
     display: none;
 }
@@ -147,19 +148,20 @@ h1.overskrift {
     margin-top: 0.7vw;
     margin: 0;
 }
+
 .valgt {
     font-weight: 800;
 }
 
 /*--------------FORSIDE---------------*/
 
-main{
+main {
     width: 100vw;
 }
 
 /*'louise roe gallery' billede og overskrift*/
-.wp-image-106{
-   margin: 3vw;
+.wp-image-106 {
+    margin: 3vw;
     width: 94vw;
     margin-top: 8vw;
 }
@@ -180,25 +182,30 @@ main{
     width: 94vw;
     margin-top: 8vw;
 }
+
 .blok2 figcaption {
     position: absolute;
     top: 6vw;
     right: 3.2vw;
 }
+
 .blok2 {
     position: relative;
 }
+
 /*'press' billede og overskrift*/
 .wp-image-109 {
     margin: 3vw;
     width: 94vw;
     margin-top: 8vw;
 }
+
 .blok3 figcaption {
     position: absolute;
     top: 18.2vw;
     left: 3vw;
 }
+
 .blok3 {
     position: relative;
 }
@@ -214,10 +221,15 @@ main{
 
 /*inspiration - billede og overskrift*/
 .wp-image-94 {
+/*
     margin: 3vw;
     width: 94vw;
     margin-top: 10vw;
+*/
+    flex-basis: 400px;
+    flex-grow: 1;
 }
+
 .inspiration_kasse figcaption {
     position: absolute;
     top: 25.5vw;
@@ -227,26 +239,41 @@ main{
 
 /*produkter - billede og overskrift*/
 .wp-image-95 {
+/*
     margin: 3vw;
     width: 94vw;
     margin-top: 8vw;
+*/
+    flex-basis: 400px;
+    flex-grow: 1;
 }
+
 .products_kasse figcaption {
     position: absolute;
     top: 162.5vw;
     right: 3vw;
 }
 
+<<<<<<< HEAD
 .publications_text {
     margin: 3vw;
 }
 
 /*FOOTER*/
+=======
+.indhold_shop {
+    display: flex;
+    flex-direction: row;
+}
+
+/*-------------------FOOTER-----------------*/
+>>>>>>> origin/master
 
 footer {
     margin-top: 6vw;
-   text-align: center;
+    text-align: center;
 }
+
 .logo_footer {
     width: 100vw;
 }
@@ -276,37 +303,37 @@ footer a {
 
     /*--------------FORSIDE---------------*/
 
-/*'louise roe gallery' billede og overskrift*/
+    /*'louise roe gallery' billede og overskrift*/
 
 
-.blok1 figcaption {
-    top: 5.5vw;
-}
+    .blok1 figcaption {
+        top: 5.5vw;
+    }
 
-/*'retailers' billede og overskrift*/
+    /*'retailers' billede og overskrift*/
 
-.blok2 figcaption {
-    top: 6vw;
-}
+    .blok2 figcaption {
+        top: 6vw;
+    }
 
-/*'press' billede og overskrift*/
+    /*'press' billede og overskrift*/
 
-.blok3 figcaption {
-    top: 18.4vw;
-}
+    .blok3 figcaption {
+        top: 18.4vw;
+    }
 
     /*FOOTER*/
 
-footer a {
-    margin: 7vw
-}
+    footer a {
+        margin: 7vw
+    }
 
     @media only screen and (min-width: 775px) {
 
-         #menu {
-        top: 110px;
+        #menu {
+            top: 110px;
 
-    }
+        }
 
     }
 
@@ -314,8 +341,8 @@ footer a {
 
 @media only screen and (min-width: 1024px) {
 
-/*forside-splash*/
- .wp-image-157{
+    /*forside-splash*/
+    .wp-image-157 {
         width: 100%;
         padding: 0;
         margin: 0;
@@ -342,17 +369,20 @@ footer a {
     .a {
         grid-area: a;
     }
+
     .b {
         grid-area: b;
     }
+
     .c {
         grid-area: c;
     }
+
     .d {
         grid-area: d;
     }
 
-    ul{
+    ul {
         display: grid;
         grid-template-areas:
             "a b . c d";
@@ -367,8 +397,9 @@ footer a {
         position: fixed;
         z-index: -1;
         cursor: pointer;
-}
-    .logo2{
+    }
+
+    .logo2 {
         grid-area: logo;
         margin-left: -0.5vw;
         display: block;
@@ -385,9 +416,7 @@ footer a {
 
     }
 
-    .logo img {
-
-    }
+    .logo img {}
 
     .logo {
         display: none;
@@ -408,50 +437,51 @@ footer a {
 
     #menu li a {}
 
-/******FORSIDE******/
+    /******FORSIDE******/
 
     /*'louise roe gallery' billede og overskrift*/
-.wp-image-106{
-    width: 45%;
-    margin: 0vw;
-    margin-top: 5vw;
-    margin-left: 4vw;
-}
+    .wp-image-106 {
+        width: 45%;
+        margin: 0vw;
+        margin-top: 5vw;
+        margin-left: 4vw;
+    }
 
-.blok1 figcaption {
-    top: 4vw;
-    left: 4vw;
-}
+    .blok1 figcaption {
+        top: 4vw;
+        left: 4vw;
+    }
 
-/*'retailers' billede og overskrift*/
-.wp-image-108 {
-    position: relative;
-    margin: 0vw;
-    width: 40%;
-    margin-top: 0vw;
-   left: 55vw;
-    top: -20vw;
-}
-.blok2 figcaption {
-    top: -20.9vw;
-    left: 83vw;
-}
+    /*'retailers' billede og overskrift*/
+    .wp-image-108 {
+        position: relative;
+        margin: 0vw;
+        width: 40%;
+        margin-top: 0vw;
+        left: 55vw;
+        top: -20vw;
+    }
+
+    .blok2 figcaption {
+        top: -20.9vw;
+        left: 83vw;
+    }
 
 
-/*'press' billede og overskrift*/
-.wp-image-109 {
-    position: relative;
-    margin: 0vw;
-    width: 40%;
-    margin-top: 0;
-    margin-left: 4vw;
-    top: -47vw;
-}
+    /*'press' billede og overskrift*/
+    .wp-image-109 {
+        position: relative;
+        margin: 0vw;
+        width: 40%;
+        margin-top: 0;
+        margin-left: 4vw;
+        top: -47vw;
+    }
 
-.blok3 figcaption {
-    top: -42.5vw;
-    left: 4vw;
-}
+    .blok3 figcaption {
+        top: -42.5vw;
+        left: 4vw;
+    }
 
     .blok3 {
         height: 0;
@@ -460,21 +490,23 @@ footer a {
     /*'coffee table' billede og overskrift*/
 
     .h2_coffeetable {
-    margin-left: 4.5vw;
-    width: 40vw;
-    margin-top: 12vw;
-}
+        margin-left: 4.5vw;
+        width: 40vw;
+        margin-top: 12vw;
+    }
 
-/*
+    /*
     .publication_img img {
         align-items: center;
         margin: 0 auto;
     }
 */
 
+    /*--------SHOP---------*/
 
-  /******FOOTER******/
+    /******FOOTER******/
 
+<<<<<<< HEAD
 footer a {
     font-family: 'DIN-light';
     text-decoration: none;
@@ -487,24 +519,44 @@ footer a {
         position: fixed;
        transform: rotate(-90deg);
         right: -20vw;
+=======
+    footer a {
+        font-family: 'DIN';
+        text-decoration: none;
+        color: black;
+        padding-bottom: 1vw;
+        margin: 2vw;
+    }
+
+    .footer_menu {
+        position: fixed;
+        transform: rotate(-90deg);
+        right: -16vw;
+>>>>>>> origin/master
         bottom: 17vw;
         padding-bottom: 1vw;
-    margin: 0;
+        margin: 0;
     }
 
 }
 
 
 
+<<<<<<< HEAD
     @media only screen and (min-width: 1180px) {
        .footer_menu {
         right: -14.6vw;
+=======
+@media only screen and (min-width: 1180px) {
+    .footer_menu {
+        right: -14.7vw;
+>>>>>>> origin/master
         bottom: 14vw;
     }
-            /*'retailers' overskrift*/
 
-.blok2 figcaption {
-    left: 84.5vw;
-}
+    /*'retailers' overskrift*/
+
+    .blok2 figcaption {
+        left: 84.5vw;
     }
-
+}
