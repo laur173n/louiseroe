@@ -487,15 +487,19 @@ footer a {
         margin-top: 12vw;
     }
 
-    .publications_text {
-    margin: 3vw;
-}
+    /*
+    .publication_img img {
+        align-items: center;
+        margin: 0 auto;
+    }
+*/
 
     /*--------SHOP---------*/
 
     /******FOOTER******/
 
     footer a {
+        font-family: 'DIN';
         text-decoration: none;
         color: black;
         padding-bottom: 1vw;
