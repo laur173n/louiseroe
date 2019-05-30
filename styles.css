@@ -144,13 +144,14 @@ h1.overskrift {
     position: absolute;
     font-family: 'DIN';
     font-size: 0.7rem;
-    right: 0.7vw;
+    right: 1vw;
     margin-top: 0.7vw;
     margin: 0;
 }
 
 .valgt {
-    font-weight: 800;
+    font-family: 'DIN-Bold';
+    font-weight: bold;
 }
 
 /*--------------FORSIDE---------------*/
