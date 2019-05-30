@@ -254,26 +254,16 @@ main {
     right: 3vw;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 .publications_text {
     margin: 3vw;
 }
 
-/*FOOTER*/
-=======
-=======
->>>>>>> origin/master
 .indhold_shop {
     display: flex;
     flex-direction: row;
 }
 
 /*-------------------FOOTER-----------------*/
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
 
 footer {
     margin-top: 6vw;
@@ -512,8 +502,7 @@ footer a {
 
     /******FOOTER******/
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 footer a {
     font-family: 'DIN-light';
     text-decoration: none;
@@ -526,8 +515,8 @@ footer a {
         position: fixed;
        transform: rotate(-90deg);
         right: -20vw;
-=======
-    footer a {
+    }
+    .footer a {
         font-family: 'DIN';
         text-decoration: none;
         color: black;
@@ -537,8 +526,8 @@ footer a {
 
     .footer_menu {
         position: fixed;
-=======
-    footer a {
+    }
+    .footer a {
         font-family: 'DIN';
         text-decoration: none;
         color: black;
@@ -548,10 +537,8 @@ footer a {
 
     .footer_menu {
         position: fixed;
->>>>>>> origin/master
         transform: rotate(-90deg);
         right: -16vw;
->>>>>>> origin/master
         bottom: 17vw;
         padding-bottom: 1vw;
         margin: 0;
@@ -561,18 +548,13 @@ footer a {
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     @media only screen and (min-width: 1180px) {
        .footer_menu {
         right: -14.6vw;
-=======
-=======
->>>>>>> origin/master
+        }
 @media only screen and (min-width: 1180px) {
     .footer_menu {
         right: -14.7vw;
->>>>>>> origin/master
         bottom: 14vw;
     }
 
