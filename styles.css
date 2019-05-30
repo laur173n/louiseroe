@@ -107,7 +107,7 @@ h1.overskrift {
 
 .burger-button img {
     width: 30px;
-    margin-top: 11vw;
+    margin-top: 8vw;
     margin-left: 7vw;
     cursor: pointer;
 
@@ -121,6 +121,7 @@ h1.overskrift {
     height: 100%;
     width: 102vw;
     margin: -2vw;
+    z-index: 2;
 }
 
 #menu li {
