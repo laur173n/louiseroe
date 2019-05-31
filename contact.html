@@ -41,7 +41,8 @@
         </header>
 
         <main>
-
+            <h1 class="overskrift"></h1>
+            <div class="indhold"></div>
         </main>
 
         <footer>
@@ -55,7 +56,69 @@
         </footer>
 
     </div>
-    <script src=""></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", sidenVises);
+
+        // hjemmesidens generelle indhold
+        let indhold;
+
+        // siden loades
+        function sidenVises() {
+            console.log("siden vises");
+            // registrer klik på menuknap
+            document.querySelector(".burger-button").addEventListener("click", toggleMenu);
+
+            start();
+        }
+
+        function toggleMenu() {
+            console.log("Toggle menu");
+            document.querySelector("#menu").classList.toggle("hide");
+
+            let erSkjult = document.querySelector("#menu").classList.contains("hide");
+            document.querySelector("header").classList.toggle("burgermenu_fix");
+
+
+            if (erSkjult == true) {
+                //menuen er skjult - ændr menuknap til lll
+                document.querySelector(".burger-button img").src = "img/burgermenu.png";
+            } else {
+                //menuen er nu vist - ændr menuknap til X
+                document.querySelector(".burger-button img").src = "img/cancel.png";
+            }
+
+        }
+
+
+        // starter den generelle hjemmeside
+        function start() {
+            console.log("starter");
+
+            // hjemmesidens generelle indhold bliver nu hentet
+            async function getJson() {
+                console.log("henter sidens indhold");
+                let url = "http://lauravillumsen.com/kea/eksamen/wp/wp-json/wp/v2/pages/274";
+                let jsonData = await fetch(url);
+                indhold = await jsonData.json();
+                visIndhold();
+            }
+
+            // hjemmesidens generelle indhold bliver nu vist
+            function visIndhold() {
+                console.log("viser sidens indhold");
+                document.querySelector(".overskrift").textContent = indhold.title.rendered;
+                document.querySelector(".indhold").innerHTML = indhold.content.rendered;
+
+
+            }
+
+            getJson();
+        }
+
+
+
+
+    </script>
 </body>
 </html>
 

@@ -372,16 +372,18 @@ button {
     width: 94vw;
     margin: 3vw;
 }
-/*contact*/
+/*contact - about*/
 
 .contactp {
     margin-top: 12vw;
     margin-bottom: 8vw;
 }
 
+/********CONTACT*******/
 
-
-
+.follow_contact {
+    margin: 12vw 3vw;
+}
 
 /*-------------------FOOTER-----------------*/
 
@@ -402,6 +404,8 @@ footer a {
     padding-bottom: 1vw;
     margin: 5vw
 }
+
+
 
 /*------------------------------MEDIAQUERY FOR 400PX-------------------------------*/
 @media only screen and (min-width: 400px) {}
@@ -505,53 +509,32 @@ footer a {
 
     }
 
-    /*************  ABOUT  *************/
-
-    .indhold_about {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-
+/*  ABOUT */
+/*    ABOUT - overskrift*/
+    .thedesigner_overskrift {
+        top: 23.5vw;
     }
-    .wp-image-113 {
-        flex-grow: 1;
-        flex-basis: 200px;
-    }
-
-    p.about_tekst {
-        flex-grow: 1;
-        flex-basis: 200px;
-    }
-
 
     /*--------------FOOTER----------------*/
 
     footer a {
         margin: 7vw
     }
-
-    @media only screen and (min-width: 775px) {
-
-        #menu {
-            top: 110px;
-
-        }
-
-    }
-
 }
 
-@media only screen and (min-width: 1024px) {
 
-    /*forside-splash*/
-    .wp-image-157 {
-        width: 100%;
-        padding: 0;
-        margin: 0;
+@media only screen and (min-width: 620px) {
+    /*  ABOUT */
+/*    ABOUT - overskrift*/
+    .thedesigner_overskrift {
+        top: 22.5vw;
     }
-
-
 }
+
+
+
+
+
 
 
 /*-------------------------MEDIAQUERY FOR webshop/IPAD--------------------------*/
@@ -607,6 +590,110 @@ footer a {
         display: block;
 
     }
+     /*************  ABOUT  *************/
+
+    .indhold_about {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-top: 10vw;
+
+    }
+    .wp-image-113 {
+        flex-grow: 1;
+        width: 40vw;
+        margin: 3vw;
+    }
+
+    p.about_tekst {
+        flex-grow: 1;
+        flex-basis: 200px;
+        width: 50vw;
+        margin: 10vw 3vw 3vw 0;
+    }
+
+    .thedesigner_overskrift {
+        display: none;
+    }
+
+    .about_overskrift_website {
+        position: absolute;
+        left: 35vw;
+        top: 17vw;
+        font-size: 1.7rem;
+    }
+    .about_overskrift_website2 {
+        position: absolute;
+        left: 46vw;
+        top: 23vw;
+        font-size: 1.7rem;
+    }
+
+    .wp-image-218 {
+        flex-grow: 1;
+        width: 50vw;
+        margin: 3vw;
+    }
+     p.followus {
+        flex-grow: 1;
+        width: 30vw;
+        margin: 3vw;
+    }
+    .contactp {
+        position: absolute;
+        top:125vw;
+        left: 7vw;
+    }
+
+    /********CONTACT*******/
+
+    .follow_contact {
+    position: absolute;
+    margin: 0vw 3vw;
+}
+    p.contact_tekst {
+        margin-top:8vw;
+    }
+
+
+}
+
+
+    @media only screen and (min-width: 775px) {
+
+        #menu {
+            top: 110px;
+
+        }
+
+
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+    /*forside-splash*/
+    .wp-image-157 {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .about_overskrift_website {
+        left: 37.6vw;
+        top: 16vw;
+
+    }
+    .about_overskrift_website2 {
+        left: 46vw;
+        top: 21vw;
+
+    }
+     .contactp {
+        top:115vw;
+        left: 11vw;
+    }
+
 }
 
 /*-----------------------------MEDIAQUERY FOR WEBSITE------------------------------------*/
@@ -694,6 +781,47 @@ footer a {
     }
 
     #menu li a {}
+
+/*    MENU HOVER */
+    *,
+    *:after,
+    *:before {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0 none;
+        position: relative;
+        outline: none;
+    }
+
+    #menu li > a {
+        text-decoration: none;
+        z-index: 1;
+    }
+
+    #menu li > a:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background: black;
+        visibility: hidden;
+        border-radius: 5px;
+        transform: scaleX(0);
+        transition: .25s linear;
+    }
+
+    #menu li > a:hover:before,
+    #menu li > a:focus:before {
+        visibility: visible;
+        transform: scaleX(1);
+    }
 
     /******FORSIDE******/
 
@@ -1023,13 +1151,19 @@ button {
         margin: 0;
     }
 
+     /********CONTACT*******/
+
+    p.contact_tekst {
+        margin-top:0vw;
+    }
+
 }
 
 
 
 @media only screen and (min-width: 1180px) {
     .footer_menu {
-        right: -14.7vw;
+        right: -15.7vw;
         bottom: 14vw;
     }
 
@@ -1037,5 +1171,54 @@ button {
 
     .blok2 figcaption {
         left: 84.5vw;
+    }
+
+/*--------ABOUT--------*/
+    .indhold_about {
+        margin-top: 4vw;
+    }
+    p.about_tekst {
+        margin-top: 7vw;
+        flex-basis: 400px;
+        width: 50%;
+    }
+    .about_overskrift_website {
+        top: 13vw;
+        left: 38.5vw;
+    }
+
+    .about_overskrift_website2 {
+        top: 16.3vw;
+        left: 46vw;
+    }
+     .contactp {
+        top:110vw;
+        left: 13vw;
+    }
+}
+
+@media only screen and (min-width: 1250px) {
+    .footer_menu {
+        right: -15.5vw;
+    }
+    .about_overskrift_website {
+        top: 15vw;
+        left: 39vw;
+    }
+
+    .about_overskrift_website2 {
+        top: 18.5vw;
+        left: 46vw;
+    }
+}
+
+@media only screen and (min-width: 1320px) {
+    .footer_menu {
+        right: -15.3vw;
+    }
+}
+@media only screen and (min-width: 1375px) {
+    .footer_menu {
+        right: -15vw;
     }
 }
