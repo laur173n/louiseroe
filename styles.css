@@ -432,7 +432,7 @@ footer a {
     /* MENU */
 
     .burger-button img {
-        margin-top: 7vw;
+        margin-top: 6vw;
     }
 
     #menu {
@@ -1168,7 +1168,7 @@ button {
         margin: 0;
     }
 
-     /********CONTACT*******/
+     /*------------CONTACT--------------*/
 
     p.contact_tekst {
         margin-top:0vw;
