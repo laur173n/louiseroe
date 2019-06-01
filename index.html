@@ -42,6 +42,20 @@
         </header>
 
         <main>
+            <!--https://www.w3schools.com/howto/howto_css_fullscreen_video.asp
+
+            <picture class="shop_inspiration">
+                    <source media="(min-width: 1024px)" srcset="img/shop_inspiration_desktop.jpg">
+                    <source media="(min-width: 716px)" srcset="img/shop_inspiration_desktop.jpg">
+                    <img src="img/shop_inspiration_mobile.jpg" alt="Kort">
+                </picture> -->
+
+            <video autoplay muted loop class="myVideo_desk">
+                <source src="img/louiseroe_desktop.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop class="myVideo_mobile">
+                <source src="img/louiseroe_mobile.mp4" type="video/mp4">
+            </video>
             <h1 class="overskrift"></h1>
             <div class="indhold"></div>
 
@@ -99,7 +113,7 @@
 
         let indhold;
         var slideIndex = 1;
-            showSlides(slideIndex);
+        showSlides(slideIndex);
 
         function sidenVises() {
             //console.log("siden vises");
@@ -174,6 +188,7 @@
             }
             getJson();
         }
+
     </script>
 </body>
 
