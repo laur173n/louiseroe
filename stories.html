@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stories - Louise Roe Copenhagen</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles1.css">
 </head>
 
 
@@ -45,7 +45,7 @@
 
         <main>
             <h1 class="overskrift"></h1>
-            <div class="indhold"></div>
+            <div class="indhold_stories"></div>
         </main>
 
         <footer>
@@ -111,7 +111,7 @@
             function visIndhold() {
                 console.log("viser sidens indhold");
                 document.querySelector(".overskrift").textContent = indhold.title.rendered;
-                document.querySelector(".indhold").innerHTML = indhold.content.rendered;
+                document.querySelector(".indhold_stories").innerHTML = indhold.content.rendered;
 
 
             }
