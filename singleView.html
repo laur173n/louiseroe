@@ -27,7 +27,7 @@
             </div>
             <nav id="menu" class="hide">
                 <ul>
-                    <li><a class="a" href="shop.html">shop</a></li>
+                    <li><a class="a valgt" href="shop.html">shop</a></li>
                     <li><a class="b" href="conceptstore.html">concept store</a></li>
                     <a href="index.html">
                         <div class="logo2">
@@ -49,11 +49,13 @@
         </main>
 
         <footer>
-            <img class="logo_footer" src="img/ikon_plus_streg.png" alt="footer logo">
-            <a href="contact.html">contact</a>
-            <a href="press.html">press</a>
-            <a href="retailers.html">retailers</a>
-            <a href="policies.html">policies</a>
+            <img class="logo_footer" src="img/footer.png" alt="footer logo">
+            <div class="footer_menu">
+                <a href="contact.html">contact</a>
+                <a href="press.html">press</a>
+                <a href="retailers.html">retailers</a>
+                <a href="policies.html">policies</a>
+            </div>
         </footer>
 
     </div>
@@ -91,8 +93,17 @@
                 console.log("åbner indhold");
                 document.querySelector(".indhold").innerHTML = `
                         <div class="produkt">
+
+                            <div class="singleviewbillede>
+                            <img src="${produkt.billede.guid}">
+                            </div>
+
+                            <div class="singleviewdescription>
                             <h2>${produkt.title.rendered}</h2>
-                            <img src="${produkt.content.rendered}">
+                            <p>${produkt.description}</p>
+                            <h2>${produkt.price}</h2>
+                            </div>
+
                         </div>
                         `;
             }
