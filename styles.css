@@ -85,6 +85,15 @@ h1.overskrift {
     display: none;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: grey;
+}
+
 
 /***--------- HEADER ------------- ***/
 
@@ -378,8 +387,14 @@ button {
     margin-top: 12vw;
     margin-bottom: 8vw;
 }
+.about_overskrift_website {
+    display: none;
+}
+.about_overskrift_website2 {
+    display: none;
+}
 
-/********CONTACT*******/
+/*-----------CONTACT---------*/
 
 .follow_contact {
     margin: 12vw 3vw;
@@ -621,12 +636,14 @@ footer a {
         left: 35vw;
         top: 17vw;
         font-size: 1.7rem;
+        display: inline;
     }
     .about_overskrift_website2 {
         position: absolute;
         left: 46vw;
         top: 23vw;
         font-size: 1.7rem;
+        display: inline;
     }
 
     .wp-image-218 {
