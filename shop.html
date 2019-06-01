@@ -42,6 +42,21 @@
         </header>
 
         <main>
+            <div class="shop_container">
+                <h4 class="shop_inspiration_overskrift">INSPIRATION</h4>
+                <picture class="shop_inspiration">
+                    <source media="(min-width: 1024px)" srcset="img/shop_inspiration_desktop.jpg">
+                    <source media="(min-width: 716px)" srcset="img/shop_inspiration_desktop.jpg">
+                    <img src="img/shop_inspiration_mobile.jpg" alt="Kort">
+                </picture>
+                <h4 class="shop_produkter_overskrift">PRODUKTER</h4>
+                <picture class="shop_produkter">
+                    <source media="(min-width: 1024px)" srcset="img/shop_produkter_desktop.jpg">
+                    <source media="(min-width: 716px)" srcset="img/shop_produkter_desktop.jpg">
+                    <img src="img/shop_produkter_mobile.jpg" alt="Kort">
+                </picture>
+            </div>
+
             <h1 class="overskrift"></h1>
             <div class="indhold_shop"></div>
         </main>
@@ -112,10 +127,10 @@
                 document.querySelector(".indhold_shop").innerHTML = indhold.content.rendered;
 
                 // billederne skal linke til nye html-sider
-                document.querySelector(".wp-image-190").addEventListener("click", visInspirationSide);
-                document.querySelector(".wp-image-191").addEventListener("click", visInspirationSide);
-                document.querySelector(".wp-image-193").addEventListener("click", visProdukterSide);
-                document.querySelector(".wp-image-192").addEventListener("click", visProdukterSide);
+                document.querySelector(".shop_inspiration").addEventListener("click", visInspirationSide);
+                document.querySelector(".shop_inspiration_overskrift").addEventListener("click", visInspirationSide);
+                document.querySelector(".shop_produkter").addEventListener("click", visProdukterSide);
+                document.querySelector(".shop_produkter_overskrift").addEventListener("click", visProdukterSide);
 
             }
 
