@@ -740,80 +740,93 @@ footer a {
     .indhold_stories {
     display: grid;
     grid-template-areas:
-        "overskrift1 overskrift1 overskrift1 overskrift1"
+        "overskrift1 overskrift1 . ."
         "billede1 billede1 tekst1 tekst1"
         "billede1 billede1 dato1 dato1"
         "overskrift2 overskrift2 overskrift2 overskrift2"
         "dato2 billede2 billede2 billede2"
-        "overskrift3 overskrift3 overskrift3 overskrift3"
+        "overskrift3 overskrift3 billede3 billede3"
         "tekst2 tekst2 billede3 billede3"
         "dato3 dato3 billede3 billede3";
-        grid-template-columns: 200px 200px 200px 200px;
-
-        grid-row-gap: 1vw;
-        margin: 3vw;
-        width: 91vw;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 100px auto auto 100px auto 150px auto auto;
     }
 
-    .daysofdesign_h2 {
+    h2.daysofdesign_h2 {
         grid-area: overskrift1;
+        text-align: right;
+        margin: 5vw 1.5vw 2vw 0;
     }
+
 
     .daysofdesign_poster img {
-        width: 90%;
         margin: 0;
-
     }
     .daysofdesign_poster {
         grid-area: billede1;
 
     }
     img.wp-image-117 {
-
+        width: 45.5vw;
+        margin-right: 1.5vw;
+        margin-left: 3vw;
     }
     .daysofdesign_tekst {
         grid-area: tekst1;
         margin: 0vw;
+        margin-left: 1.5VW;
+        width: 47vw;
 
     }
     .daysofdesign_date {
         grid-area: dato1;
         text-align: left;
+        margin: 0;
+        align-self: end;
     }
     .moodboard_overskrift {
         grid-area: overskrift2;
+        text-align: right;
     }
 
     .moodboard_date {
         grid-area: dato2;
-    }
-    .wp-image-118 {
-        grid-area: billede2;
+        align-self: end;
+        margin-right: 3vw;
     }
 
+
+    .moodboard {
+        grid-area: billede2;
+    }
     img.wp-image-118 {
         width: 70vw;
         margin: 0;
     }
 
-    .elle_overskrift {
+    h2.elle_overskrift {
         grid-area: overskrift3;
+        margin: 8vw 0 0 3vw;
     }
     .elle_tekst {
         grid-area: tekst2;
-        margin: 0;
+        margin: 0 1.5vw 0 3vw;
     }
 
     .elle_img {
         grid-area: billede3;
     }
+
     img.wp-image-119 {
-        width: 50vw;
-        margin: 0;
+        width: 45vw;
+        margin: 8vw 3vw 0 1.5vw;
     }
     .elle_date {
         grid-area: dato3;
-        text-align: left;
+        text-align: right;
+        align-self: end;
+        margin-bottom: 0;
+        margin-right: 1.5vw;
     }
 
 
@@ -1169,14 +1182,11 @@ footer a {
     font-family: DIN;
     text-transform: uppercase;
 }
-
-
 .colours {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 0vw 33vw;
 }
-
 .colours img {
     width: 8vw;
     margin-left: auto;
@@ -1184,28 +1194,23 @@ footer a {
     display: block;
     margin: 1vw;
 }
-
 button {
     border: none;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-
 #liste {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 10vw 6vw;
-
 }
-
 #liste img {
     width: 40%;
     margin-left: auto;
     margin-right: auto;
     display: block;
 }
-
 #liste h2 {
     font-family: DIN;
     font-size: 0.7rem;
@@ -1228,13 +1233,14 @@ button {
 
     .indhold_stories {
         margin-top: 0;
+        grid-template-rows: 50px auto auto 150px auto 160px auto auto;
+
     }
 
     h2.daysofdesign_h2 {
-        margin-top: 2vw;
+        align-self: end;
     }
     img.wp-image-117 {
-        width: 100%;
         justify-self: end;
     }
     .daysofdesign_poster {
@@ -1319,15 +1325,7 @@ button {
         right: -15.5vw;
     }
 
-    .about_overskrift_website {
-        top: 15vw;
-        left: 39vw;
-    }
 
-    .about_overskrift_website2 {
-        top: 18.5vw;
-        left: 46vw;
-    }
 }
 
 @media only screen and (min-width: 1320px) {
