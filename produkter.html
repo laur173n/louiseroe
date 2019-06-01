@@ -48,20 +48,25 @@
 
             <div class="produkterwrapper">
                 <div class="produktersidebar">
+
+                    <div class="filterall">
+                        <button class="filter valgt" data-hold="All">All products</button>
+                    </div>
+
                     <div class="filtercategories">
-                        <h2>Materials</h2>
                         <div class="materials">
-                            <button class="filter valgt" data-hold="Textile">Textile</button>
+                            <h2>Materials</h2>
+                            <button class="filter" data-hold="Textile">Textile</button>
                             <button class="filter" data-hold="Metal">Metal</button>
                             <button class="filter" data-hold="Marble">Marble</button>
                             <button class="filter" data-hold="Glass">Glass</button>
                             <button class="filter" data-hold="Paper">Paper</button>
-                            <button class="filter" data-hold="Ceramics">Ceramics</button>
+                            <button class="filter" data-hold="Clay">Clay</button>
                         </div>
 
                         <h2>Colours</h2>
                         <div class="colours">
-                            <img class="filter" data-hold="Textile" src="img/colours/filter_amber.jpg">
+                            <img class="filter" data-hold="Amber" src="img/colours/filter_amber.jpg">
                             <img class="filter" data-hold="Lotus" src="img/colours/filter_lotus.jpg">
                             <img class="filter" data-hold="Blue" src="img/colours/filter_blue.jpg">
                             <img class="filter" data-hold="Gold" src="img/colours/filter_gold.jpg">
@@ -101,7 +106,7 @@
 
         // shoppens indhold
         let produkter = [];
-        let filter = "Textile";
+        let filter = "All";
 
         let dest = document.querySelector("#liste");
         let temp = document.querySelector("template");
@@ -159,7 +164,7 @@
             async function getShop() {
                 console.log("henter produkter");
 
-                let jsonData = await fetch("http://lauravillumsen.com/kea/eksamen/wp/wp-json/wp/v2/posts");
+                let jsonData = await fetch("http://lauravillumsen.com/kea/eksamen/wp/wp-json/wp/v2/posts/?per_page=100");
                 produkter = await jsonData.json();
                 visProdukter();
             }
@@ -169,11 +174,12 @@
                 console.log("viser produkter");
                 dest.innerHTML = "";
                 produkter.forEach(produkt => {
-                    if (filter == produkt.colours || filter == produkt.materials) {
+                    if (filter == produkt.colours || filter == produkt.materials || filter == produkt.all_products) {
                         let template = `
                         <div class="produkt">
-                            <h2>${produkt.title.rendered}</h2>
                             <img src="${produkt.billede.guid}">
+                            <h2>${produkt.title.rendered}</h2>
+                            <h2>${produkt.price}</h2>
                         </div>
                         `;
 
