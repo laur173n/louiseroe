@@ -815,8 +815,8 @@ footer a {
 
     .logo2 {
         grid-area: logo;
-        margin-left: -0.5vw;
         display: block;
+        margin-left: -5.1vw;
     }
 
 
@@ -1163,7 +1163,179 @@ button {
 
 }
 
+@media only screen and (min-width: 1090px) {
+    .logo2 {
+        margin-left: -4.9vw;
+    }
+}
 
+@media only screen and (min-width: 1143px) {
+    .logo2 {
+        margin-left: -4.1vw;
+    }
+}
+
+@media only screen and (min-width: 1160px) {
+    .logo2 {
+        margin-left: -3.9vw;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .logo2 {
+        margin-left: -3.7vw;
+    }
+}
+
+@media only screen and (min-width: 1180px) {
+    .logo2 {
+        margin-left: -3.5vw;
+    }
+}
+
+@media only screen and (min-width: 1190px) {
+    .logo2 {
+        margin-left: -3.3vw;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .logo2 {
+        margin-left: -3.1vw;
+    }
+}
+
+@media only screen and (min-width: 1210px) {
+    .logo2 {
+        margin-left: -2.9vw;
+    }
+}
+
+@media only screen and (min-width: 1220px) {
+    .logo2 {
+        margin-left: -2.6vw;
+    }
+}
+
+@media only screen and (min-width: 1230px) {
+    .logo2 {
+        margin-left: -2.5vw;
+    }
+}
+
+@media only screen and (min-width: 1240px) {
+    .logo2 {
+        margin-left: -2.4vw;
+    }
+}
+
+@media only screen and (min-width: 1250px) {
+    .logo2 {
+        margin-left: -2.3vw;
+    }
+}
+
+@media only screen and (min-width: 1260px) {
+    .logo2 {
+        margin-left: -2.2vw;
+    }
+}
+
+@media only screen and (min-width: 1260px) {
+    .logo2 {
+        margin-left: -2.2vw;
+    }
+}
+
+@media only screen and (min-width: 1270px) {
+    .logo2 {
+        margin-left: -2.1vw;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .logo2 {
+        margin-left: -2.0vw;
+    }
+}
+
+@media only screen and (min-width: 1290px) {
+    .logo2 {
+        margin-left: -2.0vw;
+    }
+}
+
+@media only screen and (min-width: 1290px) {
+    .logo2 {
+        margin-left: -1.9vw;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .logo2 {
+        margin-left: -1.8vw;
+    }
+}
+
+@media only screen and (min-width: 1310px) {
+    .logo2 {
+        margin-left: -1.7vw;
+    }
+}
+
+@media only screen and (min-width: 1320px) {
+    .logo2 {
+        margin-left: -1.6vw;
+    }
+}
+
+@media only screen and (min-width: 1330px) {
+    .logo2 {
+        margin-left: -1.5vw;
+    }
+}
+
+@media only screen and (min-width: 1340px) {
+    .logo2 {
+        margin-left: -1.4vw;
+    }
+}
+
+@media only screen and (min-width: 1350px) {
+    .logo2 {
+        margin-left: -1.3vw;
+    }
+}
+
+@media only screen and (min-width: 1360px) {
+    .logo2 {
+        margin-left: -1.2vw;
+    }
+}
+
+@media only screen and (min-width: 1370px) {
+    .logo2 {
+        margin-left: -1.1vw;
+    }
+}
+
+@media only screen and (min-width: 1380px) {
+    .logo2 {
+        margin-left: -1vw;
+    }
+}
+
+@media only screen and (min-width: 1390px) {
+    .logo2 {
+        margin-left: -0.9vw;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .logo2 {
+        margin-left: -0.8vw;
+    }
+}
 
 @media only screen and (min-width: 1180px) {
     .footer_menu {
@@ -1218,6 +1390,7 @@ button {
         top: 18.5vw;
         left: 46vw;
     }
+
 }
 
 @media only screen and (min-width: 1320px) {
