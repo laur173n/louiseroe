@@ -180,6 +180,9 @@ main {
 /*video*/
 .myVideo_desk {
     display: none;
+    z-index: 11;
+    animation-name: showing;
+    animation-duration: 5s;
 }
 
 .myVideo_mobile {
@@ -187,6 +190,8 @@ main {
     width: 100%;
     animation-name: showing;
     animation-duration: 5s;
+    z-index: 11;
+
 }
 
 /*'louise roe gallery' billede og overskrift*/
@@ -732,6 +737,7 @@ footer a {
     img {
         z-index: 10;
     }
+
     figcaption {
         z-index: 11;
     }
