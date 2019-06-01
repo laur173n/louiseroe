@@ -177,6 +177,12 @@ main {
     width: 100vw;
 }
 
+/*video*/
+.myVideo {
+    margin-top: 5vw;
+    width: 100%
+}
+
 /*'louise roe gallery' billede og overskrift*/
 .wp-image-106 {
     margin: 3vw;
@@ -489,6 +495,13 @@ footer a {
 
 @media only screen and (min-width: 716px) {
 
+
+    /*--------------FORSIDE--------------*/
+    /*video*/
+    .myVideo {
+        margin-top: 5vw;
+    }
+
     /*--------------SHOP FORSIDE---------------*/
 
     /*parent*/
@@ -784,7 +797,14 @@ footer a {
         transform: scaleX(1);
     }
 
-    /******FORSIDE******/
+
+    /*--------------FORSIDE--------------*/
+
+    /*video*/
+    .myVideo {
+        margin-top: -1vw;
+
+    }
 
     /*'louise roe gallery' billede og overskrift*/
     .wp-image-106 {
