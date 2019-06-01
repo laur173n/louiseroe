@@ -52,6 +52,7 @@ figure {
     padding: 0;
 }
 
+
 body {
     padding: 0;
     margin: 0;
@@ -60,6 +61,12 @@ body {
 .hide {
     visibility: hidden;
     pointer-events: none;
+}
+
+h4 {
+    font-family: palatino;
+    font-weight: 100;
+    font-size: 1.3rem;
 }
 
 h2 {
@@ -230,16 +237,6 @@ main {
 
 /*--------------SHOP FORSIDE---------------*/
 
-/*inspiration - billede og overskrift*/
-
-/*
-.inspiration_kasse figcaption {
-    position: absolute;
-    top: 25.5vw;
-    left: 3vw;
-}
-*/
-
 /*parent*/
 .indhold_shop {
     display: flex;
@@ -249,19 +246,11 @@ main {
 }
 
 /*fjernelse af desktop/ipad elementer*/
+
+.inspiration_overskrift_desktop,
+.produkter_overskrift_desktop,
+.wp-image-193,
 .wp-image-190 {
-    display: none;
-}
-
-.desktop_shop_inspiration figcaption {
-    display: none;
-}
-
-.wp-image-193 {
-    display: none;
-}
-
-.desktop_shop_produkter figcaption {
     display: none;
 }
 
@@ -271,44 +260,28 @@ main {
     width: 94vw;
     margin: 3vw;
     display: block;
-    margin-top: 10vw;
-}
-
-.mobile_shop_inspiration figcaption {
-    position: absolute;
-    top: 30vw;
-    right: 7vw;
-    font-size: 1.2rem;
-    display: block;
-}
-
-.wp-block-image mobile_shop_inspiration {
     position: relative;
-}
-
-.mobile_shop_produkter figcaption {
-    position: absolute;
-    top: 97vw;
-    left: 7vw;
-    font-size: 1.2rem;
-    display: block;
 }
 
 .wp-image-192 {
     width: 94vw;
     margin: 3vw;
     display: block;
-    margin-top: 10vw;
 }
 
+.inspiration_overskrift {
+    text-align: right;
+    padding-right: 3vw;
+    margin: 0;
 
-/*produkter - billede og overskrift*/
-
-.products_kasse figcaption {
-    position: absolute;
-    top: 162.5vw;
-    right: 3vw;
 }
+
+.produkter_overskrift {
+    padding-left: 3vw;
+    margin: 0;
+    margin-top: 5vw;
+}
+
 
 /*-------------------PRODUKTER-----------------*/
 
@@ -475,11 +448,12 @@ footer a {
 
     /*---------------SHOP-----------------*/
 
+    /*
     .indhold_shop {
         flex-direction: row;
     }
 
-    /*fjernelse af mobil billede-versioner*/
+    fjernelse af mobil billede-versioner
     .wp-image-191 {
         display: none;
     }
@@ -495,15 +469,19 @@ footer a {
     .mobile_shop_produkter figcaption {
         display: none;
     }
+*/
 
     /*styles af desktop billeder*/
 
+    /*
     .wp-image-190 {
         width: 300px;
         margin: 2vw;
         display: block;
     }
+*/
 
+    /*
     .desktop_shop_inspiration figcaption {
         position: absolute;
         top: 14.5vw;
@@ -512,7 +490,9 @@ footer a {
         display: block;
 
     }
+*/
 
+    /*
     .desktop_shop_produkter figcaption {
         position: absolute;
         top: 14.5vw;
@@ -521,13 +501,16 @@ footer a {
         display: block;
 
     }
+*/
 
+    /*
     .wp-image-193 {
         width: 300px;
         margin: 2vw;
         display: block;
 
     }
+*/
 
     /*--------------PRODUKTER----------------*/
 
@@ -570,54 +553,42 @@ footer a {
 
 @media only screen and (min-width: 716px) {
 
-    /*---------------SHOP-----------------*/
+    /*--------------SHOP FORSIDE---------------*/
 
-    /*fjernelse af mobil billede-versioner*/
+    /*parent*/
+    .indhold_shop {
+        flex-direction: row;
+    }
+
+    /*fjernelse af mobil elementer*/
+    .inspiration_overskrift,
+    .produkter_overskrift,
+    .wp-image-192,
     .wp-image-191 {
         display: none;
     }
 
-    .mobile_shop_inspiration figcaption {
-        display: none;
-    }
-
-    .wp-image-192 {
-        display: none;
-    }
-
-    .mobile_shop_produkter figcaption {
-        display: none;
-    }
-
-    /*styles af desktop billeder*/
+    /*styles af ipad/desktop elementer*/
 
     .wp-image-190 {
-        width: 420px;
-        margin: 3vw;
         display: block;
-    }
-
-    .desktop_shop_inspiration figcaption {
-        position: absolute;
-        top: 12.5vw;
-        left: 7vw;
-        font-size: 1.5rem;
-
-    }
-
-    .desktop_shop_produkter figcaption {
-        position: absolute;
-        top: 12.5vw;
-        right: 7vw;
-        font-size: 1.5rem;
-
+        width: 200px;
     }
 
     .wp-image-193 {
-        width: 420px;
         margin: 3vw;
-        display: block;
+        flex-basis: 300px;
+        flex-grow: 1;
+        width: 200px;
 
+    }
+
+    .inspiration_overskrift_desktop {
+        display: block;
+    }
+
+    .produkter_overskrift_desktop {
+        display: block;
     }
 
     /*************  ABOUT  *************/
