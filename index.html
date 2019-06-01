@@ -11,7 +11,7 @@
 <body>
 
     <div class="container">
-    <p class="shoppingcart">shopping cart (0)</p>
+        <p class="shoppingcart">shopping cart (0)</p>
         <header>
 
             <!--- LOGO --->
@@ -23,17 +23,17 @@
 
             <!--- BURGER MENU --->
             <div class="burger-button">
-                 <img src="img/burgermenu.png" alt="menu">
+                <img src="img/burgermenu.png" alt="menu">
             </div>
             <nav id="menu" class="hide">
                 <ul>
                     <li><a class="a" href="shop.html">shop</a></li>
                     <li><a class="b" href="conceptstore.html">concept store</a></li>
                     <a href="index.html">
-                <div class="logo2">
-                    <img src="img/nyt_logo_copenhagen_FINAL.png" alt="logo">
-                </div>
-            </a>
+                        <div class="logo2">
+                            <img src="img/nyt_logo_copenhagen_FINAL.png" alt="logo">
+                        </div>
+                    </a>
                     <li><a class="c" href="about.html">about</a></li>
                     <li><a class="d" href="stories.html">stories</a></li>
                 </ul>
@@ -44,15 +44,51 @@
         <main>
             <h1 class="overskrift"></h1>
             <div class="indhold"></div>
+
+
+            <!-- Slideshow container (https://www.w3schools.com/howto/howto_js_slideshow.asp) -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="img/louiseroess19-p2.png" style="width:100%">
+                    <div class="text">Caption Text</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="img/louiseroess19-p3.png" style="width:100%">
+                    <div class="text">Caption Two</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="img/louiseroess19-p4.png" style="width:100%">
+                    <div class="text">Caption Three</div>
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
         </main>
 
         <footer>
-           <img class="logo_footer" src="img/footer.png" alt="footer logo">
-           <div class="footer_menu">
-            <a href="contact.html">contact</a>
-            <a href="press.html">press</a>
-            <a href="retailers.html">retailers</a>
-            <a href="policies.html">policies</a>
+            <img class="logo_footer" src="img/footer.png" alt="footer logo">
+            <div class="footer_menu">
+                <a href="contact.html">contact</a>
+                <a href="press.html">press</a>
+                <a href="retailers.html">retailers</a>
+                <a href="policies.html">policies</a>
             </div>
         </footer>
 
@@ -62,6 +98,8 @@
         document.addEventListener("DOMContentLoaded", sidenVises);
 
         let indhold;
+        var slideIndex = 1;
+            showSlides(slideIndex);
 
         function sidenVises() {
             //console.log("siden vises");
@@ -96,17 +134,46 @@
                 let jsonData = await fetch(url);
                 indhold = await jsonData.json();
                 visIndhold();
+
+                plusSlides();
             }
 
             function visIndhold() {
                 document.querySelector(".overskrift").textContent = indhold.title.rendered;
                 document.querySelector(".indhold").innerHTML = indhold.content.rendered;
             }
+
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
             getJson();
         }
-
-
-
     </script>
 </body>
 
