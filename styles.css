@@ -45,7 +45,7 @@ header {
     grid-area: menu;
 }
 
-/***------------- OVERALL ------------------- ***/
+/***------------- OVERALL -------------- ***/
 
 figure {
     margin: 0;
@@ -475,7 +475,16 @@ footer a {
     margin: 5vw
 }
 
+/*----------POLICIES-----------*/
 
+.policy_overskrift {
+    font-family: palatino;
+    margin-left: 3vw;
+}
+
+.indhold_policies p {
+    font-family: palatino;
+}
 
 /*------------------------------MEDIAQUERY FOR 400PX-------------------------------*/
 @media only screen and (min-width: 400px) {}
@@ -564,6 +573,12 @@ footer a {
     }
 
     /*--------------PUBLICATION----------------*/
+
+    .publications_text {
+        font-family: palatino;
+        background-color: white;
+        z-index: 12;
+    }
 
 
     /*--------------SHOP FORSIDE---------------*/
