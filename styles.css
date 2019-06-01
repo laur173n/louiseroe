@@ -862,7 +862,9 @@ footer a {
 
     .myVideo_desk {
         display: block;
-        width: 100%;
+        width: 97vw;
+        ;
+        margin-right: 3vw;
     }
 
     /*'louise roe gallery' billede og overskrift*/
