@@ -613,11 +613,6 @@ footer a {
 
     }
 
-    /*  ABOUT */
-    /*    ABOUT - overskrift*/
-    .thedesigner_overskrift {
-        top: 23.5vw;
-    }
 
     /*--------------FOOTER----------------*/
 
@@ -625,21 +620,6 @@ footer a {
         margin: 7vw
     }
 }
-
-
-@media only screen and (min-width: 620px) {
-
-    /*  ABOUT */
-    /*    ABOUT - overskrift*/
-    .thedesigner_overskrift {
-        top: 22.5vw;
-    }
-}
-
-
-
-
-
 
 
 /*-------------------------MEDIAQUERY FOR webshop/IPAD--------------------------*/
@@ -1235,6 +1215,10 @@ button {
 }*/
 
 /*-----------ABOUT------------*/
+    .indhold_about {
+        grid-template-rows: 100px auto auto;
+    }
+
     p.about_tekst {
         z-index: 13;
         background-color: white;
