@@ -167,8 +167,7 @@ a:hover {
 }
 
 .valgt {
-    font-family: 'DIN-Bold';
-    font-weight: bold;
+    border-bottom: 0.25px solid black;
 }
 
 /*--------------FORSIDE---------------*/
