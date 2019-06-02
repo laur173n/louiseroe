@@ -384,16 +384,22 @@ button {
 
 /*----------INSPIRATION-----------*/
 
-.wp-image-180,
-.wp-image-182,
-.wp-image-183,
-.wp-image-184,
-.wp-image-185,
-.wp-image-186 {
+.wp-image-508,
+.wp-image-509,
+.wp-image-510,
+.wp-image-511,
+.wp-image-512,
+.wp-image-513,
+.wp-image-514 {
     margin-left: 3vw;
     margin-right: 3vw;
     margin-bottom: 3vw;
     width: 94vw;
+    padding: 0;
+}
+
+.wp-block-gallery {
+    padding: 0;
 }
 
 .wp-image-180 {
@@ -749,17 +755,54 @@ footer a {
 
     /*----------INSPIRATION-----------*/
 
-    /*
+
     .indhold_inspiration {
         display: grid;
         grid-template-areas:
-            "billede1"
-            "billede2"
-            "billede3 .";
+            "billede1 billede2"
+            "billede3 billede4"
+            "billede5 billede6";
         grid-template-columns: 1fr 1fr;
         max-width: 100vw;
     }
-*/
+
+
+.wp-image-508,
+.wp-image-509,
+.wp-image-510,
+.wp-image-511,
+.wp-image-512,
+.wp-image-513 {
+    width: 40vw;
+    margin: 3vw;
+}
+    .inspiration_billede1 {
+        grid-area: billede1;
+    }
+    .inspiration_billede2 {
+        grid-area: billede2;
+    }
+
+    .inspiration_billede3 {
+        grid-area: billede3;
+    }
+    .inspiration_billede4 {
+        grid-area: billede4;
+    }
+    .inspiration_billede5 {
+        grid-area: billede5;
+    }
+    .inspiration_billede6 {
+        grid-area: billede6;
+    }
+
+.wp-block-gallery {
+    padding: 0;
+}
+
+.wp-image-180 {
+    margin-top: 5vw;
+}
 /*------------- CONCEPT STORE -----------*/
 
     .indhold_concept {
