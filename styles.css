@@ -448,6 +448,48 @@ button {
     display: none;
 }
 
+/*-------------STORIES---------------*/
+
+
+h2.daysofdesign_h2 {
+    margin: 8vw 3vw 2vw 3vw;
+}
+
+.daysofdesign_poster img {
+    width: 94vw;
+    margin: 3vw;
+}
+
+.wp-block-preformatted {
+    margin: 3vw;
+}
+.daysofdesign_date {
+    text-align: right;
+}
+
+h2.moodboard_overskrift {
+    margin: 8vw 3vw 2vw 3vw;
+}
+.moodboard img {
+    width: 94vw;
+    margin: 3vw;
+}
+.moodboard_date {
+    text-align: right;
+}
+
+h2.elle_overskrift {
+     margin: 8vw 3vw 2vw 3vw;
+}
+
+.elle_img img {
+    width: 94vw;
+    margin: 3vw;
+}
+.elle_date {
+    text-align: right;
+}
+
 /*-----------CONTACT---------*/
 
 .follow_contact {
@@ -706,6 +748,102 @@ footer a {
         top: 125vw;
         left: 7vw;
     }
+
+    /*--------------STORIES----------------*/
+
+
+    .indhold_stories {
+    display: grid;
+    grid-template-areas:
+        "overskrift1 overskrift1 . ."
+        "billede1 billede1 tekst1 tekst1"
+        "billede1 billede1 dato1 dato1"
+        "overskrift2 overskrift2 overskrift2 overskrift2"
+        "dato2 billede2 billede2 billede2"
+        "overskrift3 overskrift3 billede3 billede3"
+        "tekst2 tekst2 billede3 billede3"
+        "dato3 dato3 billede3 billede3";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 100px auto auto 100px auto 150px auto auto;
+    }
+
+    h2.daysofdesign_h2 {
+        grid-area: overskrift1;
+        text-align: right;
+        margin: 5vw 1.5vw 2vw 0;
+    }
+
+
+    .daysofdesign_poster img {
+        margin: 0;
+    }
+    .daysofdesign_poster {
+        grid-area: billede1;
+
+    }
+    img.wp-image-117 {
+        width: 45.5vw;
+        margin-right: 1.5vw;
+        margin-left: 3vw;
+    }
+    .daysofdesign_tekst {
+        grid-area: tekst1;
+        margin: 0vw;
+        margin-left: 1.5VW;
+        width: 47vw;
+
+    }
+    .daysofdesign_date {
+        grid-area: dato1;
+        text-align: left;
+        margin: 0;
+        align-self: end;
+    }
+    .moodboard_overskrift {
+        grid-area: overskrift2;
+        text-align: right;
+    }
+
+    .moodboard_date {
+        grid-area: dato2;
+        align-self: end;
+        margin-right: 3vw;
+    }
+
+
+    .moodboard {
+        grid-area: billede2;
+    }
+    img.wp-image-118 {
+        width: 70vw;
+        margin: 0;
+    }
+
+    h2.elle_overskrift {
+        grid-area: overskrift3;
+        margin: 8vw 0 0 3vw;
+    }
+    .elle_tekst {
+        grid-area: tekst2;
+        margin: 0 1.5vw 0 3vw;
+    }
+
+    .elle_img {
+        grid-area: billede3;
+    }
+
+    img.wp-image-119 {
+        width: 45vw;
+        margin: 8vw 3vw 0 1.5vw;
+    }
+    .elle_date {
+        grid-area: dato3;
+        text-align: right;
+        align-self: end;
+        margin-bottom: 0;
+        margin-right: 1.5vw;
+    }
+
 
     /********CONTACT*******/
 
@@ -1132,6 +1270,28 @@ button {
     .wp-block-gallery li img {
         margin: 0;
         padding: 0;
+    }
+
+    /*-----------STORIES------------*/
+
+    .indhold_stories {
+        margin-top: 0;
+        grid-template-rows: 50px auto auto 150px auto 160px auto auto;
+
+    }
+
+    h2.daysofdesign_h2 {
+        align-self: end;
+    }
+    img.wp-image-117 {
+        justify-self: end;
+    }
+    .daysofdesign_poster {
+        align-self: end;
+    }
+
+    .daysofdesign_tekst {
+        margin-right: 1.5vw;
     }
 
 
