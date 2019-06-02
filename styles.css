@@ -428,6 +428,9 @@ button {
 
 .wp-image-98 {
     margin-top: 8vw;
+    animation-name: showing;
+    animation-duration: 2s;
+
 }
 
 .beskrivelse {
@@ -480,6 +483,8 @@ button {
     width: 94vw;
     margin: 3vw;
     margin-top: 0vw;
+    animation-name: showing;
+    animation-duration: 2s;
 }
 
 .thedesigner_overskrift {
@@ -505,6 +510,41 @@ button {
     margin-top: 12vw;
     margin-bottom: 8vw;
 }
+
+/*------------SINGLEVIEW--------------*/
+
+/*
+.produkt {
+    width: 100vw;
+}
+*/
+/*
+
+.produkt h2 {
+    margin-left: 3vw;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.produkt img {
+    width: 94vw;
+    margin-left: 3vw;
+}
+
+.produkt p {
+    font-family: palatino;
+    border-top: 1px solid black;
+    padding: 2vw;
+    text-align: center;
+}
+
+.addbag {
+    font-family: palatino;
+    padding: 2vw 5vw 2vw 5vw;
+    border: 1px solid black;
+    cursor: pointer;
+}
+*/
 
 
 /*-------------STORIES---------------*/
@@ -786,6 +826,37 @@ footer a {
         width: 94vw;
     }
 
+    /*------------SINGLEVIEW--------------*/
+
+/*
+    .produkt {
+        width: 100vw;
+
+    }
+
+    .produkt h2 {
+        margin-right: 3vw;
+        text-align: right
+    }
+
+    .produkt img {
+        width: 44vw;
+    }
+
+    .produkt p {
+        font-family: palatino;
+        border-top: 1px solid black;
+        padding: 2vw;
+    }
+
+    .addbag {
+        font-family: palatino;
+        padding: 2vw 5vw 2vw 5vw;
+        border: 1px solid black;
+            cursor: pointer;
+    }
+*/
+
     /*---------------  ABOUT  ---------------*/
 
     .indhold_about {
@@ -872,6 +943,8 @@ footer a {
         width: 45.5vw;
         margin-right: 1.5vw;
         margin-left: 3vw;
+        animation-name: showing;
+    animation-duration: 2s;
     }
     .daysofdesign_tekst {
         grid-area: tekst1;
@@ -938,6 +1011,7 @@ footer a {
     .follow_contact {
         position: absolute;
         margin: 0vw 3vw;
+        z-index: 13;
     }
 
     p.contact_tekst {
@@ -1371,6 +1445,8 @@ button {
     .beskrivelse {
         margin: 5vw 3vw 0 3vw;
         width: 45.5vw;
+        background-color: white;
+        z-index: 14;
     }
 
     .wp-image-497 {
@@ -1419,6 +1495,8 @@ button {
     }
     .thedesigner_overskrift {
         margin-top: 1vw;
+        z-index: 18;
+        background-color: white;
     }
     p.about_tekst {
         z-index: 13;
@@ -1451,10 +1529,14 @@ button {
     .daysofdesign_tekst {
         margin-right: 5vw;
         width: 40vw;
+        z-index: 15;
+        background-color: white;
     }
 
     .daysofdesign_date {
-        margin-left: 1.5vw
+        margin-left: 1.5vw;
+        z-index: 17;
+        background-color: white;
     }
 
     img.wp-image-118 {
@@ -1473,6 +1555,11 @@ button {
     .elle_img {
         justify-self: left;
 
+    }
+
+    .elle_tekst{
+        z-index: 16;
+        background-color: white;
     }
 
     /******FOOTER******/

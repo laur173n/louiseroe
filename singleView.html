@@ -48,6 +48,8 @@
             <div class="singleview">
                 <div class="indhold"></div>
             </div>
+
+            <button class="addbag">ADD TO BAG</button>
         </main>
 
         <footer>
@@ -69,6 +71,7 @@
 
         let produkter = [];
         let produkt;
+        let point = 0;
 
         document.addEventListener("DOMContentLoaded", start);
 
@@ -102,6 +105,13 @@
                             <h2>${produkt.price}</h2>
                         </div>
                         `;
+                document.querySelector(".addbag").addEventListener("click", tilfojKurven);
+            }
+
+            function tilfojKurven() {
+                point += 1;
+                console.log(point);
+                document.querySelector(".shoppingcart").textContent = "shopping cart ()" + point;
             }
 
             getJson();
