@@ -407,13 +407,12 @@ button {
 .wp-image-113 {
     width: 94vw;
     margin: 3vw;
-    margin-top: 13vw;
+    margin-top: 0vw;
 }
 
 .thedesigner_overskrift {
     margin: 3vw;
-    position: absolute;
-    top: 25.5vw;
+     margin-top: 9vw;
 }
 
 /*follow us*/
@@ -676,29 +675,32 @@ footer a {
     /*---------------  ABOUT  ---------------*/
 
     .indhold_about {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        margin-top: 10vw;
+        display: grid;
+        grid-template-areas:
+            "billede_about overskrift_about"
+            "billede_about tekst_about"
+            "followus billede2_about"
+            "contact_about billede2_about";
+        grid-template-columns: 1fr 1fr;
 
+    }
+    .thedesigner_billede {
+        grid-area: billede_about;
     }
 
     .wp-image-113 {
-        flex-grow: 1;
-        width: 40vw;
-        margin: 3vw;
+      width: 47vw;
+    }
+
+    h2.thedesigner_overskrift {
+        grid-area: overskrift_about;
+        margin: 0vw 0 0 1.5;
     }
 
     p.about_tekst {
-        flex-grow: 1;
-        flex-basis: 200px;
-        width: 50vw;
-        margin: 10vw 3vw 3vw 0;
+       grid-area: tekst_about;
     }
 
-    .thedesigner_overskrift {
-        display: none;
-    }
 
     .about_overskrift_website {
         position: absolute;
@@ -713,23 +715,20 @@ footer a {
         top: 23vw;
         font-size: 1.7rem;
     }
+    .gallery_about {
+        grid-area: billede2_about;
+    }
 
-    .wp-image-218 {
-        flex-grow: 1;
-        width: 50vw;
-        margin: 3vw;
+     img.wp-image-218 {
+        width: 47vw;
     }
 
     p.followus {
-        flex-grow: 1;
-        width: 30vw;
-        margin: 3vw;
+        grid-area: followus;
     }
 
     .contactp {
-        position: absolute;
-        top: 125vw;
-        left: 7vw;
+        grid-area: contact_about;
     }
 
 
