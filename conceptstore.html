@@ -45,7 +45,7 @@
 
         <main>
             <h1 class="overskrift"></h1>
-            <div class="indhold"></div>
+            <div class="indhold_concept"></div>
         </main>
 
         <footer>
@@ -111,7 +111,7 @@
             function visIndhold() {
                 console.log("viser sidens indhold");
                 document.querySelector(".overskrift").textContent = indhold.title.rendered;
-                document.querySelector(".indhold").innerHTML = indhold.content.rendered;
+                document.querySelector(".indhold_concept").innerHTML = indhold.content.rendered;
 
             }
 
