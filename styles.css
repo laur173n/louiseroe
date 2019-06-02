@@ -406,19 +406,18 @@ button {
 }
 
 
-/**----------ABOUT ---------------**/
 
+/********* ABOUT **********/
 /*The designer overkrift og billede af hanne louise*/
 .wp-image-113 {
     width: 94vw;
     margin: 3vw;
-    margin-top: 13vw;
+    margin-top: 0vw;
 }
 
 .thedesigner_overskrift {
     margin: 3vw;
-    position: absolute;
-    top: 25.5vw;
+     margin-top: 9vw;
 }
 
 /*follow us*/
@@ -574,26 +573,10 @@ footer a {
 
     }
 
-    /*  ABOUT */
-    /*    ABOUT - overskrift*/
-    .thedesigner_overskrift {
-        top: 23.5vw;
-    }
-
     /*--------------FOOTER----------------*/
 
     footer a {
         margin: 7vw
-    }
-}
-
-
-@media only screen and (min-width: 620px) {
-
-    /*  ABOUT */
-    /*    ABOUT - overskrift*/
-    .thedesigner_overskrift {
-        top: 22.5vw;
     }
 }
 
@@ -688,65 +671,48 @@ footer a {
 */
 
 
-    /*------------ABOUT------------*/
+   /*---------------  ABOUT  ---------------*/
 
     .indhold_about {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        margin-top: 10vw;
+        display: grid;
+        grid-template-areas:
+            "billede_about overskrift_about"
+            "billede_about tekst_about"
+            "followus billede2_about"
+            "contact_about billede2_about";
+        grid-template-columns: 1fr 1fr;
 
+    }
+    .thedesigner_billede {
+        grid-area: billede_about;
     }
 
     .wp-image-113 {
-        flex-grow: 1;
-        width: 40vw;
-        margin: 3vw;
-    }
-
-    p.about_tekst {
-        flex-grow: 1;
-        flex-basis: 200px;
-        width: 50vw;
-        margin: 10vw 3vw 3vw 0;
+      width: 47vw;
     }
 
     .thedesigner_overskrift {
-        display: none;
+        grid-area: overskrift_about;
+        margin: 0 0 0 1.5;
     }
 
-    .about_overskrift_website {
-        position: absolute;
-        left: 35vw;
-        top: 17vw;
-        font-size: 1.7rem;
-        display: inline;
+    p.about_tekst {
+       grid-area: tekst_about;
+    }
+    .gallery_about {
+        grid-area: billede2_about;
     }
 
-    .about_overskrift_website2 {
-        position: absolute;
-        left: 46vw;
-        top: 23vw;
-        font-size: 1.7rem;
-        display: inline;
-    }
-
-    .wp-image-218 {
-        flex-grow: 1;
-        width: 50vw;
-        margin: 3vw;
+     img.wp-image-218 {
+        width: 47vw;
     }
 
     p.followus {
-        flex-grow: 1;
-        width: 30vw;
-        margin: 3vw;
+        grid-area: followus;
     }
 
     .contactp {
-        position: absolute;
-        top: 125vw;
-        left: 7vw;
+        grid-area: contact_about;
     }
 
     /*--------------STORIES----------------*/
@@ -875,23 +841,6 @@ footer a {
         width: 100%;
         padding: 0;
         margin: 0;
-    }
-
-    .about_overskrift_website {
-        left: 37.6vw;
-        top: 16vw;
-
-    }
-
-    .about_overskrift_website2 {
-        left: 46vw;
-        top: 21vw;
-
-    }
-
-    .contactp {
-        top: 115vw;
-        left: 11vw;
     }
 
 }
@@ -1272,6 +1221,17 @@ button {
         padding: 0;
     }
 
+    /*-----------ABOUT------------*/
+    .indhold_about {
+        grid-template-rows: 100px auto auto;
+    }
+
+    p.about_tekst {
+        z-index: 13;
+        background-color: white;
+
+    }
+
     /*-----------STORIES------------*/
 
     .indhold_stories {
@@ -1538,16 +1498,6 @@ button {
 @media only screen and (min-width: 1250px) {
     .footer_menu {
         right: -15.5vw;
-    }
-
-    .about_overskrift_website {
-        top: 15vw;
-        left: 39vw;
-    }
-
-    .about_overskrift_website2 {
-        top: 18.5vw;
-        left: 46vw;
     }
 
 }

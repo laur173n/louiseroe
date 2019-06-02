@@ -865,18 +865,6 @@ footer a {
         margin: 0;
     }
 
-    .about_overskrift_website {
-        left: 37.6vw;
-        top: 16vw;
-
-    }
-
-    .about_overskrift_website2 {
-        left: 46vw;
-        top: 21vw;
-
-    }
-
     .contactp {
         top: 115vw;
         left: 11vw;
@@ -1292,31 +1280,7 @@ button {
         left: 84.5vw;
     }
 
-    /*--------ABOUT--------*/
-    .indhold_about {
-        margin-top: 4vw;
-    }
 
-    p.about_tekst {
-        margin-top: 7vw;
-        flex-basis: 400px;
-        width: 50%;
-    }
-
-    .about_overskrift_website {
-        top: 13vw;
-        left: 38.5vw;
-    }
-
-    .about_overskrift_website2 {
-        top: 16.3vw;
-        left: 46vw;
-    }
-
-    .contactp {
-        top: 110vw;
-        left: 13vw;
-    }
 }
 
 @media only screen and (min-width: 1250px) {
