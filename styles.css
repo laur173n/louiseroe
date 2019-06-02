@@ -82,8 +82,8 @@ figcaption {
 
 p {
     font-family: palatino;
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.8rem;
     margin: 3vw;
 }
 
@@ -410,10 +410,9 @@ button {
     grid-template-areas:
             "billede1_concept"
             "tekst_concept"
-            "billede2_concept"
-            "abningstider"
             "address_concept"
             "billede3_concept"
+            "abningstider"
             "menu_overskrift"
             "menukort";
         grid-template-columns: 1fr;
@@ -426,22 +425,15 @@ button {
 }
 
 .wp-image-98 {
-    margin-top: 8vw;
+    margin: 8vw 3vw 0 3vw;
     animation-name: showing;
     animation-duration: 2s;
-
+    width: 94vw
 }
 
 .beskrivelse {
     grid-area: tekst_concept;
-    margin: 10vw 3vw;
-}
-.gallery_flowers_img {
-    grid-area: billede2_concept;
-}
-.wp-image-497 {
-    margin: 0 3vw;
-    width: 94vw;
+    margin: 6vw 3vw;
 }
 
 .abningstider {
@@ -452,7 +444,7 @@ button {
 .adresse {
     grid-area: address_concept;
     text-align: right;
-    margin: 5vw 3vw 8vw 0
+    margin: 6vw 3vw 8vw 0
 }
 .gallery_food_img {
     grid-area: billede3_concept;
@@ -465,7 +457,7 @@ button {
 
 .menu_overskrift {
     grid-area: menu_overskrift;
-    margin: 8vw 3vw 3vw 3vw;
+    margin: 5vw 3vw 5vw 3vw;
 }
 .wp-image-502 {
     margin: 0 3vw 8vw 3vw;
@@ -774,7 +766,7 @@ footer a {
         display: grid;
         grid-template-areas:
             "billede1_concept billede1_concept"
-            "billede2_concept tekst_concept"
+            "tekst_concept tekst_concept"
             "abningstider billede3_concept"
             "address_concept billede3_concept"
             "menu_overskrift menu_overskrift"
@@ -793,8 +785,7 @@ footer a {
     }
 
     .beskrivelse {
-        margin: 5vw 3vw 0 1.5vw;
-        width: 45.5vw;
+        margin: 3vw 3vw 0vw 3vw;
     }
 
     .wp-image-497 {
@@ -803,7 +794,7 @@ footer a {
     }
 
     .abningstider {
-        margin: 5vw 3vw;
+        margin: 8vw 3vw;
     }
 
     .adresse {
@@ -813,7 +804,7 @@ footer a {
 
 
     .wp-image-498 {
-        margin: 5vw 3vw 0 1.5vw;
+        margin: 8vw 3vw 0 1.5vw;
         width: 45.5vw;
     }
 
@@ -821,7 +812,7 @@ footer a {
         margin: 8vw 3vw 3vw 3vw;
     }
     .wp-image-502 {
-        margin: 0 3vw 8vw 3vw;
+        margin: 0 3vw 0vw 3vw;
         width: 94vw;
     }
 
@@ -1421,12 +1412,12 @@ button {
     .indhold_concept {
         display: grid;
         grid-template-areas:
-            "abningstider billede1_concept billede1_concept billede1_concept"
-            "billede2_concept tekst_concept tekst_concept tekst_concept"
-            "address_concept address_concept billede3_concept billede3_concept"
+            "tekst_concept tekst_concept billede1_concept billede1_concept"
+            "billede3_concept billede3_concept abningstider abningstider"
+            "billede3_concept billede3_concept address_concept address_concept"
             "menu_overskrift menu_overskrift menu_overskrift menu_overskrift"
             "menukort menukort menukort menukort";
-        grid-template-columns: 1.75fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
 
@@ -1442,31 +1433,26 @@ button {
     }
 
     .beskrivelse {
-        margin: 5vw 3vw 0 3vw;
-        width: 45.5vw;
+        margin: 0vw 10vw 0 3vw;
         background-color: white;
         z-index: 14;
     }
 
-    .wp-image-497 {
-        margin: 5vw 1.5vw 0 3vw;
-        width: 35vw;
-    }
-
     .abningstider {
-        margin: 0vw 3vw;
+        margin: 8vw 3vw;
     }
 
     .adresse {
         margin: 0;
+        text-align: left;
     }
 
     .gallery_food_img {
-        justify-self: end;
+
     }
     .wp-image-498 {
-        margin: 5vw 3vw 0 1.5vw;
-        width: 35vw;
+        margin: 5vw 3vw 0 3vw;
+        justify-self: end;
 
     }
 
@@ -1475,7 +1461,7 @@ button {
     }
     .wp-image-502 {
         margin: 0 auto;
-        width: 70vw;
+        width: 80vw;
     }
     .menukort_img {
         justify-self: center;
@@ -1487,7 +1473,7 @@ button {
     }
     .wp-image-113 {
         margin-top: 1vw;
-        width: 30vw;
+        width: 35vw;
     }
     .thedesigner_billede {
         justify-self:right;
@@ -1502,10 +1488,13 @@ button {
         background-color: white;
     }
     img.wp-image-218 {
-        width: 30vw;
+        width: 45.5vw;
     }
     .gallery_about {
         justify-self:center;
+    }
+    .contactp {
+        margin-right: 1.5vw;
     }
 
     /*-----------STORIES------------*/
