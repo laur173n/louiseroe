@@ -681,6 +681,7 @@ footer a {
             "followus billede2_about"
             "contact_about billede2_about";
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px auto auto auto;
 
     }
     .thedesigner_billede {
@@ -688,27 +689,31 @@ footer a {
     }
 
     .wp-image-113 {
-      width: 47vw;
+      width: 45.5vw;
+        margin: 5vw 1.5vw 0 3vw;
     }
 
     .thedesigner_overskrift {
         grid-area: overskrift_about;
-        margin: 0 0 0 1.5;
+        margin: 5vw 0 0 1.5vw;
     }
 
     p.about_tekst {
        grid-area: tekst_about;
+        margin: 0 3vw 0 1.5vw;
     }
     .gallery_about {
         grid-area: billede2_about;
     }
 
      img.wp-image-218 {
-        width: 47vw;
+        width: 45.5vw;
+         margin: 5vw 3vw 0 1.5vw;
     }
 
     p.followus {
         grid-area: followus;
+        margin: 5vw 0 0 3vw;
     }
 
     .contactp {
@@ -774,6 +779,7 @@ footer a {
         grid-area: dato2;
         align-self: end;
         margin-right: 3vw;
+        margin-bottom: 0;
     }
 
 
@@ -1225,11 +1231,25 @@ button {
     .indhold_about {
         grid-template-rows: 100px auto auto;
     }
-
+    .wp-image-113 {
+        margin-top: 1vw;
+        width: 30vw;
+    }
+    .thedesigner_billede {
+        justify-self:right;
+    }
+    .thedesigner_overskrift {
+        margin-top: 1vw;
+    }
     p.about_tekst {
         z-index: 13;
         background-color: white;
-
+    }
+    img.wp-image-218 {
+        width: 30vw;
+    }
+    .gallery_about {
+        justify-self:center;
     }
 
     /*-----------STORIES------------*/
@@ -1237,23 +1257,44 @@ button {
     .indhold_stories {
         margin-top: 0;
         grid-template-rows: 50px auto auto 150px auto 160px auto auto;
-
     }
 
     h2.daysofdesign_h2 {
         align-self: end;
     }
     img.wp-image-117 {
-        justify-self: end;
+        width: 30vw;
     }
     .daysofdesign_poster {
-        align-self: end;
+        justify-self: right;
     }
 
     .daysofdesign_tekst {
-        margin-right: 1.5vw;
+        margin-right: 5vw;
+        width: 40vw;
     }
 
+    .daysofdesign_date {
+        margin-left: 1.5vw
+    }
+
+    img.wp-image-118 {
+        width: 60vw;
+    }
+    .moodboard {
+        justify-self: right;
+        margin-right: 3vw;
+    }
+    .moodboard_date {
+        margin-right: 0;
+    }
+    img.wp-image-119 {
+        width: 30vw;
+    }
+    .elle_img {
+        justify-self: left;
+
+    }
 
     /******FOOTER******/
 
@@ -1468,31 +1509,7 @@ button {
         left: 84.5vw;
     }
 
-    /*--------ABOUT--------*/
-    .indhold_about {
-        margin-top: 4vw;
-    }
 
-    p.about_tekst {
-        margin-top: 7vw;
-        flex-basis: 400px;
-        width: 50%;
-    }
-
-    .about_overskrift_website {
-        top: 13vw;
-        left: 38.5vw;
-    }
-
-    .about_overskrift_website2 {
-        top: 16.3vw;
-        left: 46vw;
-    }
-
-    .contactp {
-        top: 110vw;
-        left: 13vw;
-    }
 }
 
 @media only screen and (min-width: 1250px) {
