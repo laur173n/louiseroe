@@ -474,7 +474,7 @@ button {
     grid-area: menukort;
 }
 
-/*------------- ABOUT -----------*/
+/*---------- ABOUT --------*/
 /*The designer overkrift og billede af hanne louise*/
 .wp-image-113 {
     width: 94vw;
@@ -506,13 +506,6 @@ button {
     margin-bottom: 8vw;
 }
 
-.about_overskrift_website {
-    display: none;
-}
-
-.about_overskrift_website2 {
-    display: none;
-}
 
 /*-------------STORIES---------------*/
 
@@ -792,6 +785,56 @@ footer a {
         margin: 0 3vw 8vw 3vw;
         width: 94vw;
     }
+
+    /*---------------  ABOUT  ---------------*/
+
+    .indhold_about {
+        display: grid;
+        grid-template-areas:
+            "billede_about overskrift_about"
+            "billede_about tekst_about"
+            "followus billede2_about"
+            "contact_about billede2_about";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px auto auto auto;
+
+    }
+    .thedesigner_billede {
+        grid-area: billede_about;
+    }
+
+    .wp-image-113 {
+      width: 45.5vw;
+        margin: 5vw 1.5vw 0 3vw;
+    }
+
+    .thedesigner_overskrift {
+        grid-area: overskrift_about;
+        margin: 5vw 0 0 1.5vw;
+    }
+
+    p.about_tekst {
+       grid-area: tekst_about;
+        margin: 0 3vw 0 1.5vw;
+    }
+    .gallery_about {
+        grid-area: billede2_about;
+    }
+
+     img.wp-image-218 {
+        width: 45.5vw;
+         margin: 5vw 3vw 0 1.5vw;
+    }
+
+    p.followus {
+        grid-area: followus;
+        margin: 5vw 0 0 3vw;
+    }
+
+    .contactp {
+        grid-area: contact_about;
+    }
+
 
     /*--------------STORIES----------------*/
 
