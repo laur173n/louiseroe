@@ -1414,6 +1414,10 @@ footer a {
         background-color: white;
     }
 
+    .blackbox img {
+        border: 0.5px solid black;
+    }
+
     /*------------INSPIRATION------------*/
 
     .indhold_inspiration {
