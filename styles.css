@@ -409,20 +409,21 @@ button {
 .h2_inspiration {
     display: none;
 }
+
 /*------------- CONCEPT STORE -----------*/
 
 .indhold_concept {
     display: grid;
     grid-template-areas:
-            "billede1_concept"
-            "tekst_concept"
-            "address_concept"
-            "billede3_concept"
-            "abningstider"
-            "menu_overskrift"
-            "menukort";
-        grid-template-columns: 1fr;
-    }
+        "billede1_concept"
+        "tekst_concept"
+        "address_concept"
+        "billede3_concept"
+        "abningstider"
+        "menu_overskrift"
+        "menukort";
+    grid-template-columns: 1fr;
+}
 }
 
 
@@ -452,6 +453,7 @@ button {
     text-align: right;
     margin: 6vw 3vw 8vw 0
 }
+
 .gallery_food_img {
     grid-area: billede3_concept;
 }
@@ -465,6 +467,7 @@ button {
     grid-area: menu_overskrift;
     margin: 5vw 3vw 5vw 3vw;
 }
+
 .wp-image-502 {
     margin: 0 3vw 8vw 3vw;
     width: 94vw;
@@ -486,7 +489,7 @@ button {
 
 .thedesigner_overskrift {
     margin: 3vw;
-     margin-top: 9vw;
+    margin-top: 9vw;
 }
 
 /*follow us*/
@@ -559,6 +562,7 @@ h2.daysofdesign_h2 {
 .wp-block-preformatted {
     margin: 3vw;
 }
+
 .daysofdesign_date {
     text-align: right;
 }
@@ -566,22 +570,25 @@ h2.daysofdesign_h2 {
 h2.moodboard_overskrift {
     margin: 8vw 3vw 2vw 3vw;
 }
+
 .moodboard img {
     width: 94vw;
     margin: 3vw;
 }
+
 .moodboard_date {
     text-align: right;
 }
 
 h2.elle_overskrift {
-     margin: 8vw 3vw 2vw 3vw;
+    margin: 8vw 3vw 2vw 3vw;
 }
 
 .elle_img img {
     width: 94vw;
     margin: 3vw;
 }
+
 .elle_date {
     text-align: right;
 }
@@ -767,18 +774,20 @@ footer a {
     }
 
 
-.wp-image-508,
-.wp-image-509,
-.wp-image-510,
-.wp-image-511,
-.wp-image-512,
-.wp-image-513 {
-    width: 40vw;
-    margin: 3vw;
-}
+    .wp-image-508,
+    .wp-image-509,
+    .wp-image-510,
+    .wp-image-511,
+    .wp-image-512,
+    .wp-image-513 {
+        width: 40vw;
+        margin: 3vw;
+    }
+
     .inspiration_billede1 {
         grid-area: billede1;
     }
+
     .inspiration_billede2 {
         grid-area: billede2;
     }
@@ -786,24 +795,28 @@ footer a {
     .inspiration_billede3 {
         grid-area: billede3;
     }
+
     .inspiration_billede4 {
         grid-area: billede4;
     }
+
     .inspiration_billede5 {
         grid-area: billede5;
     }
+
     .inspiration_billede6 {
         grid-area: billede6;
     }
 
-.wp-block-gallery {
-    padding: 0;
-}
+    .wp-block-gallery {
+        padding: 0;
+    }
 
-.wp-image-180 {
-    margin-top: 5vw;
-}
-/*------------- CONCEPT STORE -----------*/
+    .wp-image-180 {
+        margin-top: 5vw;
+    }
+
+    /*------------- CONCEPT STORE -----------*/
 
     .indhold_concept {
         display: grid;
@@ -854,6 +867,7 @@ footer a {
     .menu_overskrift {
         margin: 8vw 3vw 3vw 3vw;
     }
+
     .wp-image-502 {
         margin: 0 3vw 0vw 3vw;
         width: 94vw;
@@ -861,7 +875,7 @@ footer a {
 
     /*------------SINGLEVIEW--------------*/
 
-/*
+    /*
     .produkt {
         width: 100vw;
 
@@ -903,12 +917,13 @@ footer a {
         grid-template-rows: 100px auto auto auto;
 
     }
+
     .thedesigner_billede {
         grid-area: billede_about;
     }
 
     .wp-image-113 {
-      width: 45.5vw;
+        width: 45.5vw;
         margin: 5vw 1.5vw 0 3vw;
     }
 
@@ -918,16 +933,17 @@ footer a {
     }
 
     p.about_tekst {
-       grid-area: tekst_about;
+        grid-area: tekst_about;
         margin: 0 3vw 0 1.5vw;
     }
+
     .gallery_about {
         grid-area: billede2_about;
     }
 
-     img.wp-image-218 {
+    img.wp-image-218 {
         width: 45.5vw;
-         margin: 5vw 3vw 0 1.5vw;
+        margin: 5vw 3vw 0 1.5vw;
     }
 
     p.followus {
@@ -944,16 +960,16 @@ footer a {
 
 
     .indhold_stories {
-    display: grid;
-    grid-template-areas:
-        "overskrift1 overskrift1 . ."
-        "billede1 billede1 tekst1 tekst1"
-        "billede1 billede1 dato1 dato1"
-        "overskrift2 overskrift2 overskrift2 overskrift2"
-        "dato2 billede2 billede2 billede2"
-        "overskrift3 overskrift3 billede3 billede3"
-        "tekst2 tekst2 billede3 billede3"
-        "dato3 dato3 billede3 billede3";
+        display: grid;
+        grid-template-areas:
+            "overskrift1 overskrift1 . ."
+            "billede1 billede1 tekst1 tekst1"
+            "billede1 billede1 dato1 dato1"
+            "overskrift2 overskrift2 overskrift2 overskrift2"
+            "dato2 billede2 billede2 billede2"
+            "overskrift3 overskrift3 billede3 billede3"
+            "tekst2 tekst2 billede3 billede3"
+            "dato3 dato3 billede3 billede3";
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 100px auto auto 100px auto 150px auto auto;
     }
@@ -968,17 +984,20 @@ footer a {
     .daysofdesign_poster img {
         margin: 0;
     }
+
     .daysofdesign_poster {
         grid-area: billede1;
 
     }
+
     img.wp-image-117 {
         width: 45.5vw;
         margin-right: 1.5vw;
         margin-left: 3vw;
         animation-name: showing;
-    animation-duration: 2s;
+        animation-duration: 2s;
     }
+
     .daysofdesign_tekst {
         grid-area: tekst1;
         margin: 0vw;
@@ -986,12 +1005,14 @@ footer a {
         width: 47vw;
 
     }
+
     .daysofdesign_date {
         grid-area: dato1;
         text-align: left;
         margin: 0;
         align-self: end;
     }
+
     .moodboard_overskrift {
         grid-area: overskrift2;
         text-align: right;
@@ -1008,6 +1029,7 @@ footer a {
     .moodboard {
         grid-area: billede2;
     }
+
     img.wp-image-118 {
         width: 70vw;
         margin: 0;
@@ -1017,6 +1039,7 @@ footer a {
         grid-area: overskrift3;
         margin: 8vw 0 0 3vw;
     }
+
     .elle_tekst {
         grid-area: tekst2;
         margin: 0 1.5vw 0 3vw;
@@ -1030,6 +1053,7 @@ footer a {
         width: 45vw;
         margin: 8vw 3vw 0 1.5vw;
     }
+
     .elle_date {
         grid-area: dato3;
         text-align: right;
@@ -1278,7 +1302,9 @@ footer a {
         margin-top: 12vw;
     }
 
-
+    .produktersidebar h2 {
+        margin: 1 0 1 0vw;
+    }
 
     /*--------SHOP---------*/
 
@@ -1365,13 +1391,12 @@ footer a {
 
     #liste img {
         width: 50%;
-        display: inline;
 
     }
 
     #liste h2 {
-        width: 50%;
         text-align: center;
+
 
     }
 
@@ -1379,56 +1404,15 @@ footer a {
         margin-top: 2vw;
     }
 
-    /*.produkterwrapper h2 {
-    text-align: center;
-    font-family: DIN;
-    text-transform: uppercase;
-}
 
+    button {
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+    }
 
-.colours {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 0vw 33vw;
-}
-
-.colours img {
-    width: 8vw;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin: 1vw;
-}
-
-button {
-    border: none;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#liste {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 10vw 6vw;
-
-}
-
-#liste img {
-    width: 40%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-
-#liste h2 {
-    font-family: DIN;
-    font-size: 0.7rem;
-    line-height: 1.5rem;
-    margin: 0;
-    text-align: center;
-}*/
-
+    #liste {
+        background-color: white;
+    }
 
     /*------------INSPIRATION------------*/
 
@@ -1490,9 +1474,8 @@ button {
         text-align: left;
     }
 
-    .gallery_food_img {
+    .gallery_food_img {}
 
-    }
     .wp-image-498 {
         margin: 5vw 3vw 0 3vw;
         justify-self: end;
@@ -1502,10 +1485,12 @@ button {
     .menu_overskrift {
         margin: 8vw 3vw 3vw 3vw;
     }
+
     .wp-image-502 {
         margin: 0 auto;
         width: 80vw;
     }
+
     .menukort_img {
         justify-self: center;
     }
@@ -1514,28 +1499,35 @@ button {
     .indhold_about {
         grid-template-rows: 100px auto auto;
     }
+
     .wp-image-113 {
         margin-top: 1vw;
         width: 35vw;
     }
+
     .thedesigner_billede {
-        justify-self:right;
+        justify-self: right;
     }
+
     .thedesigner_overskrift {
         margin-top: 1vw;
         z-index: 18;
         background-color: white;
     }
+
     p.about_tekst {
         z-index: 13;
         background-color: white;
     }
+
     img.wp-image-218 {
         width: 45.5vw;
     }
+
     .gallery_about {
-        justify-self:center;
+        justify-self: center;
     }
+
     .contactp {
         margin-right: 1.5vw;
     }
@@ -1550,9 +1542,11 @@ button {
     h2.daysofdesign_h2 {
         align-self: end;
     }
+
     img.wp-image-117 {
         width: 30vw;
     }
+
     .daysofdesign_poster {
         justify-self: right;
     }
@@ -1573,22 +1567,26 @@ button {
     img.wp-image-118 {
         width: 60vw;
     }
+
     .moodboard {
         justify-self: right;
         margin-right: 3vw;
     }
+
     .moodboard_date {
         margin-right: 0;
     }
+
     img.wp-image-119 {
         width: 30vw;
     }
+
     .elle_img {
         justify-self: left;
 
     }
 
-    .elle_tekst{
+    .elle_tekst {
         z-index: 16;
         background-color: white;
     }
