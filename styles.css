@@ -514,6 +514,7 @@ button {
 
 .h2_inspiration {
     display: none;
+    z-index: 300;
 }
 
 /*------------- CONCEPT STORE -----------*/
@@ -648,6 +649,7 @@ button {
     padding: 2vw 5vw 2vw 5vw;
     border: 1px solid black;
     cursor: pointer;
+    z-index: 400;
 }
 
 
@@ -2060,7 +2062,7 @@ footer a {
     }
 
     .h2_inspiration {
-        left: -6.7vw;
+        left: -5.7vw;
     }
 }
 
