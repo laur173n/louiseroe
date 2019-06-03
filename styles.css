@@ -136,7 +136,7 @@ a:hover {
     height: 100%;
     width: 102vw;
     margin: -2vw;
-    z-index: 2;
+    z-index: 2000;
 }
 
 #menu li {
@@ -173,6 +173,7 @@ a:hover {
 
 main {
     width: 100vw;
+    margin-top: 3vw;
 }
 
 /*video*/
@@ -395,17 +396,20 @@ main {
 /*-------------------PRODUKTER-----------------*/
 
 .produkterwrapper {
-    margin-top: 2vw;
+    margin-top: 5vw;
 }
 
 .produkt {
     background-color: white;
     z-index: 40;
+    cursor: pointer;
 
 }
 
 .filtercategories {
     margin-bottom: -18vw;
+    cursor: pointer;
+
 }
 
 .produkterwrapper h2 {
@@ -422,6 +426,8 @@ main {
     margin: 0vw 36vw;
     z-index: 200;
     width: 150px;
+    cursor: pointer;
+
 }
 
 .colours img {
@@ -476,12 +482,8 @@ button {
     padding: 0;
 }
 
-.wp-block-gallery {
-    padding: 0;
-}
-
-.wp-image-180 {
-    margin-top: 5vw;
+.wp-image-508 {
+    margin-top: vw;
 }
 
 .h2_inspiration {
@@ -493,6 +495,7 @@ button {
 
 .indhold_concept {
     display: grid;
+    margin-top: -2vw;
     grid-template-areas:
         "billede1_concept"
         "tekst_concept"
@@ -568,7 +571,7 @@ button {
 
 .thedesigner_overskrift {
     margin: 3vw;
-    margin-top: 9vw;
+    margin-top: 5vw;
 }
 
 /*follow us*/
@@ -615,7 +618,8 @@ button {
 }
 
 .addbag {
-    font-family: palatino;
+    font-family: 'DIN';
+    font-size: .7rem;
     padding: 2vw 5vw 2vw 5vw;
     border: 1px solid black;
     cursor: pointer;
@@ -624,16 +628,24 @@ button {
 
 .back_button p {
     padding: 0;
-    margin: 3vw 3vw;
+    margin: 5vw 3vw;
     font-family: 'DIN';
     text-align: right;
+}
+
+.back_button_inspi p {
+    padding: 0;
+    font-family: 'DIN';
+    text-align: right;
+    margin-right: 3vw;
+    margin-top: 2vw;
 }
 
 /*-------------STORIES---------------*/
 
 
 h2.daysofdesign_h2 {
-    margin: 8vw 3vw 2vw 3vw;
+    margin: 5vw 3vw 2vw 3vw;
 }
 
 .daysofdesign_poster img {
@@ -678,7 +690,7 @@ h2.elle_overskrift {
 /*-----------CONTACT---------*/
 
 .follow_contact {
-    margin: 12vw 3vw;
+    margin: 5vw 3vw;
 }
 
 /*-------------------FOOTER-----------------*/
@@ -821,7 +833,7 @@ footer a {
     /*video*/
 
     .myVideo_mobile {
-        margin-top: 5vw;
+        margin-top: 3vw;
         width: 100%;
         animation-name: showing;
         animation-duration: 5s;
@@ -858,6 +870,10 @@ footer a {
         margin-bottom: -6vw;
     }
 
+    .produkterwrapper {
+        margin-top: 3vw;
+    }
+
 
     /*--------------SHOP FORSIDE---------------*/
 
@@ -886,8 +902,8 @@ footer a {
     .shop_produkter img {
         width: 45.5vw;
         grid-area: produkt-billede;
-        margin: 0;
-        padding-right: 3vw;
+        margin-top: 0;
+        margin-left: 3vw;
         padding-left: 1.5vw;
     }
 
@@ -920,6 +936,7 @@ footer a {
             "billede3 billede4"
             "billede5 billede6";
         grid-template-columns: 1fr 1fr;
+        margin-top: -5vw;
     }
 
 
@@ -972,6 +989,12 @@ footer a {
         margin-top: 5vw;
     }
 
+    .back_button_inspi p {
+        margin: 0;
+        padding: 0;
+        margin-right: 3vw;
+    }
+
     /*------------- CONCEPT STORE -----------*/
 
     .indhold_concept {
@@ -984,6 +1007,7 @@ footer a {
             "menu_overskrift menu_overskrift"
             "menukort menukort";
         grid-template-columns: 1fr 1fr;
+        margin-top: -5vw;
     }
 
 
@@ -1044,27 +1068,29 @@ footer a {
     .singleview .produkt img {
         width: 54vw;
         margin-left: 20vw;
+        margin-top: -10vw;
     }
 
     .singleview .produkt p {
         font-family: palatino;
         border-top: 1px solid black;
         padding-top: 2vw;
-        width:
-            margin: 5vw;
+        margin: 5vw;
+    }
+
+    .back_button {
+        margin-top: -2vw;
     }
 
     .addbag {
-        font-family: palatino;
-        padding: 2vw 5vw 2vw 5vw;
-        border: 1px solid black;
-        cursor: pointer;
+        font-size: 1rem;
     }
 
     /*---------------  ABOUT  ---------------*/
 
     .indhold_about {
         display: grid;
+        margin-top: -2vw;
         grid-template-areas:
             "billede_about overskrift_about"
             "billede_about tekst_about"
@@ -1118,6 +1144,7 @@ footer a {
 
     .indhold_stories {
         display: grid;
+        margin-top: -2vw;
         grid-template-areas:
             "billede1 billede1 overskrift1 overskrift1"
             "billede1 billede1 tekst1 tekst1"
@@ -1227,7 +1254,7 @@ footer a {
 
     .follow_contact {
         position: absolute;
-        margin: 0vw 3vw;
+        margin: -6vw 3vw;
         z-index: 13;
     }
 
@@ -1517,6 +1544,7 @@ footer a {
 
     .shop_container {
         max-width: 100;
+        margin-top: 0;
     }
 
     /*styles af mobil elementer*/
@@ -1543,6 +1571,7 @@ footer a {
         margin-left: 3vw;
         display: inline-block;
         padding-bottom: 1.5vw;
+        font-size: 1.5rem;
     }
 
     .shop_produkter_overskrift {
@@ -1552,6 +1581,8 @@ footer a {
         margin-right: 3vw;
         text-align: right;
         padding-bottom: 1.5vw;
+        font-size: 1.5rem;
+
     }
 
 
@@ -1574,6 +1605,8 @@ footer a {
 
     .produktersidebar {
         grid-area: sidebar;
+        margin-top: -3vw;
+
     }
 
     .colours {
@@ -1652,6 +1685,7 @@ footer a {
     .singleview .produkt img {
         width: 34vw;
         margin-left: 16vw;
+        margin-top: 3vw;
     }
 
     .singleview .produkt p {
@@ -1666,7 +1700,6 @@ footer a {
     }
 
     .addbag {
-        font-family: palatino;
         padding: 1vw 2vw 1vw 2vw;
         border: 1px solid black;
         cursor: pointer;
@@ -1679,11 +1712,24 @@ footer a {
         position: absolute;
         right: 5vw;
         z-index: 500;
+        top: -3vw;
+    }
+
+    .back_button_inspi p {
+        z-index: 500;
+        right: 5vw;
+        margin-top: 2vw;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+
     }
 
     /*------------INSPIRATION------------*/
 
-    .indhold_inspiration {}
+    .indhold_inspiration {
+        margin-top: 0vw;
+    }
 
     .wp-image-456,
     .wp-image-457,
@@ -1693,7 +1739,7 @@ footer a {
     .wp-image-461 {}
 
     .inspiration_billede1 {
-        margin-top: 0;
+        margin-top: -2vw;
     }
 
     .inspiration_billede2 {
@@ -1711,6 +1757,7 @@ footer a {
             "menu_overskrift menu_overskrift menu_overskrift menu_overskrift"
             "menukort menukort menukort menukort";
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin-top: 0;
     }
 
 
@@ -1771,6 +1818,7 @@ footer a {
             "contact_about billede2_about";
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 100px auto auto;
+        margin-top: 0;
     }
 
     .wp-image-113 {
@@ -1786,11 +1834,16 @@ footer a {
         margin-top: 1vw;
         z-index: 18;
         background-color: white;
+        margin-right: 3vw;
+        height: 3vw;
+
     }
 
     p.about_tekst {
         z-index: 13;
         background-color: white;
+        margin-right: 3vw;
+        margin-top: -2vw;
     }
 
     img.wp-image-218 {
@@ -1815,6 +1868,7 @@ footer a {
     .indhold_stories {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 60px auto auto 100px auto 160px auto auto;
+        margin-top: 0;
     }
 
     h2.daysofdesign_h2 {
@@ -1899,6 +1953,10 @@ footer a {
 
     p.contact_tekst {
         margin-top: 0vw;
+    }
+
+    .follow_contact {
+        margin-top: 0;
     }
 
 }

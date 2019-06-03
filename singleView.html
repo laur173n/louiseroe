@@ -44,7 +44,7 @@
         </header>
 
         <main>
-           <a href="produkter.html">
+            <a href="produkter.html">
                 <div class="back_button">
                     <p>BACK</p>
                 </div>
@@ -98,6 +98,26 @@
                 })
 
                 åbn();
+                document.querySelector(".burger-button").addEventListener("click", toggleMenu);
+
+            }
+
+            // burgermenuen skal kunne foldes ind og ud
+            function toggleMenu() {
+                console.log("Toggle menu");
+                document.querySelector("#menu").classList.toggle("hide");
+
+                let erSkjult = document.querySelector("#menu").classList.contains("hide");
+                document.querySelector("header").classList.toggle("burgermenu_fix");
+
+
+                if (erSkjult == true) {
+                    //menuen er skjult - ændr menuknap til lll
+                    document.querySelector(".burger-button img").src = "img/burgermenu.png";
+                } else {
+                    //menuen er nu vist - ændr menuknap til X
+                    document.querySelector(".burger-button img").src = "img/cancel.png";
+                }
             }
 
             function åbn() {
