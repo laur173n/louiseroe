@@ -525,7 +525,7 @@ button {
     grid-area: billede1_concept;
 }
 
-.wp-image-98 {
+.wp-image-518 {
     margin: 8vw 3vw 0 3vw;
     animation-name: showing;
     animation-duration: 2s;
@@ -552,7 +552,7 @@ button {
     grid-area: billede3_concept;
 }
 
-.wp-image-498 {
+.wp-image-517 {
     margin: 0 3vw;
     width: 94vw;
 }
@@ -862,7 +862,6 @@ footer a {
             "billede3 billede4"
             "billede5 billede6";
         grid-template-columns: 1fr 1fr;
-        max-width: 100vw;
     }
 
 
@@ -878,10 +877,14 @@ footer a {
 
     .inspiration_billede1 {
         grid-area: billede1;
+        margin-top: 5vw;
+
     }
 
     .inspiration_billede2 {
         grid-area: billede2;
+        justify-self: end;
+        margin-top: 5vw;
     }
 
     .inspiration_billede3 {
@@ -890,14 +893,17 @@ footer a {
 
     .inspiration_billede4 {
         grid-area: billede4;
+        align-self: end;
     }
 
     .inspiration_billede5 {
         grid-area: billede5;
+        align-self: end;
     }
 
     .inspiration_billede6 {
         grid-area: billede6;
+        justify-self: end;
     }
 
     .wp-block-gallery {
@@ -927,7 +933,7 @@ footer a {
         grid-area: billede1_concept;
     }
 
-    .wp-image-98 {
+    .wp-image-518 {
         margin: 8vw 3vw 0vw 3vw;
         width: 94vw;
     }
@@ -936,13 +942,13 @@ footer a {
         margin: 3vw 3vw 0vw 3vw;
     }
 
-    .wp-image-497 {
+    .wp-image-517 {
         margin: 5vw 1.5vw 0 3vw;
         width: 45.5vw;
     }
 
     .abningstider {
-        margin: 8vw 3vw;
+        margin: 5vw 3vw;
     }
 
     .adresse {
@@ -1058,7 +1064,7 @@ footer a {
     .indhold_stories {
         display: grid;
         grid-template-areas:
-            "overskrift1 overskrift1 . ."
+            "billede1 billede1 overskrift1 overskrift1"
             "billede1 billede1 tekst1 tekst1"
             "billede1 billede1 dato1 dato1"
             "overskrift2 overskrift2 overskrift2 overskrift2"
@@ -1072,13 +1078,14 @@ footer a {
 
     h2.daysofdesign_h2 {
         grid-area: overskrift1;
-        text-align: right;
+        text-align: left;
         margin: 5vw 1.5vw 2vw 0;
     }
 
 
     .daysofdesign_poster img {
         margin: 0;
+        margin-top: 5vw;
     }
 
     .daysofdesign_poster {
@@ -1573,9 +1580,7 @@ footer a {
     /*------------INSPIRATION------------*/
 
     .indhold_inspiration {
-        width: 94vw;
-        display: flex;
-        flex-wrap: wrap;
+
     }
 
     .wp-image-456,
@@ -1585,9 +1590,19 @@ footer a {
     .wp-image-460,
     .wp-image-461 {}
 
-    .wp-block-gallery li img {
-        margin: 0;
-        padding: 0;
+    .inspiration_billede1 {
+        margin-top: 0;
+    }
+    .inspiration_billede2 {
+        margin-top: 0;
+    }
+    .h2_inspiration {
+        display: block;
+        position: fixed;
+        transform: rotate(-90deg);
+        left: -7.8vw;
+        top: 31vw;
+
     }
 
     /*------------- CONCEPT STORE -----------*/
@@ -1609,7 +1624,7 @@ footer a {
         justify-self: end;
     }
 
-    .wp-image-98 {
+    .wp-image-518 {
         margin: 0vw 3vw 0vw 3vw;
         width: 55vw;
 
@@ -1622,7 +1637,7 @@ footer a {
     }
 
     .abningstider {
-        margin: 8vw 3vw;
+        margin: 5vw 3vw;
     }
 
     .adresse {
@@ -1632,7 +1647,7 @@ footer a {
 
     .gallery_food_img {}
 
-    .wp-image-498 {
+    .wp-image-517 {
         margin: 5vw 3vw 0 3vw;
         justify-self: end;
 
@@ -1653,6 +1668,13 @@ footer a {
 
     /*-----------ABOUT------------*/
     .indhold_about {
+        display: grid;
+        grid-template-areas:
+            "billede_about overskrift_about"
+            "billede_about tekst_about"
+            "billede_about followus"
+            "contact_about billede2_about";
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: 100px auto auto;
     }
 
@@ -1683,9 +1705,13 @@ footer a {
     .gallery_about {
         justify-self: center;
     }
+    p.followus {
+        margin-left: 0;
+    }
 
     .contactp {
         margin-right: 1.5vw;
+        margin-top: 5vw;
     }
 
     /*-----------STORIES------------*/
@@ -1750,7 +1776,6 @@ footer a {
     /******FOOTER******/
 
     footer a {
-        font-family: 'DIN';
         text-decoration: none;
         color: black;
         padding-bottom: 1vw;
@@ -1784,6 +1809,9 @@ footer a {
     .logo2 {
         margin-left: -4.1vw;
     }
+    .h2_inspiration {
+        left: -7.5vw;
+    }
 }
 
 @media only screen and (min-width: 1160px) {
@@ -1808,11 +1836,16 @@ footer a {
     .logo2 {
         margin-left: -3.3vw;
     }
+
 }
 
 @media only screen and (min-width: 1200px) {
     .logo2 {
         margin-left: -3.1vw;
+    }
+    .h2_inspiration {
+        left: -7.2vw;
+
     }
 }
 
@@ -1837,6 +1870,9 @@ footer a {
 @media only screen and (min-width: 1240px) {
     .logo2 {
         margin-left: -2.4vw;
+    }
+    .h2_inspiration {
+        left: -7vw;
     }
 }
 
@@ -1867,6 +1903,9 @@ footer a {
 @media only screen and (min-width: 1280px) {
     .logo2 {
         margin-left: -2.0vw;
+    }
+    .h2_inspiration {
+        left: -6.7vw;
     }
 }
 
@@ -1916,6 +1955,10 @@ footer a {
     .logo2 {
         margin-left: -1.3vw;
     }
+    .h2_inspiration {
+        left: -6.2vw;
+
+    }
 }
 
 @media only screen and (min-width: 1360px) {
@@ -1945,6 +1988,10 @@ footer a {
 @media only screen and (min-width: 1400px) {
     .logo2 {
         margin-left: -0.8vw;
+    }
+    .h2_inspiration {
+        left: -5.9vw;
+
     }
 }
 
