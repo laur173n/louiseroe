@@ -87,7 +87,7 @@
                     </div>
                 </div>
             </a>
-<!--        <p class="publications_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+            <!--        <p class="publications_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
         </main>
 
         <footer>
@@ -150,6 +150,29 @@
                 document.querySelector(".overskrift").textContent = indhold.title.rendered;
                 document.querySelector(".indhold").innerHTML = indhold.content.rendered;
 
+                // billederne skal linke til nye html-sider
+                document.querySelector(".wp-image-106").addEventListener("click", visStoreSide);
+                document.querySelector(".overskrift1_forside").addEventListener("click", visStoreSide);
+                document.querySelector(".wp-image-108").addEventListener("click", visRetailersSide);
+                document.querySelector(".overskrift2_forside").addEventListener("click", visRetailersSide);
+                document.querySelector(".wp-image-536").addEventListener("click", visPressSide);
+                document.querySelector(".overskrift3_forside").addEventListener("click", visPressSide);
+
+            }
+
+            function visStoreSide() {
+                console.log("klikket på inspiration");
+                location.href = "conceptstore.html";
+            }
+
+            function visRetailersSide() {
+                console.log("klikket på produkter");
+                location.href = "retailers.html";
+            }
+
+            function visPressSide() {
+                console.log("klikket på produkter");
+                location.href = "press.html";
             }
 
 

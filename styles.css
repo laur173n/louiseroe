@@ -199,15 +199,21 @@ main {
     margin-top: 0vw;
     animation-name: showing;
     animation-duration: 2s;
+    cursor: pointer;
 }
 
-.overskrift1_forside, .overskrift2_forside, .overskrift3_forside {
+.overskrift1_forside,
+.overskrift2_forside,
+.overskrift3_forside {
     margin: 8vw 3vw 2vw 3vw;
+    cursor: pointer;
+
 }
 
 .overskrift2_forside {
     text-align: right;
 }
+
 /*'retailers' billede og overskrift*/
 .wp-image-108 {
     margin: 3vw;
@@ -215,6 +221,8 @@ main {
     margin-top: 0vw;
     animation-name: showing;
     animation-duration: 2s;
+    cursor: pointer;
+
 }
 
 
@@ -225,6 +233,8 @@ main {
     margin-top: 0;
     animation-name: showing;
     animation-duration: 2s;
+    cursor: pointer;
+
 }
 
 
@@ -612,7 +622,7 @@ button {
     z-index: 400;
 }
 
-.back_button p{
+.back_button p {
     padding: 0;
     margin: 3vw 3vw;
     font-family: 'DIN';
@@ -1041,7 +1051,7 @@ footer a {
         border-top: 1px solid black;
         padding-top: 2vw;
         width:
-        margin: 5vw;
+            margin: 5vw;
     }
 
     .addbag {
@@ -1454,6 +1464,7 @@ footer a {
         left: 55vw;
         top: -20vw;
     }
+
     .overskrift2_forside {
         position: absolute;
         right: 2vw;
@@ -1470,6 +1481,7 @@ footer a {
         margin-left: 3vw;
         top: -40vw;
     }
+
     .overskrift3_forside {
         margin: 0;
         top: -42vw;
@@ -1663,11 +1675,11 @@ footer a {
         left: 53vw;
     }
 
-     .back_button p {
-    position: absolute;
-         right: 5vw;
-         z-index: 500;
-}
+    .back_button p {
+        position: absolute;
+        right: 5vw;
+        z-index: 500;
+    }
 
     /*------------INSPIRATION------------*/
 
