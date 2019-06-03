@@ -263,7 +263,7 @@ main {
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 600px;
+    max-width: 400px;
     position: relative;
     margin: auto;
 }
@@ -301,12 +301,6 @@ main {
     border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
 /* Caption text */
 .text {
     color: #f2f2f2;
@@ -330,8 +324,8 @@ main {
 /* The dots/bullets/indicators */
 .dot {
     cursor: pointer;
-    height: 15px;
-    width: 15px;
+    height: 7px;
+    width: 7px;
     margin: 0 2px;
     background-color: #bbb;
     border-radius: 50%;
@@ -341,7 +335,7 @@ main {
 
 .active,
 .dot:hover {
-    background-color: #717171;
+    background-color: black;
 }
 
 /* Fading animation */
@@ -1406,6 +1400,14 @@ footer a {
 
     .produktersidebar h2 {
         margin: 1 0 1 0vw;
+    }
+
+    /*--------------PUBLICATION----------------*/
+
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 600px;
+
     }
 
     /*------------SHOP---------------*/

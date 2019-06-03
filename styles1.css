@@ -8,6 +8,7 @@
 @font-face {
     font-family: 'DIN-Bold';
     src: url('fonts/DINPro-Bold.woff') format('woff');
+
 }
 
 @font-face {
@@ -44,13 +45,12 @@ header {
     grid-area: menu;
 }
 
-/***------------- OVERALL -------------- ***/
+/***------------- OVERALL ------------------- ***/
 
 figure {
     margin: 0;
     padding: 0;
 }
-
 
 body {
     padding: 0;
@@ -60,12 +60,6 @@ body {
 .hide {
     visibility: hidden;
     pointer-events: none;
-}
-
-h4 {
-    font-family: palatino;
-    font-weight: 100;
-    font-size: 1.3rem;
 }
 
 h2 {
@@ -82,22 +76,13 @@ figcaption {
 
 p {
     font-family: palatino;
-    font-size: 0.9rem;
-    line-height: 1.8rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
     margin: 3vw;
 }
 
 h1.overskrift {
     display: none;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-a:hover {
-    color: grey;
 }
 
 
@@ -166,7 +151,8 @@ a:hover {
 }
 
 .valgt {
-    border-bottom: 0.25px solid black;
+    font-family: 'DIN-Bold';
+    font-weight: bold;
 }
 
 /*--------------FORSIDE---------------*/
@@ -175,30 +161,11 @@ main {
     width: 100vw;
 }
 
-/*video*/
-.myVideo_desk {
-    display: none;
-    z-index: 11;
-    animation-name: showing;
-    animation-duration: 5s;
-}
-
-.myVideo_mobile {
-    margin-top: 5vw;
-    width: 100%;
-    animation-name: showing;
-    animation-duration: 5s;
-    z-index: 11;
-
-}
-
 /*'louise roe gallery' billede og overskrift*/
 .wp-image-106 {
     margin: 3vw;
     width: 94vw;
     margin-top: 8vw;
-    animation-name: showing;
-    animation-duration: 2s;
 }
 
 .blok1 figcaption {
@@ -216,8 +183,6 @@ main {
     margin: 3vw;
     width: 94vw;
     margin-top: 8vw;
-    animation-name: showing;
-    animation-duration: 2s;
 }
 
 .blok2 figcaption {
@@ -235,8 +200,6 @@ main {
     margin: 3vw;
     width: 94vw;
     margin-top: 8vw;
-    animation-name: showing;
-    animation-duration: 2s;
 }
 
 .blok3 figcaption {
@@ -256,74 +219,131 @@ main {
     margin-top: 8vw;
 }
 
-/*--------------PUBLICATION----------------*/
-.publication {
-    width: 100vw;
+/*    SLIDESHOW (https://www.w3schools.com/howto/howto_js_slideshow.asp) */
+    * {
+        box-sizing: border-box
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 1000px;
+    }
+
+
+
+    /* Hide the images by default */
+    .mySlides {
+        display: none;
+        cursor: pointer;
+    }
+
+
+    .active,
+    .dot:hover {
+        background-color: #717171;
+    }
+
+
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+/*--------------shop forside---------------*/
+
+/*inspiration - billede og overskrift*/
+
+.inspiration_kasse figcaption {
+    position: absolute;
+    top: 25.5vw;
+    left: 3vw;
 }
 
-.page1 img,
-.page2 img,
-.page3 img {
-    width: 94vw;
+/*fjernelse af mobil billede-versioner*/
+.wp-image-190 {
+    display: none;
+}
+
+.desktop_shop_inspiration figcaption {
+    display: none;
+}
+
+.wp-image-193 {
+    display: none;
+}
+
+.desktop_shop_produkter figcaption {
+    display: none;
+}
+
+/*styles af desktop billeder*/
+
+.wp-image-191 {
+    width: 350px;
     margin: 3vw;
+    display: block;
+    margin-top: 10vw;
 }
 
-.page1 img:hover {
-    cursor: pointer;
+.mobile_shop_inspiration figcaption {
+    position: absolute;
+    top: 30vw;
+    right: 7vw;
+    font-size: 1.2rem;
+    display: block;
 }
 
-/*--------------SHOP FORSIDE---------------*/
+.mobile_shop_produkter figcaption {
+    position: absolute;
+    top: 97vw;
+    left: 7vw;
+    font-size: 1.2rem;
+    display: block;
+}
 
-/*parent*/
-.shop_container {
+.wp-image-192 {
+    width: 350px;
+    margin: 3vw;
+    display: block;
+    margin-top: 10vw;
+}
+
+
+/*produkter - billede og overskrift*/
+
+.products_kasse figcaption {
+    position: absolute;
+    top: 162.5vw;
+    right: 3vw;
+}
+
+.indhold_shop {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-top: 5vw;
-}
-
-/*styles af mobil elementer*/
-
-.shop_inspiration img {
-    width: 94vw;
-    margin: 3vw;
-    cursor: pointer;
-    animation-name: showing;
-    animation-duration: 2s;
-}
-
-.shop_produkter img {
-    margin: 3vw;
-    width: 94vw;
-    cursor: pointer;
-    animation-name: showing;
-    animation-duration: 2s;
-}
-
-.shop_inspiration_overskrift {
-    text-align: right;
-    padding-right: 3vw;
-    margin: 0;
-    cursor: pointer;
-}
-
-.shop_produkter_overskrift {
-    padding-left: 3vw;
-    margin: 0;
-    margin-top: 5vw;
-    cursor: pointer;
-
-}
-
-@keyframes showing {
-
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 100;
-    }
+    align-items: center;
 }
 
 /*-------------------PRODUKTER-----------------*/
@@ -382,114 +402,17 @@ button {
     text-align: center;
 }
 
-/*----------INSPIRATION-----------*/
-
-.wp-image-508,
-.wp-image-509,
-.wp-image-510,
-.wp-image-511,
-.wp-image-512,
-.wp-image-513,
-.wp-image-514 {
-    margin-left: 3vw;
-    margin-right: 3vw;
-    margin-bottom: 3vw;
-    width: 94vw;
-    padding: 0;
-}
-
-.wp-block-gallery {
-    padding: 0;
-}
-
-.wp-image-180 {
-    margin-top: 5vw;
-}
-
-.h2_inspiration {
-    display: none;
-}
-
-/*------------- CONCEPT STORE -----------*/
-
-.indhold_concept {
-    display: grid;
-    grid-template-areas:
-        "billede1_concept"
-        "tekst_concept"
-        "address_concept"
-        "billede3_concept"
-        "abningstider"
-        "menu_overskrift"
-        "menukort";
-    grid-template-columns: 1fr;
-}
-}
-
-
-.louise_gallery_img {
-    grid-area: billede1_concept;
-}
-
-.wp-image-518 {
-    margin: 8vw 3vw 0 3vw;
-    animation-name: showing;
-    animation-duration: 2s;
-    width: 94vw
-}
-
-.beskrivelse {
-    grid-area: tekst_concept;
-    margin: 6vw 3vw;
-}
-
-.abningstider {
-    grid-area: abningstider;
-    margin: 8vw 3vw;
-}
-
-.adresse {
-    grid-area: address_concept;
-    text-align: right;
-    margin: 6vw 3vw 8vw 0
-}
-
-.gallery_food_img {
-    grid-area: billede3_concept;
-}
-
-.wp-image-517 {
-    margin: 0 3vw;
-    width: 94vw;
-}
-
-.menu_overskrift {
-    grid-area: menu_overskrift;
-    margin: 5vw 3vw 5vw 3vw;
-}
-
-.wp-image-502 {
-    margin: 0 3vw 8vw 3vw;
-    width: 94vw;
-}
-
-.menukort_img {
-    grid-area: menukort;
-}
-
-/*---------- ABOUT --------*/
+/********* ABOUT **********/
 /*The designer overkrift og billede af hanne louise*/
 .wp-image-113 {
     width: 94vw;
     margin: 3vw;
     margin-top: 0vw;
-    animation-name: showing;
-    animation-duration: 2s;
 }
 
 .thedesigner_overskrift {
     margin: 3vw;
-    margin-top: 9vw;
+     margin-top: 9vw;
 }
 
 /*follow us*/
@@ -511,42 +434,6 @@ button {
     margin-bottom: 8vw;
 }
 
-/*------------SINGLEVIEW--------------*/
-
-/*
-.produkt {
-    width: 100vw;
-}
-*/
-/*
-
-.produkt h2 {
-    margin-left: 3vw;
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-.produkt img {
-    width: 94vw;
-    margin-left: 3vw;
-}
-
-.produkt p {
-    font-family: palatino;
-    border-top: 1px solid black;
-    padding: 2vw;
-    text-align: center;
-}
-
-.addbag {
-    font-family: palatino;
-    padding: 2vw 5vw 2vw 5vw;
-    border: 1px solid black;
-    cursor: pointer;
-}
-*/
-
-
 /*-------------STORIES---------------*/
 
 
@@ -559,10 +446,11 @@ h2.daysofdesign_h2 {
     margin: 3vw;
 }
 
+
+
 .wp-block-preformatted {
     margin: 3vw;
 }
-
 .daysofdesign_date {
     text-align: right;
 }
@@ -570,34 +458,32 @@ h2.daysofdesign_h2 {
 h2.moodboard_overskrift {
     margin: 8vw 3vw 2vw 3vw;
 }
-
 .moodboard img {
     width: 94vw;
     margin: 3vw;
 }
-
 .moodboard_date {
     text-align: right;
 }
 
 h2.elle_overskrift {
-    margin: 8vw 3vw 2vw 3vw;
+     margin: 8vw 3vw 2vw 3vw;
 }
 
 .elle_img img {
     width: 94vw;
     margin: 3vw;
 }
-
 .elle_date {
     text-align: right;
 }
 
-/*-----------CONTACT---------*/
+/*-------------CONTACT---------------*/
 
 .follow_contact {
     margin: 12vw 3vw;
 }
+
 
 /*-------------------FOOTER-----------------*/
 
@@ -619,16 +505,7 @@ footer a {
     margin: 5vw
 }
 
-/*----------POLICIES-----------*/
 
-.policy_overskrift {
-    font-family: palatino;
-    margin-left: 3vw;
-}
-
-.indhold_policies p {
-    font-family: palatino;
-}
 
 /*------------------------------MEDIAQUERY FOR 400PX-------------------------------*/
 @media only screen and (min-width: 400px) {}
@@ -640,7 +517,7 @@ footer a {
     /* MENU */
 
     .burger-button img {
-        margin-top: 6vw;
+        margin-top: 7vw;
     }
 
     #menu {
@@ -668,6 +545,61 @@ footer a {
         top: 18.4vw;
     }
 
+    /*---------------SHOP-----------------*/
+
+    .indhold_shop {
+        flex-direction: row;
+    }
+
+    /*fjernelse af mobil billede-versioner*/
+    .wp-image-191 {
+        display: none;
+    }
+
+    .mobile_shop_inspiration figcaption {
+        display: none;
+    }
+
+    .wp-image-192 {
+        display: none;
+    }
+
+    .mobile_shop_produkter figcaption {
+        display: none;
+    }
+
+    /*styles af desktop billeder*/
+
+    .wp-image-190 {
+        width: 300px;
+        margin: 2vw;
+        display: block;
+    }
+
+    .desktop_shop_inspiration figcaption {
+        position: absolute;
+        top: 14.5vw;
+        left: 7vw;
+        font-size: 1.2rem;
+        display: block;
+
+    }
+
+    .desktop_shop_produkter figcaption {
+        position: absolute;
+        top: 14.5vw;
+        right: 7vw;
+        font-size: 1.2rem;
+        display: block;
+
+    }
+
+    .wp-image-193 {
+        width: 300px;
+        margin: 2vw;
+        display: block;
+
+    }
 
     /*--------------PRODUKTER----------------*/
 
@@ -677,6 +609,7 @@ footer a {
 
     }
 
+
     /*--------------FOOTER----------------*/
 
     footer a {
@@ -685,242 +618,59 @@ footer a {
 }
 
 
-/*-------------------------MEDIAQUERY FOR IPAD--------------------------*/
+/*-------------------------MEDIAQUERY FOR webshop/IPAD--------------------------*/
 
 @media only screen and (min-width: 716px) {
 
+    /*---------------SHOP-----------------*/
 
-    /*--------------FORSIDE--------------*/
-    /*video*/
-
-    .myVideo_mobile {
-        margin-top: 5vw;
-        width: 100%;
-        animation-name: showing;
-        animation-duration: 5s;
+    /*fjernelse af mobil billede-versioner*/
+    .wp-image-191 {
+        display: none;
     }
 
-    /*--------------PUBLICATION----------------*/
-
-    .publications_text {
-        font-family: palatino;
-        background-color: white;
-        z-index: 12;
+    .mobile_shop_inspiration figcaption {
+        display: none;
     }
 
-
-    /*--------------SHOP FORSIDE---------------*/
-
-    /*parent*/
-    .shop_container {
-        display: grid;
-        justify-content: center;
-        width: 100vw;
-        margin-top: 3vw;
-        grid-template-areas:
-            "inspi-overskrift produkt-overskrift"
-            "inspi-billede produkt-billede";
-        grid-template-columns: 1fr 1fr;
+    .wp-image-192 {
+        display: none;
     }
 
-    /*styles af mobil elementer*/
-
-    .shop_inspiration img {
-        width: 45.5vw;
-        grid-area: inspi-billede;
-        margin: 0;
-        padding-left: 3vw;
-        padding-right: 1.5vw;
+    .mobile_shop_produkter figcaption {
+        display: none;
     }
 
-    .shop_produkter img {
-        width: 45.5vw;
-        grid-area: produkt-billede;
-        margin: 0;
-        padding-right: 3vw;
-        padding-left: 1.5vw;
+    /*styles af desktop billeder*/
+
+    .wp-image-190 {
+        width: 420px;
+        margin: 3vw;
+        display: block;
     }
 
-    .shop_inspiration_overskrift {
-        grid-area: inspi-overskrift;
-        text-align: left;
-        margin-left: 3vw;
-        display: inline-block;
-        padding-bottom: 1.5vw;
-    }
-
-    .shop_produkter_overskrift {
-        grid-area: produkt-overskrift;
-        display: inline-block;
-        margin-top: 0;
-        margin-right: 3vw;
-        text-align: right;
-        padding-bottom: 1.5vw;
-    }
-
-
-
-    /*----------INSPIRATION-----------*/
-
-
-    .indhold_inspiration {
-        display: grid;
-        grid-template-areas:
-            "billede1 billede2"
-            "billede3 billede4"
-            "billede5 billede6";
-        grid-template-columns: 1fr 1fr;
-        justify-content: center;
-          margin-right: 0;
-    }
-
-
-    .wp-image-508,
-    .wp-image-509,
-    .wp-image-510,
-    .wp-image-511,
-    .wp-image-512,
-    .wp-image-513 {
-        width: 40vw;
+    .desktop_shop_inspiration figcaption {
+        position: absolute;
+        top: 12.5vw;
+        left: 7vw;
+        font-size: 1.5rem;
 
     }
 
-    .inspiration_billede1 {
-        grid-area: billede1;
-        margin-top: 5vw;
-    }
-    .wp-image-508 {
+    .desktop_shop_produkter figcaption {
+        position: absolute;
+        top: 12.5vw;
+        right: 7vw;
+        font-size: 1.5rem;
 
     }
 
-    .inspiration_billede2 {
-        grid-area: billede2;
-        justify-self: end;
-        margin-top: 5vw;
-    }
-    img.wp-image-509 {
-
+    .wp-image-193 {
+        width: 420px;
+        margin: 3vw;
+        display: block;
 
     }
-
-    .inspiration_billede3 {
-        grid-area: billede3;
-    }
-
-    .wp-image-510 {
-
-    }
-    .inspiration_billede4 {
-        grid-area: billede4;
-        align-self: end;
-    }
-
-    .inspiration_billede5 {
-        grid-area: billede5;
-        align-self: end;
-    }
-
-    .inspiration_billede6 {
-        grid-area: billede6;
-        justify-self: end;
-    }
-
-    .wp-block-gallery {
-        padding: 0;
-    }
-
-    .wp-image-180 {
-        margin-top: 5vw;
-    }
-
-
-    /*------------- CONCEPT STORE -----------*/
-
-    .indhold_concept {
-        display: grid;
-        grid-template-areas:
-            "billede1_concept billede1_concept"
-            "tekst_concept tekst_concept"
-            "abningstider billede3_concept"
-            "address_concept billede3_concept"
-            "menu_overskrift menu_overskrift"
-            "menukort menukort";
-        grid-template-columns: 1fr 1fr;
-    }
-
-
-    .louise_gallery_img {
-        grid-area: billede1_concept;
-    }
-
-    .wp-image-518 {
-        margin: 8vw 3vw 0vw 3vw;
-        width: 94vw;
-    }
-
-    .beskrivelse {
-        margin: 3vw 3vw 0vw 3vw;
-    }
-
-    .wp-image-517 {
-        margin: 5vw 1.5vw 0 3vw;
-        width: 45.5vw;
-    }
-
-    .abningstider {
-        margin: 8vw 3vw;
-    }
-
-    .adresse {
-        margin: 0 1.5vw 0vw 0;
-        align-self: end;
-    }
-
-
-    .wp-image-498 {
-        margin: 8vw 3vw 0 1.5vw;
-        width: 45.5vw;
-    }
-
-    .menu_overskrift {
-        margin: 8vw 3vw 3vw 3vw;
-    }
-
-    .wp-image-502 {
-        margin: 0 3vw 0vw 3vw;
-        width: 94vw;
-    }
-
-    /*------------SINGLEVIEW--------------*/
-
-    /*
-    .produkt {
-        width: 100vw;
-
-    }
-
-    .produkt h2 {
-        margin-right: 3vw;
-        text-align: right
-    }
-
-    .produkt img {
-        width: 44vw;
-    }
-
-    .produkt p {
-        font-family: palatino;
-        border-top: 1px solid black;
-        padding: 2vw;
-    }
-
-    .addbag {
-        font-family: palatino;
-        padding: 2vw 5vw 2vw 5vw;
-        border: 1px solid black;
-            cursor: pointer;
-    }
-*/
 
     /*---------------  ABOUT  ---------------*/
 
@@ -932,41 +682,49 @@ footer a {
             "followus billede2_about"
             "contact_about billede2_about";
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 100px auto auto auto;
 
     }
-
     .thedesigner_billede {
         grid-area: billede_about;
     }
 
     .wp-image-113 {
-        width: 45.5vw;
-        margin: 5vw 1.5vw 0 3vw;
+      width: 47vw;
     }
 
-    .thedesigner_overskrift {
+    h2.thedesigner_overskrift {
         grid-area: overskrift_about;
-        margin: 5vw 0 0 1.5vw;
+        margin: 0vw 0 0 1.5;
     }
 
     p.about_tekst {
-        grid-area: tekst_about;
-        margin: 0 3vw 0 1.5vw;
+       grid-area: tekst_about;
     }
 
+
+    .about_overskrift_website {
+        position: absolute;
+        left: 35vw;
+        top: 17vw;
+        font-size: 1.7rem;
+    }
+
+    .about_overskrift_website2 {
+        position: absolute;
+        left: 46vw;
+        top: 23vw;
+        font-size: 1.7rem;
+    }
     .gallery_about {
         grid-area: billede2_about;
     }
 
-    img.wp-image-218 {
-        width: 45.5vw;
-        margin: 5vw 3vw 0 1.5vw;
+     img.wp-image-218 {
+        width: 47vw;
     }
 
     p.followus {
         grid-area: followus;
-        margin: 5vw 0 0 3vw;
     }
 
     .contactp {
@@ -974,20 +732,21 @@ footer a {
     }
 
 
-    /*--------------STORIES----------------*/
+
+/*--------------STORIES----------------*/
 
 
     .indhold_stories {
-        display: grid;
-        grid-template-areas:
-            "overskrift1 overskrift1 . ."
-            "billede1 billede1 tekst1 tekst1"
-            "billede1 billede1 dato1 dato1"
-            "overskrift2 overskrift2 overskrift2 overskrift2"
-            "dato2 billede2 billede2 billede2"
-            "overskrift3 overskrift3 billede3 billede3"
-            "tekst2 tekst2 billede3 billede3"
-            "dato3 dato3 billede3 billede3";
+    display: grid;
+    grid-template-areas:
+        "overskrift1 overskrift1 . ."
+        "billede1 billede1 tekst1 tekst1"
+        "billede1 billede1 dato1 dato1"
+        "overskrift2 overskrift2 overskrift2 overskrift2"
+        "dato2 billede2 billede2 billede2"
+        "overskrift3 overskrift3 billede3 billede3"
+        "tekst2 tekst2 billede3 billede3"
+        "dato3 dato3 billede3 billede3";
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 100px auto auto 100px auto 150px auto auto;
     }
@@ -1002,20 +761,15 @@ footer a {
     .daysofdesign_poster img {
         margin: 0;
     }
-
     .daysofdesign_poster {
         grid-area: billede1;
 
     }
-
     img.wp-image-117 {
         width: 45.5vw;
         margin-right: 1.5vw;
         margin-left: 3vw;
-        animation-name: showing;
-        animation-duration: 2s;
     }
-
     .daysofdesign_tekst {
         grid-area: tekst1;
         margin: 0vw;
@@ -1023,14 +777,12 @@ footer a {
         width: 47vw;
 
     }
-
     .daysofdesign_date {
         grid-area: dato1;
         text-align: left;
         margin: 0;
         align-self: end;
     }
-
     .moodboard_overskrift {
         grid-area: overskrift2;
         text-align: right;
@@ -1040,14 +792,12 @@ footer a {
         grid-area: dato2;
         align-self: end;
         margin-right: 3vw;
-        margin-bottom: 0;
     }
 
 
     .moodboard {
         grid-area: billede2;
     }
-
     img.wp-image-118 {
         width: 70vw;
         margin: 0;
@@ -1057,7 +807,6 @@ footer a {
         grid-area: overskrift3;
         margin: 8vw 0 0 3vw;
     }
-
     .elle_tekst {
         grid-area: tekst2;
         margin: 0 1.5vw 0 3vw;
@@ -1071,7 +820,6 @@ footer a {
         width: 45vw;
         margin: 8vw 3vw 0 1.5vw;
     }
-
     .elle_date {
         grid-area: dato3;
         text-align: right;
@@ -1081,12 +829,12 @@ footer a {
     }
 
 
+
     /********CONTACT*******/
 
     .follow_contact {
         position: absolute;
         margin: 0vw 3vw;
-        z-index: 13;
     }
 
     p.contact_tekst {
@@ -1101,7 +849,10 @@ footer a {
 
     #menu {
         top: 110px;
+
     }
+
+
 
 }
 
@@ -1114,20 +865,21 @@ footer a {
         margin: 0;
     }
 
+    .contactp {
+        top: 115vw;
+        left: 11vw;
+    }
+
 }
 
 /*-----------------------------MEDIAQUERY FOR WEBSITE------------------------------------*/
 
 @media only screen and (min-width: 1080px) {
 
+
     img {
         z-index: 10;
     }
-
-    figcaption {
-        z-index: 11;
-    }
-
     /*HEADER*/
     header {
         display: block;
@@ -1153,7 +905,7 @@ footer a {
         grid-area: d;
     }
 
-    #menu ul {
+    ul {
         display: grid;
         grid-template-areas:
             "a b . c d";
@@ -1172,8 +924,8 @@ footer a {
 
     .logo2 {
         grid-area: logo;
+        margin-left: -0.5vw;
         display: block;
-        margin-left: -5.1vw;
     }
 
 
@@ -1240,7 +992,7 @@ footer a {
         visibility: hidden;
         border-radius: 5px;
         transform: scaleX(0);
-        transition: .25s linear;
+        transition: .50s linear;
     }
 
     #menu li > a:hover:before,
@@ -1249,20 +1001,7 @@ footer a {
         transform: scaleX(1);
     }
 
-
-    /*--------------FORSIDE--------------*/
-
-    /*video*/
-    .myVideo_mobile {
-        display: none;
-    }
-
-    .myVideo_desk {
-        display: block;
-        width: 97vw;
-        ;
-        margin-right: 3vw;
-    }
+    /******FORSIDE******/
 
     /*'louise roe gallery' billede og overskrift*/
     .wp-image-106 {
@@ -1320,51 +1059,53 @@ footer a {
         margin-top: 12vw;
     }
 
-    .produktersidebar h2 {
-        margin: 1 0 1 0vw;
-    }
+
 
     /*--------SHOP---------*/
 
-    .shop_container {
-        max-width: 100;
+    /*fjernelse af mobil billede-versioner*/
+    .wp-image-191 {
+        display: none;
     }
 
-    /*styles af mobil elementer*/
-
-    .shop_inspiration img {
-        width: 45.5vw;
-        grid-area: inspi-billede;
-        margin-left: 3vw;
-        padding: 0;
-        margin-right: 1.5vw;
+    .mobile_shop_inspiration figcaption {
+        display: none;
     }
 
-    .shop_produkter img {
-        width: 45.5vw;
-        grid-area: produkt-billede;
-        margin-right: 3vw;
-        padding: 0;
-        margin-left: 1.5vw;
+    .wp-image-192 {
+        display: none;
     }
 
-    .shop_inspiration_overskrift {
-        grid-area: inspi-overskrift;
-        text-align: left;
-        margin-left: 3vw;
-        display: inline-block;
-        padding-bottom: 1.5vw;
+    .mobile_shop_produkter figcaption {
+        display: none;
     }
 
-    .shop_produkter_overskrift {
-        grid-area: produkt-overskrift;
-        display: inline-block;
-        margin-top: 0;
-        margin-right: 3vw;
-        text-align: right;
-        padding-bottom: 1.5vw;
+    /*styles af desktop billeder*/
+
+    .wp-image-190 {
+        width: 550px;
+        margin: 3vw;
+        display: block;
+
     }
 
+    .desktop_shop_inspiration figcaption {
+        position: absolute;
+        top: 14.5vw;
+        left: 7vw;
+    }
+
+    .desktop_shop_produkter figcaption {
+        position: absolute;
+        top: 14.5vw;
+        right: 7vw;
+    }
+
+    .wp-image-193 {
+        width: 550px;
+        margin: 3vw;
+        display: block;
+    }
 
     /*--------------PRODUKTER----------------*/
 
@@ -1409,12 +1150,13 @@ footer a {
 
     #liste img {
         width: 50%;
+        display: inline;
 
     }
 
     #liste h2 {
+        width: 50%;
         text-align: center;
-
 
     }
 
@@ -1422,118 +1164,51 @@ footer a {
         margin-top: 2vw;
     }
 
-
-    button {
-        margin-top: 1vw;
-        margin-bottom: 1vw;
-    }
-
-    #liste {
-        background-color: white;
-    }
-
-    .blackbox img {
-        border: 0.5px solid black;
-    }
-
-    /*------------INSPIRATION------------*/
-
-
-    .inspiration_billede1 {
-        margin-top: 0;
-    }
-    .inspiration_billede2 {
-        margin-top: 0;
-    }
-
-    .h2_inspiration {
-        display: block;
-        position: fixed;
-        transform: rotate(-90deg);
-        margin: 0;
-        left: -8vw;
-        top: 32vw
+    /*.produkterwrapper h2 {
+    text-align: center;
+    font-family: DIN;
+    text-transform: uppercase;
 }
+.colours {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0vw 33vw;
+}
+.colours img {
+    width: 8vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin: 1vw;
+}
+button {
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#liste {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10vw 6vw;
+}
+#liste img {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#liste h2 {
+    font-family: DIN;
+    font-size: 0.7rem;
+    line-height: 1.5rem;
+    margin: 0;
+    text-align: center;
+}*/
 
-    /*------------- CONCEPT STORE -----------*/
-
-    .indhold_concept {
-        display: grid;
-        grid-template-areas:
-            "tekst_concept tekst_concept billede1_concept billede1_concept"
-            "billede3_concept billede3_concept abningstider abningstider"
-            "billede3_concept billede3_concept address_concept address_concept"
-            "menu_overskrift menu_overskrift menu_overskrift menu_overskrift"
-            "menukort menukort menukort menukort";
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-
-    .louise_gallery_img {
-        grid-area: billede1_concept;
-        justify-self: end;
-    }
-
-    .wp-image-518 {
-        margin: 0vw 3vw 0vw 3vw;
-        width: 55vw;
-
-    }
-
-    .beskrivelse {
-        margin: 0vw 10vw 0 3vw;
-        background-color: white;
-        z-index: 14;
-    }
-
-    .abningstider {
-        margin: 8vw 3vw;
-    }
-
-    .adresse {
-        margin: 0;
-        text-align: left;
-    }
-
-    .gallery_food_img {}
-
-    .wp-image-517 {
-        margin: 5vw 3vw 0 3vw;
-        justify-self: end;
-
-    }
-
-    .menu_overskrift {
-        margin: 8vw 3vw 3vw 3vw;
-    }
-
-    .wp-image-502 {
-        margin: 0 auto;
-        width: 80vw;
-    }
-
-    .menukort_img {
-        justify-self: center;
-    }
-
-    /*-----------ABOUT------------*/
+/*-----------ABOUT------------*/
     .indhold_about {
         grid-template-rows: 100px auto auto;
-    }
-
-    .wp-image-113 {
-        margin-top: 1vw;
-        width: 35vw;
-    }
-
-    .thedesigner_billede {
-        justify-self: right;
-    }
-
-    .thedesigner_overskrift {
-        margin-top: 1vw;
-        z-index: 18;
-        background-color: white;
     }
 
     p.about_tekst {
@@ -1541,76 +1216,28 @@ footer a {
         background-color: white;
     }
 
-    img.wp-image-218 {
-        width: 45.5vw;
-    }
-
-    .gallery_about {
-        justify-self: center;
-    }
-
-    .contactp {
-        margin-right: 1.5vw;
-    }
-
-    /*-----------STORIES------------*/
+/*-----------STORIES------------*/
 
     .indhold_stories {
         margin-top: 0;
         grid-template-rows: 50px auto auto 150px auto 160px auto auto;
+
     }
 
     h2.daysofdesign_h2 {
         align-self: end;
     }
-
     img.wp-image-117 {
-        width: 30vw;
+        justify-self: end;
     }
-
     .daysofdesign_poster {
-        justify-self: right;
+        align-self: end;
     }
 
     .daysofdesign_tekst {
-        margin-right: 5vw;
-        width: 40vw;
-        z-index: 15;
-        background-color: white;
+        margin-right: 1.5vw;
     }
 
-    .daysofdesign_date {
-        margin-left: 1.5vw;
-        z-index: 17;
-        background-color: white;
-    }
-
-    img.wp-image-118 {
-        width: 60vw;
-    }
-
-    .moodboard {
-        justify-self: right;
-        margin-right: 3vw;
-    }
-
-    .moodboard_date {
-        margin-right: 0;
-    }
-
-    img.wp-image-119 {
-        width: 30vw;
-    }
-
-    .elle_img {
-        justify-self: left;
-
-    }
-
-    .elle_tekst {
-        z-index: 16;
-        background-color: white;
-    }
 
     /******FOOTER******/
 
@@ -1631,7 +1258,7 @@ footer a {
         margin: 0;
     }
 
-    /*------------CONTACT--------------*/
+    /********CONTACT*******/
 
     p.contact_tekst {
         margin-top: 0vw;
@@ -1639,194 +1266,7 @@ footer a {
 
 }
 
-@media only screen and (min-width: 1090px) {
-    .logo2 {
-        margin-left: -4.9vw;
-    }
-}
 
-@media only screen and (min-width: 1143px) {
-    .logo2 {
-        margin-left: -4.1vw;
-    }
-    .h2_inspiration {
-        left: -7.5vw;
-}
-}
-
-@media only screen and (min-width: 1160px) {
-    .logo2 {
-        margin-left: -3.9vw;
-    }
-}
-
-@media only screen and (min-width: 1170px) {
-    .logo2 {
-        margin-left: -3.7vw;
-    }
-    .h2_inspiration {
-        left: -7.1vw;
-}
-}
-
-@media only screen and (min-width: 1180px) {
-    .logo2 {
-        margin-left: -3.5vw;
-    }
-}
-
-@media only screen and (min-width: 1190px) {
-    .logo2 {
-        margin-left: -3.3vw;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    .logo2 {
-        margin-left: -3.1vw;
-    }
-}
-
-@media only screen and (min-width: 1210px) {
-    .logo2 {
-        margin-left: -2.9vw;
-    }
-}
-
-@media only screen and (min-width: 1220px) {
-    .logo2 {
-        margin-left: -2.6vw;
-    }
-}
-
-@media only screen and (min-width: 1230px) {
-    .logo2 {
-        margin-left: -2.5vw;
-    }
-}
-
-@media only screen and (min-width: 1240px) {
-    .logo2 {
-        margin-left: -2.4vw;
-    }
-}
-
-@media only screen and (min-width: 1250px) {
-    .logo2 {
-        margin-left: -2.3vw;
-    }
-    .h2_inspiration {
-        left: -7vw;
-}
-}
-
-@media only screen and (min-width: 1260px) {
-    .logo2 {
-        margin-left: -2.2vw;
-    }
-}
-
-@media only screen and (min-width: 1260px) {
-    .logo2 {
-        margin-left: -2.2vw;
-    }
-}
-
-@media only screen and (min-width: 1270px) {
-    .logo2 {
-        margin-left: -2.1vw;
-    }
-}
-
-@media only screen and (min-width: 1280px) {
-    .logo2 {
-        margin-left: -2.0vw;
-    }
-}
-
-@media only screen and (min-width: 1290px) {
-    .logo2 {
-        margin-left: -2.0vw;
-    }
-}
-
-@media only screen and (min-width: 1290px) {
-    .logo2 {
-        margin-left: -1.9vw;
-    }
-}
-
-@media only screen and (min-width: 1300px) {
-    .logo2 {
-        margin-left: -1.8vw;
-    }
-    .h2_inspiration {
-        left: -6.5vw;
-}
-}
-
-@media only screen and (min-width: 1310px) {
-    .logo2 {
-        margin-left: -1.7vw;
-    }
-}
-
-@media only screen and (min-width: 1320px) {
-    .logo2 {
-        margin-left: -1.6vw;
-    }
-}
-
-@media only screen and (min-width: 1330px) {
-    .logo2 {
-        margin-left: -1.5vw;
-    }
-}
-
-@media only screen and (min-width: 1340px) {
-    .logo2 {
-        margin-left: -1.4vw;
-    }
-}
-
-@media only screen and (min-width: 1350px) {
-    .logo2 {
-        margin-left: -1.3vw;
-    }
-    .h2_inspiration {
-        left: -6.2vw;
-}
-}
-
-@media only screen and (min-width: 1360px) {
-    .logo2 {
-        margin-left: -1.2vw;
-    }
-}
-
-@media only screen and (min-width: 1370px) {
-    .logo2 {
-        margin-left: -1.1vw;
-    }
-}
-
-@media only screen and (min-width: 1380px) {
-    .logo2 {
-        margin-left: -1vw;
-    }
-}
-
-@media only screen and (min-width: 1390px) {
-    .logo2 {
-        margin-left: -0.9vw;
-    }
-}
-
-@media only screen and (min-width: 1400px) {
-    .logo2 {
-        margin-left: -0.8vw;
-    }
-}
 
 @media only screen and (min-width: 1180px) {
     .footer_menu {
@@ -1847,6 +1287,7 @@ footer a {
     .footer_menu {
         right: -15.5vw;
     }
+
 
 }
 
