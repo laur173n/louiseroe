@@ -1079,7 +1079,7 @@ footer a {
     h2.daysofdesign_h2 {
         grid-area: overskrift1;
         text-align: left;
-        margin: 5vw 1.5vw 2vw 0;
+        margin: 5vw 0vw 2vw 1.5vw;
     }
 
 
@@ -1113,6 +1113,7 @@ footer a {
         grid-area: dato1;
         text-align: left;
         margin: 0;
+        margin-left: 1.5vw;
         align-self: end;
     }
 
@@ -1124,18 +1125,19 @@ footer a {
     .moodboard_date {
         grid-area: dato2;
         align-self: end;
-        margin-right: 3vw;
-        margin-bottom: 0;
+        margin-right: -9vw;
+        margin-bottom: 0.9vw;
     }
 
 
     .moodboard {
         grid-area: billede2;
+        justify-self:end;
     }
 
     img.wp-image-118 {
-        width: 70vw;
-        margin: 0;
+        width: 60vw;
+        margin: 3vw 3vw 0 3vw;
     }
 
     h2.elle_overskrift {
@@ -1717,16 +1719,18 @@ footer a {
     /*-----------STORIES------------*/
 
     .indhold_stories {
-        margin-top: 0;
-        grid-template-rows: 50px auto auto 150px auto 160px auto auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 60px auto auto 100px auto 160px auto auto;
     }
 
     h2.daysofdesign_h2 {
-        align-self: end;
+        margin-top: 0;
+
     }
 
     img.wp-image-117 {
-        width: 30vw;
+        width: 35vw;
+        margin-top: 0;
     }
 
     .daysofdesign_poster {
@@ -1752,11 +1756,16 @@ footer a {
 
     .moodboard {
         justify-self: right;
-        margin-right: 3vw;
+        margin-right: 0vw;
     }
 
     .moodboard_date {
-        margin-right: 0;
+        margin-right: -10vw;
+        margin-bottom: 1.2vw
+    }
+    .moodboard_overskrift {
+        margin-bottom: 0;
+        margin-right: 3vw;
     }
 
     img.wp-image-119 {
