@@ -426,6 +426,16 @@ main {
     margin-top: 2vw;
 }
 
+.produkt {
+    background-color: white;
+    z-index: 40;
+
+}
+
+.filtercategories {
+    margin-bottom: -18vw;
+}
+
 .produkterwrapper h2 {
     text-align: center;
     font-family: DIN;
@@ -435,16 +445,18 @@ main {
 
 .colours {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 0vw 33vw;
+    grid-template-columns: 30px 30px 30px 30px 30px;
+    grid-template-rows: 30px 30px 30px 30px 30px;
+    margin: 0vw 36vw;
+    z-index: 200;
+    width: 150px;
 }
 
 .colours img {
-    width: 8vw;
+    width: 5vw;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    margin: 1vw;
 }
 
 button {
@@ -747,6 +759,23 @@ footer a {
         top: 100px;
     }
 
+    .colours {
+        display: grid;
+        grid-template-columns: 30px 30px 30px 30px 30px;
+        grid-template-rows: 30px 30px 30px 30px 30px;
+        margin: 0vw 35vw;
+        z-index: 200;
+
+    }
+
+    .colours img {
+        width: 5vw;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+
     /*--------------FORSIDE---------------*/
 
     /*'louise roe gallery' billede og overskrift*/
@@ -784,6 +813,25 @@ footer a {
     }
 }
 
+@media only screen and (min-width: 716px) {
+    .colours {
+        display: grid;
+        grid-template-columns: 30px 30px 30px 30px 30px;
+        grid-template-rows: 30px 30px 30px 30px 30px;
+        margin: 0vw 36vw;
+        z-index: 200;
+        width: 150px;
+    }
+
+    .colours img {
+        width: 5vw;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+}
+
 
 /*-------------------------MEDIAQUERY FOR IPAD--------------------------*/
 
@@ -806,6 +854,24 @@ footer a {
         font-family: palatino;
         background-color: white;
         z-index: 12;
+    }
+
+    /*------PRODUKTER------------*/
+    .colours {
+        display: grid;
+        grid-template-columns: 30px 30px 30px;
+        grid-template-rows: 30px 30px 30px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
+    }
+
+    .colours img {
+        width: 3vw;
+        margin-left: auto;
+        margin-right: auto;
+        display: inline;
+        margin: 1vw;
     }
 
 
@@ -1140,7 +1206,7 @@ footer a {
 
     .moodboard {
         grid-area: billede2;
-        justify-self:end;
+        justify-self: end;
     }
 
     img.wp-image-118 {
@@ -1190,10 +1256,10 @@ footer a {
 
     /*-------POLICIES------*/
     .indhold_policies p {
-    width: 600px;
+        width: 600px;
         z-index: 11;
         background-color: white;
-}
+    }
 
 }
 
@@ -1204,6 +1270,21 @@ footer a {
         top: 110px;
     }
 
+    /*-------------------PRODUKTER-----------------*/
+
+    .produkterwrapper {
+        margin-top: 2vw;
+    }
+
+    .produkt {
+        background-color: white;
+        z-index: 40;
+
+    }
+
+    .filtercategories {
+        margin-bottom: -7vw;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -1497,12 +1578,14 @@ footer a {
 
     .colours {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 30px 30px 30px;
+        grid-template-rows: 30px 30px 30px;
         margin: 0vw;
+        margin-left: 5.7vw;
     }
 
     .colours img {
-        width: 3vw;
+        width: 2vw;
         margin-left: auto;
         margin-right: auto;
         display: inline;
@@ -1595,9 +1678,7 @@ footer a {
 
     /*------------INSPIRATION------------*/
 
-    .indhold_inspiration {
-
-    }
+    .indhold_inspiration {}
 
     .wp-image-456,
     .wp-image-457,
@@ -1609,9 +1690,11 @@ footer a {
     .inspiration_billede1 {
         margin-top: 0;
     }
+
     .inspiration_billede2 {
         margin-top: 0;
     }
+
     .h2_inspiration {
         display: block;
         position: fixed;
@@ -1720,6 +1803,7 @@ footer a {
     .gallery_about {
         justify-self: center;
     }
+
     p.followus {
         margin-left: 1.5vw;
     }
@@ -1776,6 +1860,7 @@ footer a {
         margin-right: -10vw;
         margin-bottom: 1.2vw
     }
+
     .moodboard_overskrift {
         margin-bottom: 0;
         margin-right: 3vw;
@@ -1831,6 +1916,7 @@ footer a {
     .logo2 {
         margin-left: -4.1vw;
     }
+
     .h2_inspiration {
         left: -7.5vw;
     }
@@ -1865,6 +1951,7 @@ footer a {
     .logo2 {
         margin-left: -3.1vw;
     }
+
     .h2_inspiration {
         left: -7.2vw;
 
@@ -1893,6 +1980,7 @@ footer a {
     .logo2 {
         margin-left: -2.4vw;
     }
+
     .h2_inspiration {
         left: -7vw;
     }
@@ -1926,6 +2014,7 @@ footer a {
     .logo2 {
         margin-left: -2.0vw;
     }
+
     .h2_inspiration {
         left: -6.7vw;
     }
@@ -1977,6 +2066,7 @@ footer a {
     .logo2 {
         margin-left: -1.3vw;
     }
+
     .h2_inspiration {
         left: -6.2vw;
 
@@ -2011,6 +2101,7 @@ footer a {
     .logo2 {
         margin-left: -0.8vw;
     }
+
     .h2_inspiration {
         left: -5.9vw;
 
