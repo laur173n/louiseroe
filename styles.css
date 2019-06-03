@@ -769,7 +769,7 @@ footer a {
     }
 
     .colours img {
-        width: 5vw;
+        width: 4vw;
         margin-left: auto;
         margin-right: auto;
         display: block;
@@ -810,6 +810,27 @@ footer a {
 
     footer a {
         margin: 7vw
+    }
+}
+
+@media only screen and (min-width: 648px) {
+
+    /*------PRODUKTER------------*/
+    .colours {
+        display: grid;
+        grid-template-columns: 30px 30px 30px 30px 30px;
+        grid-template-rows: 30px 30px 30px 30px 30px;
+        margin: 0vw 38vw;
+        z-index: 200;
+        width: 100px;
+
+    }
+
+    .colours img {
+        width: 4vw;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
 }
 
@@ -872,6 +893,10 @@ footer a {
         margin-right: auto;
         display: inline;
         margin: 1vw;
+    }
+
+    .filtercategories {
+        margin-bottom: -6vw;
     }
 
 
@@ -1263,7 +1288,6 @@ footer a {
 
 }
 
-
 @media only screen and (min-width: 775px) {
 
     #menu {
@@ -1279,11 +1303,27 @@ footer a {
     .produkt {
         background-color: white;
         z-index: 40;
-
     }
 
     .filtercategories {
         margin-bottom: -7vw;
+    }
+
+    .colours {
+        display: grid;
+        grid-template-columns: 30px 30px 30px;
+        grid-template-rows: 30px 30px 30px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
+    }
+
+    .colours img {
+        width: 3vw;
+        margin-left: auto;
+        margin-right: auto;
+        display: inline;
+        margin: 1vw;
     }
 }
 
@@ -1294,6 +1334,10 @@ footer a {
         width: 100%;
         padding: 0;
         margin: 0;
+    }
+
+    .filtercategories {
+        margin-bottom: -5vw;
     }
 
 }
