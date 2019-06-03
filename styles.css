@@ -714,12 +714,20 @@ footer a {
 /*----------POLICIES-----------*/
 
 .policy_overskrift {
-    font-family: palatino;
+    font-family: 'DIN';
     margin-left: 3vw;
 }
 
 .indhold_policies p {
     font-family: palatino;
+
+}
+
+/*----------RETAILERS-----------*/
+.retailers_img {
+
+    margin: 0 auto;
+    align-items: center;
 }
 
 /*------------------------------MEDIAQUERY FOR 400PX-------------------------------*/
@@ -1180,6 +1188,12 @@ footer a {
         margin-top: 8vw;
     }
 
+    /*-------POLICIES------*/
+    .indhold_policies p {
+    width: 600px;
+        z-index: 11;
+        background-color: white;
+}
 
 }
 
@@ -1604,7 +1618,6 @@ footer a {
         transform: rotate(-90deg);
         left: -7.8vw;
         top: 31vw;
-
     }
 
     /*------------- CONCEPT STORE -----------*/
