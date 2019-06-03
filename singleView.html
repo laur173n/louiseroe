@@ -96,11 +96,10 @@
 
             function åbn() {
                 console.log("åbner indhold");
-
                 document.querySelector(".indhold").innerHTML = `
                         <div class="produkt">
-                            <img src="${produkt.billede.guid}">
-                            <h2>${produkt.title.rendered}</h2>
+                            <img src="${produkt.billede.guid}" alt="${produkt.title.rendered}">
+                            <h2 class="overskrift_product">${produkt.title.rendered}</h2>
                             <p>${produkt.description}</p>
                             <h2>${produkt.price}</h2>
                         </div>
@@ -111,7 +110,7 @@
             function tilfojKurven() {
                 point += 1;
                 console.log(point);
-                document.querySelector(".shoppingcart").textContent = "shopping cart ()" + point;
+                document.querySelector(".shoppingcart").textContent = "shopping cart (" + point + ")";
             }
 
             getJson();
