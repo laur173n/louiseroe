@@ -15,7 +15,7 @@
 
     <div class="container">
 
-        <a class="shoppingcart" href="shoppingcart.html">shopping cart (0)</a>
+        <p class="shoppingcart">shopping cart (0)</p>
         <header>
 
             <!--- LOGO --->
@@ -47,7 +47,7 @@
 
         <main>
             <a href="shop.html">
-                <div class="back_button_inspi">
+                <div class="back_button_produkter">
                     <p>BACK</p>
                 </div>
             </a>
@@ -168,6 +168,12 @@
                 document.querySelector(".overskrift").textContent = indhold.title.rendered;
                 document.querySelector(".indhold").innerHTML = indhold.content.rendered;
                 getShop();
+                document.querySelector(".shoppingcart").addEventListener("click", åbnKurv)
+            }
+
+            function åbnKurv() {
+                console.log("kurv");
+                location.href = "shoppingcart.html";
             }
 
             // shoppen bliver nu hentet

@@ -113,12 +113,18 @@
                 console.log("viser sidens indhold");
                 document.querySelector(".overskrift").textContent = indhold.title.rendered;
                 document.querySelector(".indhold_about").innerHTML = indhold.content.rendered;
+                document.querySelector(".shoppingcart").addEventListener("click", åbnKurv)
 
+            }
 
+            function åbnKurv() {
+                console.log("kurv");
+                location.href = "shoppingcart.html";
             }
 
             getJson();
         }
+
     </script>
 </body>
 

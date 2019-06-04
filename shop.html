@@ -134,6 +134,7 @@
                 document.querySelector(".shop_inspiration_overskrift").addEventListener("click", visInspirationSide);
                 document.querySelector(".shop_produkter").addEventListener("click", visProdukterSide);
                 document.querySelector(".shop_produkter_overskrift").addEventListener("click", visProdukterSide);
+                document.querySelector(".shoppingcart").addEventListener("click", åbnKurv)
 
             }
 
@@ -149,8 +150,14 @@
                 location.href = "produkter.html";
             }
 
+            function åbnKurv() {
+                console.log("kurv");
+                location.href = "shoppingcart.html";
+            }
+
             getJson();
         }
+
     </script>
 </body>
 

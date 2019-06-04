@@ -132,12 +132,20 @@
                         </div>
                         `;
                 document.querySelector(".addbag").addEventListener("click", tilfojKurven);
+                document.querySelector(".shoppingcart").addEventListener("click", åbnKurv)
+
             }
 
             function tilfojKurven() {
                 point += 1;
                 console.log(point);
                 document.querySelector(".shoppingcart").textContent = "shopping cart (" + point + ")";
+
+            }
+
+            function åbnKurv() {
+                console.log("kurv");
+                location.href = "shoppingcart.html";
             }
 
             getJson();

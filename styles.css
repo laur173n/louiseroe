@@ -163,6 +163,8 @@ a:hover {
     right: 1vw;
     margin-top: 0.7vw;
     margin: 0;
+    z-index: 10000;
+    cursor: pointer;
 }
 
 .valgt {
@@ -472,7 +474,7 @@ button {
 .wp-image-509,
 .wp-image-510,
 .wp-image-511,
-.wp-image-512,
+.wp-image-554,
 .wp-image-513,
 .wp-image-514 {
     margin-left: 3vw;
@@ -633,7 +635,8 @@ button {
     text-align: right;
 }
 
-.back_button_inspi p {
+.back_button_inspi p,
+.back_button_produkter p {
     padding: 0;
     font-family: 'DIN';
     text-align: right;
@@ -944,7 +947,7 @@ footer a {
     .wp-image-509,
     .wp-image-510,
     .wp-image-511,
-    .wp-image-512,
+    .wp-image-554,
     .wp-image-513 {
         width: 40vw;
         margin: 3vw;
@@ -989,7 +992,8 @@ footer a {
         margin-top: 5vw;
     }
 
-    .back_button_inspi p {
+    .back_button_inspi p,
+    .back_button_produkter p {
         margin: 0;
         padding: 0;
         margin-right: 3vw;
@@ -1370,20 +1374,26 @@ footer a {
 
     }
 
+    main {
+        z-index: 2000;
+    }
+
 
     .logo2 img {
         width: 100%;
         max-width: 400px;
-        position: fixed;
-        z-index: -1;
         cursor: pointer;
-        pointer-events: none;
     }
 
     .logo2 {
-        grid-area: logo;
+        position: fixed;
+        top: 0;
+
+        left: 36%;
+        margin-left: -200px;
+        /* Negative half of width. */
+        z-index: -1;
         display: block;
-        margin-left: -5.1vw;
     }
 
 
@@ -1716,14 +1726,24 @@ footer a {
         top: -3vw;
     }
 
-    .back_button_inspi p {
+    .back_button_inspi p,
+    .back_button_produkter p {
         z-index: 500;
         right: 5vw;
         margin-top: 2vw;
         margin: 0;
         padding: 0;
         position: fixed;
+    }
 
+    .back_button_produkter p {
+        margin-top: -3vw;
+        z-index: 500;
+        right: 18vw;
+        top: 15vw;
+        margin: 0;
+        padding: 0;
+        position: fixed;
     }
 
     /*------------INSPIRATION------------*/
@@ -1786,6 +1806,7 @@ footer a {
     .adresse {
         margin: 0;
         text-align: left;
+        background-color: white;
     }
 
     .gallery_food_img {}
@@ -1857,6 +1878,7 @@ footer a {
 
     p.followus {
         margin-left: 1.5vw;
+        background-color: white;
     }
 
     .contactp {
@@ -1874,6 +1896,7 @@ footer a {
 
     h2.daysofdesign_h2 {
         margin-top: 0;
+        background-color: white;
 
     }
 
@@ -1889,7 +1912,7 @@ footer a {
     .daysofdesign_tekst {
         margin-right: 5vw;
         width: 40vw;
-        z-index: 15;
+        z-index: 18;
         background-color: white;
     }
 
@@ -1948,6 +1971,7 @@ footer a {
         bottom: 17vw;
         padding-bottom: 1vw;
         margin: 0;
+        z-index: 200000;
     }
 
     /*------------CONTACT--------------*/
@@ -1958,6 +1982,11 @@ footer a {
 
     .follow_contact {
         margin-top: 0;
+    }
+
+    .indhold_contact {
+        background-color: white;
+
     }
 
 }

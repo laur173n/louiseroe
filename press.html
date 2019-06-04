@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -111,12 +112,19 @@
                 console.log("viser sidens indhold");
                 document.querySelector(".overskrift").textContent = indhold.title.rendered;
                 document.querySelector(".indhold").innerHTML = indhold.content.rendered;
+                document.querySelector(".shoppingcart").addEventListener("click", åbnKurv);
 
+            }
 
+            function åbnKurv() {
+                console.log("kurv");
+                location.href = "shoppingcart.html";
             }
 
             getJson();
         }
+
     </script>
 </body>
+
 </html>
