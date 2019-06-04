@@ -1616,7 +1616,7 @@ footer a {
 
     .produktersidebar {
         grid-area: sidebar;
-        margin-top: 1vw;
+        margin-top: -1vw;
 
     }
 
@@ -1723,12 +1723,12 @@ footer a {
         position: absolute;
         right: 5vw;
         z-index: 500;
-        top: -3vw;
+        top: -2vw;
     }
 
     .back_button_inspi p {
         z-index: 500;
-        right: 5vw;
+        right: 8vw;
         margin-top: 2vw;
         margin: 0;
         padding: 0;
@@ -1739,7 +1739,7 @@ footer a {
         margin-top: -3vw;
         z-index: 500;
         right: 8vw;
-        top: 15vw;
+        top: 1vw;
         margin: 0;
         padding: 0;
     }
