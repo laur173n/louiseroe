@@ -1375,8 +1375,9 @@ footer a {
         width: 100%;
         max-width: 400px;
         position: fixed;
-        z-index: -10;
+        z-index: -1;
         cursor: pointer;
+        pointer-events: none;
     }
 
     .logo2 {
@@ -1393,7 +1394,6 @@ footer a {
         width: 100vw;
         top: 0;
         height: 0;
-        z-index: -12;
 
     }
 
