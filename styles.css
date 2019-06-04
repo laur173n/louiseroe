@@ -1991,15 +1991,21 @@ footer a {
 
 }
 
+@media only screen and (min-width: 1080px) {
+    .logo2 {
+        left: 49.5%;
+    }
+}
+
 @media only screen and (min-width: 1090px) {
     .logo2 {
-        margin-left: -4.9vw;
+        left: 49.5%;
     }
 }
 
 @media only screen and (min-width: 1143px) {
     .logo2 {
-        margin-left: -4.1vw;
+        left: 49.8%;
     }
 
     .h2_inspiration {
@@ -2009,32 +2015,32 @@ footer a {
 
 @media only screen and (min-width: 1160px) {
     .logo2 {
-        margin-left: -3.9vw;
+        left: 49.8%;
     }
 }
 
 @media only screen and (min-width: 1170px) {
     .logo2 {
-        margin-left: -3.7vw;
+        left: 49.8%;
     }
 }
 
 @media only screen and (min-width: 1180px) {
     .logo2 {
-        margin-left: -3.5vw;
+        left: 49.8%;
     }
 }
 
 @media only screen and (min-width: 1190px) {
     .logo2 {
-        margin-left: -3.3vw;
+        left: 49.8%;
     }
 
 }
 
 @media only screen and (min-width: 1200px) {
     .logo2 {
-        margin-left: -3.1vw;
+        left: 49.8%;
     }
 
     .h2_inspiration {
@@ -2045,25 +2051,25 @@ footer a {
 
 @media only screen and (min-width: 1210px) {
     .logo2 {
-        margin-left: -2.9vw;
+        left: 49.8%;
     }
 }
 
 @media only screen and (min-width: 1220px) {
     .logo2 {
-        margin-left: -2.6vw;
+        left: 49.8%;
     }
 }
 
 @media only screen and (min-width: 1230px) {
     .logo2 {
-        margin-left: -2.5vw;
+        left: 49.8%;
     }
 }
 
 @media only screen and (min-width: 1240px) {
     .logo2 {
-        margin-left: -2.4vw;
+        left: 49.8%;
     }
 
     .h2_inspiration {
@@ -2073,31 +2079,31 @@ footer a {
 
 @media only screen and (min-width: 1250px) {
     .logo2 {
-        margin-left: -2.3vw;
+        left: 49.8%;
     }
 }
 
 @media only screen and (min-width: 1260px) {
     .logo2 {
-        margin-left: -2.2vw;
+        left: 49.8%;
     }
 }
 
 @media only screen and (min-width: 1260px) {
     .logo2 {
-        margin-left: -2.2vw;
+        left: 49.8%;
     }
 }
 
 @media only screen and (min-width: 1270px) {
     .logo2 {
-        margin-left: -2.1vw;
+        left: 49.8%;
     }
 }
 
 @media only screen and (min-width: 1280px) {
     .logo2 {
-        margin-left: -2.0vw;
+        left: 49.8%;
     }
 
     .h2_inspiration {
@@ -2107,49 +2113,49 @@ footer a {
 
 @media only screen and (min-width: 1290px) {
     .logo2 {
-        margin-left: -2.0vw;
+        left: 49.8%;
     }
 }
 
 @media only screen and (min-width: 1290px) {
     .logo2 {
-        margin-left: -1.9vw;
+        left: 49.8%;
     }
 }
 
 @media only screen and (min-width: 1300px) {
     .logo2 {
-        margin-left: -1.8vw;
+        left: 49.8%;
     }
 }
 
 @media only screen and (min-width: 1310px) {
     .logo2 {
-        margin-left: -1.7vw;
+        left: 49.8%;
     }
 }
 
 @media only screen and (min-width: 1320px) {
     .logo2 {
-        margin-left: -1.6vw;
+        left: 49.8%;
     }
 }
 
 @media only screen and (min-width: 1330px) {
     .logo2 {
-        margin-left: -1.5vw;
+        left: 49.8%;
     }
 }
 
 @media only screen and (min-width: 1340px) {
     .logo2 {
-        margin-left: -1.4vw;
+        left: 49.8%;
     }
 }
 
 @media only screen and (min-width: 1350px) {
     .logo2 {
-        margin-left: -1.3vw;
+        left: 49.8%;
     }
 
     .h2_inspiration {
@@ -2160,31 +2166,31 @@ footer a {
 
 @media only screen and (min-width: 1360px) {
     .logo2 {
-        margin-left: -1.2vw;
+        left: 49.8%;
     }
 }
 
 @media only screen and (min-width: 1370px) {
     .logo2 {
-        margin-left: -1.1vw;
+        left: 49.8%;
     }
 }
 
 @media only screen and (min-width: 1380px) {
     .logo2 {
-        margin-left: -1vw;
+        left: 49.8%;
     }
 }
 
 @media only screen and (min-width: 1390px) {
     .logo2 {
-        margin-left: -0.9vw;
+        left: 49.8%;
     }
 }
 
 @media only screen and (min-width: 1400px) {
     .logo2 {
-        margin-left: -0.8vw;
+        left: 49.8%;
     }
 
     .h2_inspiration {
