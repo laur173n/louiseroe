@@ -18,6 +18,7 @@
         <p class="shoppingcart">shopping cart (0)</p>
         <header>
 
+
             <!--- LOGO --->
             <a href="index.html">
                 <div class="logo">
@@ -31,17 +32,19 @@
             </div>
             <nav id="menu" class="hide">
                 <ul>
-                    <li><a class="a valgt" href="shop.html">shop</a></li>
+                    <li><a class="a" href="shop.html">shop</a></li>
                     <li><a class="b" href="conceptstore.html">concept store</a></li>
-                    <a href="index.html">
-                        <div class="logo2">
-                            <img src="img/nyt_logo_copenhagen_FINAL.png" alt="logo">
-                        </div>
-                    </a>
+                    <li></li>
                     <li><a class="c" href="about.html">about</a></li>
                     <li><a class="d" href="stories.html">stories</a></li>
                 </ul>
+                <div class="logo2">
+                    <a href="index.html">
+                        <img src="img/nyt_logo_copenhagen_FINAL.png" alt="logo">
+                    </a>
+                </div>
             </nav>
+
 
         </header>
 
@@ -76,15 +79,15 @@
 
                         <h2>Colours</h2>
                         <div class="colours">
-                            <img class="filter" data-hold="Amber" src="img/colours/filter_amber.jpg">
-                            <img class="filter" data-hold="Lotus" src="img/colours/filter_lotus.jpg">
-                            <img class="filter" data-hold="Blue" src="img/colours/filter_blue.jpg">
-                            <img class="filter" data-hold="Gold" src="img/colours/filter_gold.jpg">
-                            <img class="filter blackbox" data-hold="White" src="img/colours/filter_white.jpg">
-                            <img class="filter" data-hold="Burgundy" src="img/colours/filter_burgundy.jpg">
-                            <img class="filter" data-hold="Green" src="img/colours/filter_green.jpg">
-                            <img class="filter" data-hold="Silver" src="img/colours/filter_silver.jpg">
-                            <img class="filter" data-hold="Black" src="img/colours/filter_black.jpg">
+                            <img class="filter" data-hold="Amber" src="img/colours/filter_amber.jpg" alt="farve">
+                            <img class="filter" data-hold="Lotus" src="img/colours/filter_lotus.jpg" alt="farve">
+                            <img class="filter" data-hold="Blue" src="img/colours/filter_blue.jpg" alt="farve">
+                            <img class="filter" data-hold="Gold" src="img/colours/filter_gold.jpg" alt="farve">
+                            <img class="filter blackbox" data-hold="White" src="img/colours/filter_white.jpg" alt="farve">
+                            <img class="filter" data-hold="Burgundy" src="img/colours/filter_burgundy.jpg" alt="farve">
+                            <img class="filter" data-hold="Green" src="img/colours/filter_green.jpg" alt="farve">
+                            <img class="filter" data-hold="Silver" src="img/colours/filter_silver.jpg" alt="farve">
+                            <img class="filter" data-hold="Black" src="img/colours/filter_black.jpg" alt="farve">
                         </div>
                     </div>
                 </div>
@@ -193,7 +196,7 @@
                     if (filter == produkt.colours || filter == produkt.materials || filter == produkt.all_products) {
                         let template = `
                         <div class="produkt">
-                            <img src="${produkt.billede.guid}">
+                            <img src="${produkt.billede.guid}" alt="${produkt.title.rendered}">
                             <h2>${produkt.title.rendered}</h2>
                             <h2>${produkt.price}</h2>
                         </div>
