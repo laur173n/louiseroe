@@ -1557,6 +1557,8 @@ footer a {
         margin-right: 58vw;
         margin-left: 3vw;
         text-align: left;
+        z-index: 3;
+        background-color: white;
     }
 
     /*------------SHOP---------------*/
